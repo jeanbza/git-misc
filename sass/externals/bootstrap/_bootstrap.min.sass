@@ -1,3 +1,14 @@
+/*!
+ * Bootstrap v3.0.0
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary
   display: block
 
@@ -26,8 +37,8 @@ a
     outline: 0
 
 h1
+  margin: .67em 0
   font-size: 2em
-  margin: 0.67em 0
 
 abbr[title]
   border-bottom: 1px dotted
@@ -39,16 +50,16 @@ dfn
   font-style: italic
 
 hr
+  height: 0
   -moz-box-sizing: content-box
   box-sizing: content-box
-  height: 0
 
 mark
-  background: #ff0
   color: #000
+  background: #ff0
 
 code, kbd, pre, samp
-  font-family: monospace, serif
+  font-family: monospace,serif
   font-size: 1em
 
 pre
@@ -61,15 +72,15 @@ small
   font-size: 80%
 
 sub
+  position: relative
   font-size: 75%
   line-height: 0
-  position: relative
   vertical-align: baseline
 
 sup
+  position: relative
   font-size: 75%
   line-height: 0
-  position: relative
   vertical-align: baseline
   top: -0.5em
 
@@ -86,18 +97,18 @@ figure
   margin: 0
 
 fieldset
-  border: 1px solid #c0c0c0
+  padding: .35em .625em .75em
   margin: 0 2px
-  padding: 0.35em 0.625em 0.75em
+  border: 1px solid #c0c0c0
 
 legend
-  border: 0
   padding: 0
+  border: 0
 
 button, input, select, textarea
+  margin: 0
   font-family: inherit
   font-size: 100%
-  margin: 0
 
 button, input
   line-height: normal
@@ -106,32 +117,32 @@ button, select
   text-transform: none
 
 button, html input[type="button"]
-  -webkit-appearance: button
   cursor: pointer
+  -webkit-appearance: button
 
 input
   &[type="reset"], &[type="submit"]
-    -webkit-appearance: button
     cursor: pointer
+    -webkit-appearance: button
 
 button[disabled], html input[disabled]
   cursor: default
 
 input
   &[type="checkbox"], &[type="radio"]
-    box-sizing: border-box
     padding: 0
+    box-sizing: border-box
   &[type="search"]
-    -webkit-appearance: textfield
-    -moz-box-sizing: content-box
     -webkit-box-sizing: content-box
+    -moz-box-sizing: content-box
     box-sizing: content-box
+    -webkit-appearance: textfield
     &::-webkit-search-cancel-button, &::-webkit-search-decoration
       -webkit-appearance: none
 
 button::-moz-focus-inner, input::-moz-focus-inner
-  border: 0
   padding: 0
+  border: 0
 
 textarea
   overflow: auto
@@ -141,93 +152,10 @@ table
   border-collapse: collapse
   border-spacing: 0
 
-*
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-  &:before, &:after
-    -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
-    box-sizing: border-box
-
-html
-  font-size: 62.5%
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-
-body
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
-  font-size: 14px
-  line-height: 1.428571429
-  color: #333333
-  background-color: #ffffff
-
-input, button, select, textarea
-  font-family: inherit
-  font-size: inherit
-  line-height: inherit
-
-button, input, select[multiple], textarea
-  background-image: none
-
-a
-  color: #428bca
-  text-decoration: none
-  &:hover
-    color: #2a6496
-    text-decoration: underline
-  &:focus
-    color: #2a6496
-    text-decoration: underline
-    outline: thin dotted #333
-    outline: 5px auto -webkit-focus-ring-color
-    outline-offset: -2px
-
-img
-  vertical-align: middle
-
-.img-responsive
-  display: block
-  max-width: 100%
-  height: auto
-
-.img-rounded
-  border-radius: 6px
-
-.img-thumbnail
-  padding: 4px
-  line-height: 1.428571429
-  background-color: #ffffff
-  border: 1px solid #dddddd
-  border-radius: 4px
-  -webkit-transition: all 0.2s ease-in-out
-  transition: all 0.2s ease-in-out
-  display: inline-block
-  max-width: 100%
-  height: auto
-
-.img-circle
-  border-radius: 50%
-
-hr
-  margin-top: 20px
-  margin-bottom: 20px
-  border: 0
-  border-top: 1px solid #eeeeee
-
-.sr-only
-  position: absolute
-  width: 1px
-  height: 1px
-  margin: -1px
-  padding: 0
-  overflow: hidden
-  clip: rect(0 0 0 0)
-  border: 0
-
 @media print
   *
+    color: black !important
     text-shadow: none !important
-    color: #000 !important
     background: transparent !important
     box-shadow: none !important
   a
@@ -265,16 +193,99 @@ hr
     display: none
   .table
     td, th
-      background-color: #fff !important
+      background-color: white !important
   .btn > .caret, .dropup > .btn > .caret
-    border-top-color: #000 !important
+    border-top-color: black !important
   .label
     border: 1px solid #000
   .table
     border-collapse: collapse !important
   .table-bordered
     th, td
-      border: 1px solid #ddd !important
+      border: 1px solid #dddddd !important
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html
+  font-size: 62.5%
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+body
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  font-size: 14px
+  line-height: 1.428571429
+  color: #333
+  background-color: #fff
+
+input, button, select, textarea
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+button, input, select[multiple], textarea
+  background-image: none
+
+a
+  color: #428bca
+  text-decoration: none
+  &:hover
+    color: #2a6496
+    text-decoration: underline
+  &:focus
+    color: #2a6496
+    text-decoration: underline
+    outline: thin dotted #333
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+
+img
+  vertical-align: middle
+
+.img-responsive
+  display: block
+  height: auto
+  max-width: 100%
+
+.img-rounded
+  border-radius: 6px
+
+.img-thumbnail
+  display: inline-block
+  height: auto
+  max-width: 100%
+  padding: 4px
+  line-height: 1.428571429
+  background-color: #fff
+  border: 1px solid #ddd
+  border-radius: 4px
+  -webkit-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
+
+.img-circle
+  border-radius: 50%
+
+hr
+  margin-top: 20px
+  margin-bottom: 20px
+  border: 0
+  border-top: 1px solid #eee
+
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  border: 0
 
 p
   margin: 0 0 10px
@@ -296,7 +307,7 @@ cite
   font-style: normal
 
 .text-muted
-  color: #999999
+  color: #999
 
 .text-primary
   color: #428bca
@@ -330,7 +341,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small
   font-weight: normal
   line-height: 1
-  color: #999999
+  color: #999
 
 h1, h2, h3
   margin-top: 20px
@@ -370,7 +381,7 @@ h3 small, .h3 small, h4 small, .h4 small
 .page-header
   padding-bottom: 9px
   margin: 40px 0 20px
-  border-bottom: 1px solid #eeeeee
+  border-bottom: 1px solid #eee
 
 ul, ol
   margin-top: 0
@@ -388,8 +399,8 @@ ul ul, ol ul, ul ol, ol ol
   list-style: none
   > li
     display: inline-block
-    padding-left: 5px
     padding-right: 5px
+    padding-left: 5px
 
 dl
   margin-bottom: 20px
@@ -408,32 +419,32 @@ dd
     dt
       float: left
       width: 160px
+      overflow: hidden
       clear: left
       text-align: right
-      overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap
     dd
       margin-left: 180px
       &:before
-        content: " "
         display: table
+        content: " "
       &:after
-        content: " "
         display: table
+        content: " "
         clear: both
       &:before
-        content: " "
         display: table
+        content: " "
       &:after
-        content: " "
         display: table
+        content: " "
         clear: both
 
 abbr
   &[title], &[data-original-title]
     cursor: help
-    border-bottom: 1px dotted #999999
+    border-bottom: 1px dotted #999
   &.initialism
     font-size: 90%
     text-transform: uppercase
@@ -441,7 +452,7 @@ abbr
 blockquote
   padding: 10px 20px
   margin: 0 0 20px
-  border-left: 5px solid #eeeeee
+  border-left: 5px solid #eee
   p
     font-size: 17.5px
     font-weight: 300
@@ -451,13 +462,13 @@ blockquote
   small
     display: block
     line-height: 1.428571429
-    color: #999999
+    color: #999
     &:before
       content: '\2014 \00A0'
   &.pull-right
     padding-right: 15px
     padding-left: 0
-    border-right: 5px solid #eeeeee
+    border-right: 5px solid #eee
     border-left: 0
     p
       text-align: right
@@ -489,8 +500,8 @@ code
   padding: 2px 4px
   font-size: 90%
   color: #c7254e
-  background-color: #f9f2f4
   white-space: nowrap
+  background-color: #f9f2f4
   border-radius: 4px
 
 pre
@@ -499,11 +510,11 @@ pre
   margin: 0 0 10px
   font-size: 13px
   line-height: 1.428571429
+  color: #333
   word-break: break-all
   word-wrap: break-word
-  color: #333333
   background-color: #f5f5f5
-  border: 1px solid #cccccc
+  border: 1px solid #ccc
   border-radius: 4px
   &.prettyprint
     margin-bottom: 20px
@@ -520,48 +531,48 @@ pre
   overflow-y: scroll
 
 .container
+  padding-right: 15px
+  padding-left: 15px
   margin-right: auto
   margin-left: auto
-  padding-left: 15px
-  padding-right: 15px
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 .row
-  margin-left: -15px
   margin-right: -15px
+  margin-left: -15px
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
   position: relative
   min-height: 1px
-  padding-left: 15px
   padding-right: 15px
+  padding-left: 15px
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11
   float: left
@@ -916,26 +927,26 @@ th
     padding: 8px
     line-height: 1.428571429
     vertical-align: top
-    border-top: 1px solid #dddddd
+    border-top: 1px solid #ddd
   thead > tr > th
     vertical-align: bottom
-    border-bottom: 2px solid #dddddd
+    border-bottom: 2px solid #ddd
   caption + thead tr:first-child th, colgroup + thead tr:first-child th, thead:first-child tr:first-child th, caption + thead tr:first-child td, colgroup + thead tr:first-child td, thead:first-child tr:first-child td
     border-top: 0
   tbody + tbody
-    border-top: 2px solid #dddddd
+    border-top: 2px solid #ddd
   .table
-    background-color: #ffffff
+    background-color: #fff
 
 .table-condensed
   thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
     padding: 5px
 
 .table-bordered
-  border: 1px solid #dddddd
+  border: 1px solid #ddd
   >
     thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
-      border: 1px solid #dddddd
+      border: 1px solid #ddd
     thead > tr >
       th, td
         border-bottom-width: 2px
@@ -950,11 +961,11 @@ th
 
 table
   col[class*="col-"]
-    float: none
     display: table-column
-  td[class*="col-"], th[class*="col-"]
     float: none
+  td[class*="col-"], th[class*="col-"]
     display: table-cell
+    float: none
 
 .table >
   thead > tr > td.active, tbody > tr > td.active, tfoot > tr > td.active, thead > tr > th.active, tbody > tr > th.active, tfoot > tr > th.active, thead > tr.active > td, tbody > tr.active > td, tfoot > tr.active > td, thead > tr.active > th, tbody > tr.active > th, tfoot > tr.active > th
@@ -1004,9 +1015,9 @@ table
   .table-responsive
     width: 100%
     margin-bottom: 15px
-    overflow-y: hidden
     overflow-x: scroll
-    border: 1px solid #dddddd
+    overflow-y: hidden
+    border: 1px solid #ddd
     >
       .table
         margin-bottom: 0
@@ -1036,7 +1047,7 @@ legend
   margin-bottom: 20px
   font-size: 21px
   line-height: inherit
-  color: #333333
+  color: #333
   border: 0
   border-bottom: 1px solid #e5e5e5
 
@@ -1061,9 +1072,9 @@ select
   &[multiple], &[size]
     height: auto
   optgroup
+    font-family: inherit
     font-size: inherit
     font-style: inherit
-    font-family: inherit
 
 input
   &[type="file"]:focus, &[type="radio"]:focus, &[type="checkbox"]:focus
@@ -1076,22 +1087,22 @@ input
 
 .form-control
   &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder
-    color: #999999
+    color: #999
   display: block
   width: 100%
   height: 34px
   padding: 6px 12px
   font-size: 14px
   line-height: 1.428571429
-  color: #555555
+  color: #555
   vertical-align: middle
-  background-color: #ffffff
-  border: 1px solid #cccccc
+  background-color: #fff
+  border: 1px solid #ccc
   border-radius: 4px
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
   &:focus
     border-color: #66afe9
     outline: 0
@@ -1099,11 +1110,11 @@ input
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
   &[disabled], &[readonly]
     cursor: not-allowed
-    background-color: #eeeeee
+    background-color: #eee
 
 fieldset[disabled] .form-control
   cursor: not-allowed
-  background-color: #eeeeee
+  background-color: #eee
 
 textarea.form-control
   height: auto
@@ -1114,9 +1125,9 @@ textarea.form-control
 .radio, .checkbox
   display: block
   min-height: 20px
+  padding-left: 20px
   margin-top: 10px
   margin-bottom: 10px
-  padding-left: 20px
   vertical-align: middle
 
 .radio label, .checkbox label
@@ -1136,8 +1147,8 @@ textarea.form-control
   display: inline-block
   padding-left: 20px
   margin-bottom: 0
-  vertical-align: middle
   font-weight: normal
+  vertical-align: middle
   cursor: pointer
 
 .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline
@@ -1199,8 +1210,8 @@ textarea.input-lg
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e
   .input-group-addon
     color: #c09853
-    border-color: #c09853
     background-color: #fcf8e3
+    border-color: #c09853
 
 .has-error
   .help-block, .control-label
@@ -1215,8 +1226,8 @@ textarea.input-lg
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392
   .input-group-addon
     color: #b94a48
-    border-color: #b94a48
     background-color: #f2dede
+    border-color: #b94a48
 
 .has-success
   .help-block, .control-label
@@ -1231,12 +1242,12 @@ textarea.input-lg
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b
   .input-group-addon
     color: #468847
-    border-color: #468847
     background-color: #dff0d8
+    border-color: #468847
 
 .form-control-static
-  margin-bottom: 0
   padding-top: 7px
+  margin-bottom: 0
 
 .help-block
   display: block
@@ -1254,34 +1265,34 @@ textarea.input-lg
       display: inline-block
     .radio, .checkbox
       display: inline-block
+      padding-left: 0
       margin-top: 0
       margin-bottom: 0
-      padding-left: 0
     .radio input[type="radio"], .checkbox input[type="checkbox"]
       float: none
       margin-left: 0
 
 .form-horizontal
   .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline
+    padding-top: 7px
     margin-top: 0
     margin-bottom: 0
-    padding-top: 7px
   .form-group
-    margin-left: -15px
     margin-right: -15px
+    margin-left: -15px
     &:before
-      content: " "
       display: table
+      content: " "
     &:after
-      content: " "
       display: table
+      content: " "
       clear: both
     &:before
-      content: " "
       display: table
+      content: " "
     &:after
-      content: " "
       display: table
+      content: " "
       clear: both
 
 @media (min-width: 768px)
@@ -1296,11 +1307,11 @@ textarea.input-lg
   font-weight: normal
   line-height: 1.428571429
   text-align: center
+  white-space: nowrap
   vertical-align: middle
   cursor: pointer
   border: 1px solid transparent
   border-radius: 4px
-  white-space: nowrap
   -webkit-user-select: none
   -moz-user-select: none
   -ms-user-select: none
@@ -1311,40 +1322,40 @@ textarea.input-lg
     outline: 5px auto -webkit-focus-ring-color
     outline-offset: -2px
   &:hover, &:focus
-    color: #333333
+    color: #333
     text-decoration: none
   &:active, &.active
-    outline: 0
     background-image: none
+    outline: 0
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
   &.disabled, &[disabled]
-    cursor: not-allowed
     pointer-events: none
-    opacity: 0.65
+    cursor: not-allowed
+    opacity: .65
     filter: alpha(opacity = 65)
     -webkit-box-shadow: none
     box-shadow: none
 
 fieldset[disabled] .btn
-  cursor: not-allowed
   pointer-events: none
-  opacity: 0.65
+  cursor: not-allowed
+  opacity: .65
   filter: alpha(opacity = 65)
   -webkit-box-shadow: none
   box-shadow: none
 
 .btn-default
-  color: #333333
-  background-color: #ffffff
-  border-color: #cccccc
+  color: #333
+  background-color: #fff
+  border-color: #ccc
   &:hover, &:focus, &:active, &.active
-    color: #333333
+    color: #333
     background-color: #ebebeb
     border-color: #adadad
 
 .open .dropdown-toggle.btn-default
-  color: #333333
+  color: #333
   background-color: #ebebeb
   border-color: #adadad
 
@@ -1357,60 +1368,60 @@ fieldset[disabled] .btn
 
 .btn-default
   &.disabled, &[disabled]
-    background-color: #ffffff
-    border-color: #cccccc
+    background-color: #fff
+    border-color: #ccc
 
 fieldset[disabled] .btn-default
-  background-color: #ffffff
-  border-color: #cccccc
+  background-color: #fff
+  border-color: #ccc
 
 .btn-default
   &.disabled:hover, &[disabled]:hover
-    background-color: #ffffff
-    border-color: #cccccc
+    background-color: #fff
+    border-color: #ccc
 
 fieldset[disabled] .btn-default:hover
-  background-color: #ffffff
-  border-color: #cccccc
+  background-color: #fff
+  border-color: #ccc
 
 .btn-default
   &.disabled:focus, &[disabled]:focus
-    background-color: #ffffff
-    border-color: #cccccc
+    background-color: #fff
+    border-color: #ccc
 
 fieldset[disabled] .btn-default:focus
-  background-color: #ffffff
-  border-color: #cccccc
+  background-color: #fff
+  border-color: #ccc
 
 .btn-default
   &.disabled:active, &[disabled]:active
-    background-color: #ffffff
-    border-color: #cccccc
+    background-color: #fff
+    border-color: #ccc
 
 fieldset[disabled] .btn-default:active
-  background-color: #ffffff
-  border-color: #cccccc
+  background-color: #fff
+  border-color: #ccc
 
 .btn-default
   &.disabled.active, &[disabled].active
-    background-color: #ffffff
-    border-color: #cccccc
+    background-color: #fff
+    border-color: #ccc
 
 fieldset[disabled] .btn-default.active
-  background-color: #ffffff
-  border-color: #cccccc
+  background-color: #fff
+  border-color: #ccc
 
 .btn-primary
-  color: #ffffff
+  color: #fff
   background-color: #428bca
   border-color: #357ebd
   &:hover, &:focus, &:active, &.active
-    color: #ffffff
+    color: #fff
     background-color: #3276b1
     border-color: #285e8e
 
 .open .dropdown-toggle.btn-primary
-  color: #ffffff
+  color: #fff
   background-color: #3276b1
   border-color: #285e8e
 
@@ -1467,16 +1478,16 @@ fieldset[disabled] .btn-primary.active
   border-color: #357ebd
 
 .btn-warning
-  color: #ffffff
+  color: #fff
   background-color: #f0ad4e
   border-color: #eea236
   &:hover, &:focus, &:active, &.active
-    color: #ffffff
+    color: #fff
     background-color: #ed9c28
     border-color: #d58512
 
 .open .dropdown-toggle.btn-warning
-  color: #ffffff
+  color: #fff
   background-color: #ed9c28
   border-color: #d58512
 
@@ -1533,16 +1544,16 @@ fieldset[disabled] .btn-warning.active
   border-color: #eea236
 
 .btn-danger
-  color: #ffffff
+  color: #fff
   background-color: #d9534f
   border-color: #d43f3a
   &:hover, &:focus, &:active, &.active
-    color: #ffffff
+    color: #fff
     background-color: #d2322d
     border-color: #ac2925
 
 .open .dropdown-toggle.btn-danger
-  color: #ffffff
+  color: #fff
   background-color: #d2322d
   border-color: #ac2925
 
@@ -1599,16 +1610,16 @@ fieldset[disabled] .btn-danger.active
   border-color: #d43f3a
 
 .btn-success
-  color: #ffffff
+  color: #fff
   background-color: #5cb85c
   border-color: #4cae4c
   &:hover, &:focus, &:active, &.active
-    color: #ffffff
+    color: #fff
     background-color: #47a447
     border-color: #398439
 
 .open .dropdown-toggle.btn-success
-  color: #ffffff
+  color: #fff
   background-color: #47a447
   border-color: #398439
 
@@ -1665,16 +1676,16 @@ fieldset[disabled] .btn-success.active
   border-color: #4cae4c
 
 .btn-info
-  color: #ffffff
+  color: #fff
   background-color: #5bc0de
   border-color: #46b8da
   &:hover, &:focus, &:active, &.active
-    color: #ffffff
+    color: #fff
     background-color: #39b3d7
     border-color: #269abc
 
 .open .dropdown-toggle.btn-info
-  color: #ffffff
+  color: #fff
   background-color: #39b3d7
   border-color: #269abc
 
@@ -1731,8 +1742,8 @@ fieldset[disabled] .btn-info.active
   border-color: #46b8da
 
 .btn-link
-  color: #428bca
   font-weight: normal
+  color: #428bca
   cursor: pointer
   border-radius: 0
   background-color: transparent
@@ -1757,11 +1768,11 @@ fieldset[disabled] .btn-link
     text-decoration: underline
     background-color: transparent
   &[disabled]:hover
-    color: #999999
+    color: #999
     text-decoration: none
 
 fieldset[disabled] .btn-link:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:focus
-  color: #999999
+  color: #999
   text-decoration: none
 
 .btn-lg
@@ -1786,14 +1797,33 @@ fieldset[disabled] .btn-link:hover, .btn-link[disabled]:focus, fieldset[disabled
 .btn-block
   display: block
   width: 100%
-  padding-left: 0
   padding-right: 0
+  padding-left: 0
   + .btn-block
     margin-top: 5px
 
 input
   &[type="submit"].btn-block, &[type="reset"].btn-block, &[type="button"].btn-block
     width: 100%
+
+.fade
+  opacity: 0
+  -webkit-transition: opacity .15s linear
+  transition: opacity .15s linear
+  &.in
+    opacity: 1
+
+.collapse
+  display: none
+  &.in
+    display: block
+
+.collapsing
+  position: relative
+  height: 0
+  overflow: hidden
+  -webkit-transition: height .35s ease
+  transition: height .35s ease
 
 @font-face
   font-family: 'Glyphicons Halflings'
@@ -1806,10 +1836,10 @@ input
   top: 1px
   display: inline-block
   font-family: 'Glyphicons Halflings'
+  -webkit-font-smoothing: antialiased
   font-style: normal
   font-weight: normal
   line-height: 1
-  -webkit-font-smoothing: antialiased
 
 .glyphicon-asterisk:before
   content: "\2a"
@@ -2411,15 +2441,134 @@ input
 .glyphicon-wrench:before
   content: "\1f527"
 
+.caret
+  display: inline-block
+  width: 0
+  height: 0
+  margin-left: 2px
+  vertical-align: middle
+  border-top: 4px solid #000
+  border-right: 4px solid transparent
+  border-bottom: 0 dotted
+  border-left: 4px solid transparent
+  content: ""
+
+.dropdown
+  position: relative
+
+.dropdown-toggle:focus
+  outline: 0
+
+.dropdown-menu
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 1000
+  display: none
+  float: left
+  min-width: 160px
+  padding: 5px 0
+  margin: 2px 0 0
+  font-size: 14px
+  list-style: none
+  background-color: #fff
+  border: 1px solid #ccc
+  border: 1px solid rgba(0, 0, 0, 0.15)
+  border-radius: 4px
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  background-clip: padding-box
+  &.pull-right
+    right: 0
+    left: auto
+  .divider
+    height: 1px
+    margin: 9px 0
+    overflow: hidden
+    background-color: #e5e5e5
+  >
+    li > a
+      display: block
+      padding: 3px 20px
+      clear: both
+      font-weight: normal
+      line-height: 1.428571429
+      color: #333
+      white-space: nowrap
+      &:hover, &:focus
+        color: #fff
+        text-decoration: none
+        background-color: #428bca
+    .active > a
+      color: #fff
+      text-decoration: none
+      background-color: #428bca
+      outline: 0
+      &:hover, &:focus
+        color: #fff
+        text-decoration: none
+        background-color: #428bca
+        outline: 0
+    .disabled > a
+      color: #999
+      &:hover, &:focus
+        color: #999
+      &:hover, &:focus
+        text-decoration: none
+        cursor: not-allowed
+        background-color: transparent
+        background-image: none
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+
+.open >
+  .dropdown-menu
+    display: block
+  a
+    outline: 0
+
+.dropdown-header
+  display: block
+  padding: 3px 20px
+  font-size: 12px
+  line-height: 1.428571429
+  color: #999
+
+.dropdown-backdrop
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 990
+
+.pull-right > .dropdown-menu
+  right: 0
+  left: auto
+
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret
+  border-top: 0 dotted
+  border-bottom: 4px solid #000
+  content: ""
+
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu
+  top: auto
+  bottom: 100%
+  margin-bottom: 1px
+
+@media (min-width: 768px)
+  .navbar-right .dropdown-menu
+    right: 0
+    left: auto
+
 .btn-default .caret
-  border-top-color: #333333
+  border-top-color: #333
 
 .btn-primary .caret, .btn-success .caret, .btn-warning .caret, .btn-danger .caret, .btn-info .caret
   border-top-color: #fff
 
 .dropup
   .btn-default .caret
-    border-bottom-color: #333333
+    border-bottom-color: #333
   .btn-primary .caret, .btn-success .caret, .btn-warning .caret, .btn-danger .caret, .btn-info .caret
     border-bottom-color: #fff
 
@@ -2436,7 +2585,7 @@ input
   z-index: 2
 
 .btn-group > .btn:focus, .btn-group-vertical > .btn:focus
-  outline: none
+  outline: 0
 
 .btn-group
   .btn +
@@ -2448,18 +2597,18 @@ input
 
 .btn-toolbar
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   .btn-group
     float: left
@@ -2475,8 +2624,8 @@ input
       &:first-child
         margin-left: 0
         &:not(:last-child):not(.dropdown-toggle)
-          border-bottom-right-radius: 0
           border-top-right-radius: 0
+          border-bottom-right-radius: 0
       &:last-child:not(:first-child)
         border-bottom-left-radius: 0
         border-top-left-radius: 0
@@ -2489,8 +2638,8 @@ input
         border-radius: 0
       &:first-child >
         .btn:last-child, .dropdown-toggle
-          border-bottom-right-radius: 0
           border-top-right-radius: 0
+          border-bottom-right-radius: 0
       &:last-child > .btn:first-child
         border-bottom-left-radius: 0
         border-top-left-radius: 0
@@ -2499,10 +2648,10 @@ input
 
 .btn-group-xs > .btn
   padding: 5px 10px
+  padding: 1px 5px
   font-size: 12px
   line-height: 1.5
   border-radius: 3px
-  padding: 1px 5px
 
 .btn-group-sm > .btn
   padding: 5px 10px
@@ -2519,11 +2668,11 @@ input
 .btn-group
   >
     .btn + .dropdown-toggle
-      padding-left: 8px
       padding-right: 8px
+      padding-left: 8px
     .btn-lg + .dropdown-toggle
-      padding-left: 12px
       padding-right: 12px
+      padding-left: 12px
   &.open .dropdown-toggle
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
@@ -2550,18 +2699,18 @@ input
     width: 100%
     max-width: 100%
     &:before
-      content: " "
       display: table
+      content: " "
     &:after
-      content: " "
       display: table
+      content: " "
       clear: both
     &:before
-      content: " "
       display: table
+      content: " "
     &:after
-      content: " "
       display: table
+      content: " "
       clear: both
     > .btn
       float: none
@@ -2581,8 +2730,8 @@ input
       border-bottom-right-radius: 0
       border-bottom-left-radius: 0
     &:last-child:not(:first-child)
-      border-bottom-left-radius: 4px
       border-top-right-radius: 0
+      border-bottom-left-radius: 4px
       border-top-left-radius: 0
   .btn-group
     &:not(:first-child):not(:last-child) > .btn
@@ -2598,11 +2747,11 @@ input
 .btn-group-justified
   display: table
   width: 100%
-  table-layout: fixed
   border-collapse: separate
+  table-layout: fixed
   .btn
-    float: none
     display: table-cell
+    float: none
     width: 1%
 
 [data-toggle="buttons"] > .btn > input
@@ -2615,8 +2764,8 @@ input
   border-collapse: separate
   &.col
     float: none
-    padding-left: 0
     padding-right: 0
+    padding-left: 0
   .form-control
     width: 100%
     margin-bottom: 0
@@ -2672,8 +2821,8 @@ textarea.input-group-sm >
   font-weight: normal
   line-height: 1
   text-align: center
-  background-color: #eeeeee
-  border: 1px solid #cccccc
+  background-color: #eee
+  border: 1px solid #ccc
   border-radius: 4px
   &.input-sm
     padding: 5px 10px
@@ -2688,17 +2837,17 @@ textarea.input-group-sm >
       margin-top: 0
 
 .input-group .form-control:first-child, .input-group-addon:first-child
-  border-bottom-right-radius: 0
   border-top-right-radius: 0
+  border-bottom-right-radius: 0
 
 .input-group-btn
   &:first-child >
     .btn, .dropdown-toggle
-      border-bottom-right-radius: 0
       border-top-right-radius: 0
+      border-bottom-right-radius: 0
   &:last-child > .btn:not(:last-child):not(.dropdown-toggle)
-    border-bottom-right-radius: 0
     border-top-right-radius: 0
+    border-bottom-right-radius: 0
 
 .input-group-addon:first-child
   border-right: 0
@@ -2730,22 +2879,22 @@ textarea.input-group-sm >
       z-index: 2
 
 .nav
-  margin-bottom: 0
   padding-left: 0
+  margin-bottom: 0
   list-style: none
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   > li
     position: relative
@@ -2756,19 +2905,19 @@ textarea.input-group-sm >
       padding: 10px 15px
       &:hover, &:focus
         text-decoration: none
-        background-color: #eeeeee
+        background-color: #eee
     &.disabled > a
-      color: #999999
+      color: #999
       &:hover, &:focus
-        color: #999999
+        color: #999
         text-decoration: none
-        background-color: transparent
         cursor: not-allowed
+        background-color: transparent
   .open > a
-    background-color: #eeeeee
+    background-color: #eee
     border-color: #428bca
     &:hover, &:focus
-      background-color: #eeeeee
+      background-color: #eee
       border-color: #428bca
   .nav-divider
     height: 1px
@@ -2779,7 +2928,7 @@ textarea.input-group-sm >
     max-width: none
 
 .nav-tabs
-  border-bottom: 1px solid #dddddd
+  border-bottom: 1px solid #ddd
   > li
     float: left
     margin-bottom: -1px
@@ -2789,19 +2938,19 @@ textarea.input-group-sm >
       border: 1px solid transparent
       border-radius: 4px 4px 0 0
       &:hover
-        border-color: #eeeeee #eeeeee #dddddd
+        border-color: #eee #eee #ddd
     &.active > a
-      color: #555555
-      background-color: #ffffff
-      border: 1px solid #dddddd
-      border-bottom-color: transparent
+      color: #555
       cursor: default
+      background-color: #fff
+      border: 1px solid #ddd
+      border-bottom-color: transparent
       &:hover, &:focus
-        color: #555555
-        background-color: #ffffff
-        border: 1px solid #dddddd
-        border-bottom-color: transparent
+        color: #555
         cursor: default
+        background-color: #fff
+        border: 1px solid #ddd
+        border-bottom-color: transparent
   &.nav-justified
     width: 100%
     border-bottom: 0
@@ -2810,10 +2959,10 @@ textarea.input-group-sm >
         float: none
         > a
           text-align: center
-          border-bottom: 1px solid #dddddd
           margin-right: 0
+          border-bottom: 1px solid #ddd
       .active > a
-        border-bottom-color: #ffffff
+        border-bottom-color: #fff
 
 @media (min-width: 768px)
   .nav-tabs.nav-justified > li
@@ -2827,10 +2976,10 @@ textarea.input-group-sm >
   + li
     margin-left: 2px
   &.active > a
-    color: #ffffff
+    color: #fff
     background-color: #428bca
     &:hover, &:focus
-      color: #ffffff
+      color: #fff
       background-color: #428bca
 
 .nav-stacked > li
@@ -2855,25 +3004,25 @@ textarea.input-group-sm >
   border-bottom: 0
   >
     li > a
-      border-bottom: 1px solid #dddddd
       margin-right: 0
+      border-bottom: 1px solid #ddd
     .active > a
-      border-bottom-color: #ffffff
+      border-bottom-color: #fff
 
 .tabbable
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 .tab-content > .tab-pane, .pill-content > .pill-pane
@@ -2902,18 +3051,18 @@ textarea.input-group-sm >
   margin-bottom: 20px
   border: 1px solid transparent
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 @media (min-width: 768px)
@@ -2922,18 +3071,18 @@ textarea.input-group-sm >
 
 .navbar-header
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 @media (min-width: 768px)
@@ -2942,25 +3091,25 @@ textarea.input-group-sm >
 
 .navbar-collapse
   max-height: 340px
-  overflow-x: visible
   padding-right: 15px
   padding-left: 15px
+  overflow-x: visible
   border-top: 1px solid transparent
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
   -webkit-overflow-scrolling: touch
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &.in
     overflow-y: auto
@@ -3014,8 +3163,8 @@ textarea.input-group-sm >
     border-radius: 0
 
 .navbar-fixed-top
-  z-index: 1030
   top: 0
+  z-index: 1030
 
 .navbar-fixed-bottom
   bottom: 0
@@ -3036,9 +3185,9 @@ textarea.input-group-sm >
 .navbar-toggle
   position: relative
   float: right
-  margin-right: 15px
   padding: 9px 10px
   margin-top: 8px
+  margin-right: 15px
   margin-bottom: 8px
   background-color: transparent
   border: 1px solid transparent
@@ -3095,15 +3244,15 @@ textarea.input-group-sm >
     float: right !important
 
 .navbar-form
-  margin-left: -15px
-  margin-right: -15px
   padding: 10px 15px
+  margin-top: 8px
+  margin-right: -15px
+  margin-bottom: 8px
+  margin-left: -15px
   border-top: 1px solid transparent
   border-bottom: 1px solid transparent
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1)
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1)
-  margin-top: 8px
-  margin-bottom: 8px
 
 @media (min-width: 768px)
   .navbar-form
@@ -3115,9 +3264,9 @@ textarea.input-group-sm >
       display: inline-block
     .radio, .checkbox
       display: inline-block
+      padding-left: 0
       margin-top: 0
       margin-bottom: 0
-      padding-left: 0
     .radio input[type="radio"], .checkbox input[type="checkbox"]
       float: none
       margin-left: 0
@@ -3129,11 +3278,11 @@ textarea.input-group-sm >
 @media (min-width: 768px)
   .navbar-form
     width: auto
-    border: 0
-    margin-left: 0
-    margin-right: 0
     padding-top: 0
     padding-bottom: 0
+    margin-right: 0
+    margin-left: 0
+    border: 0
     -webkit-box-shadow: none
     box-shadow: none
 
@@ -3148,8 +3297,8 @@ textarea.input-group-sm >
 
 .navbar-nav
   &.pull-right > li > .dropdown-menu, > li > .dropdown-menu.pull-right
-    left: auto
     right: 0
+    left: auto
 
 .navbar-btn
   margin-top: 8px
@@ -3162,166 +3311,166 @@ textarea.input-group-sm >
 
 @media (min-width: 768px)
   .navbar-text
-    margin-left: 15px
     margin-right: 15px
+    margin-left: 15px
 
 .navbar-default
   background-color: #f8f8f8
   border-color: #e7e7e7
   .navbar-brand
-    color: #777777
+    color: #777
     &:hover, &:focus
       color: #5e5e5e
       background-color: transparent
   .navbar-text
-    color: #777777
+    color: #777
   .navbar-nav >
     li > a
-      color: #777777
+      color: #777
       &:hover, &:focus
-        color: #333333
+        color: #333
         background-color: transparent
     .active > a
-      color: #555555
+      color: #555
       background-color: #e7e7e7
       &:hover, &:focus
-        color: #555555
+        color: #555
         background-color: #e7e7e7
     .disabled > a
-      color: #cccccc
+      color: #ccc
       background-color: transparent
       &:hover, &:focus
-        color: #cccccc
+        color: #ccc
         background-color: transparent
   .navbar-toggle
-    border-color: #dddddd
+    border-color: #ddd
     &:hover, &:focus
-      background-color: #dddddd
+      background-color: #ddd
     .icon-bar
-      background-color: #cccccc
+      background-color: #ccc
   .navbar-collapse, .navbar-form
     border-color: #e6e6e6
   .navbar-nav >
     .dropdown > a
       &:hover .caret, &:focus .caret
-        border-top-color: #333333
-        border-bottom-color: #333333
+        border-top-color: #333
+        border-bottom-color: #333
     .open > a
+      color: #555
       background-color: #e7e7e7
-      color: #555555
       &:hover, &:focus
+        color: #555
         background-color: #e7e7e7
-        color: #555555
       .caret, &:hover .caret, &:focus .caret
-        border-top-color: #555555
-        border-bottom-color: #555555
+        border-top-color: #555
+        border-bottom-color: #555
     .dropdown > a .caret
-      border-top-color: #777777
-      border-bottom-color: #777777
+      border-top-color: #777
+      border-bottom-color: #777
   .navbar-link
-    color: #777777
+    color: #777
     &:hover
-      color: #333333
+      color: #333
 
 @media (max-width: 767px)
   .navbar-default .navbar-nav .open .dropdown-menu >
     li > a
-      color: #777777
+      color: #777
       &:hover, &:focus
-        color: #333333
+        color: #333
         background-color: transparent
     .active > a
-      color: #555555
+      color: #555
       background-color: #e7e7e7
       &:hover, &:focus
-        color: #555555
+        color: #555
         background-color: #e7e7e7
     .disabled > a
-      color: #cccccc
+      color: #ccc
       background-color: transparent
       &:hover, &:focus
-        color: #cccccc
+        color: #ccc
         background-color: transparent
 
 .navbar-inverse
-  background-color: #222222
+  background-color: #222
   border-color: #080808
   .navbar-brand
-    color: #999999
+    color: #999
     &:hover, &:focus
-      color: #ffffff
+      color: #fff
       background-color: transparent
   .navbar-text
-    color: #999999
+    color: #999
   .navbar-nav >
     li > a
-      color: #999999
+      color: #999
       &:hover, &:focus
-        color: #ffffff
+        color: #fff
         background-color: transparent
     .active > a
-      color: #ffffff
+      color: #fff
       background-color: #080808
       &:hover, &:focus
-        color: #ffffff
+        color: #fff
         background-color: #080808
     .disabled > a
-      color: #444444
+      color: #444
       background-color: transparent
       &:hover, &:focus
-        color: #444444
+        color: #444
         background-color: transparent
   .navbar-toggle
-    border-color: #333333
+    border-color: #333
     &:hover, &:focus
-      background-color: #333333
+      background-color: #333
     .icon-bar
-      background-color: #ffffff
+      background-color: #fff
   .navbar-collapse, .navbar-form
     border-color: #101010
   .navbar-nav >
     .open > a
+      color: #fff
       background-color: #080808
-      color: #ffffff
       &:hover, &:focus
+        color: #fff
         background-color: #080808
-        color: #ffffff
     .dropdown > a
       &:hover .caret
-        border-top-color: #ffffff
-        border-bottom-color: #ffffff
+        border-top-color: #fff
+        border-bottom-color: #fff
       .caret
-        border-top-color: #999999
-        border-bottom-color: #999999
+        border-top-color: #999
+        border-bottom-color: #999
     .open > a
       .caret, &:hover .caret, &:focus .caret
-        border-top-color: #ffffff
-        border-bottom-color: #ffffff
+        border-top-color: #fff
+        border-bottom-color: #fff
   .navbar-link
-    color: #999999
+    color: #999
     &:hover
-      color: #ffffff
+      color: #fff
 
 @media (max-width: 767px)
   .navbar-inverse .navbar-nav .open .dropdown-menu >
     .dropdown-header
       border-color: #080808
     li > a
-      color: #999999
+      color: #999
       &:hover, &:focus
-        color: #ffffff
+        color: #fff
         background-color: transparent
     .active > a
-      color: #ffffff
+      color: #fff
       background-color: #080808
       &:hover, &:focus
-        color: #ffffff
+        color: #fff
         background-color: #080808
     .disabled > a
-      color: #444444
+      color: #444
       background-color: transparent
       &:hover, &:focus
-        color: #444444
+        color: #444
         background-color: transparent
 
 .breadcrumb
@@ -3334,11 +3483,11 @@ textarea.input-group-sm >
     li
       display: inline-block
       + li:before
-        content: "/\00a0"
         padding: 0 5px
-        color: #cccccc
+        color: #ccc
+        content: "/\00a0"
     .active
-      color: #999999
+      color: #999
 
 .pagination
   display: inline-block
@@ -3353,11 +3502,11 @@ textarea.input-group-sm >
           position: relative
           float: left
           padding: 6px 12px
+          margin-left: -1px
           line-height: 1.428571429
           text-decoration: none
-          background-color: #ffffff
-          border: 1px solid #dddddd
-          margin-left: -1px
+          background-color: #fff
+          border: 1px solid #ddd
       &:first-child >
         a, span
           margin-left: 0
@@ -3365,34 +3514,34 @@ textarea.input-group-sm >
           border-top-left-radius: 4px
       &:last-child >
         a, span
-          border-bottom-right-radius: 4px
           border-top-right-radius: 4px
+          border-bottom-right-radius: 4px
       >
         a:hover, span:hover, a:focus, span:focus
-          background-color: #eeeeee
+          background-color: #eee
     .active >
       a, span, a:hover, span:hover, a:focus, span:focus
         z-index: 2
-        color: #ffffff
+        color: #fff
+        cursor: default
         background-color: #428bca
         border-color: #428bca
-        cursor: default
     .disabled >
       span
-        color: #999999
-        background-color: #ffffff
-        border-color: #dddddd
+        color: #999
         cursor: not-allowed
+        background-color: #fff
+        border-color: #ddd
       a
-        color: #999999
-        background-color: #ffffff
-        border-color: #dddddd
+        color: #999
         cursor: not-allowed
+        background-color: #fff
+        border-color: #ddd
         &:hover, &:focus
-          color: #999999
-          background-color: #ffffff
-          border-color: #dddddd
+          color: #999
           cursor: not-allowed
+          background-color: #fff
+          border-color: #ddd
 
 .pagination-lg > li
   >
@@ -3405,8 +3554,8 @@ textarea.input-group-sm >
       border-top-left-radius: 6px
   &:last-child >
     a, span
-      border-bottom-right-radius: 6px
       border-top-right-radius: 6px
+      border-bottom-right-radius: 6px
 
 .pagination-sm > li
   >
@@ -3419,27 +3568,27 @@ textarea.input-group-sm >
       border-top-left-radius: 3px
   &:last-child >
     a, span
-      border-bottom-right-radius: 3px
       border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
 
 .pager
   padding-left: 0
   margin: 20px 0
-  list-style: none
   text-align: center
+  list-style: none
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   li
     display: inline
@@ -3447,13 +3596,13 @@ textarea.input-group-sm >
       a, span
         display: inline-block
         padding: 5px 14px
-        background-color: #ffffff
-        border: 1px solid #dddddd
+        background-color: #fff
+        border: 1px solid #ddd
         border-radius: 15px
       a
         &:hover, &:focus
           text-decoration: none
-          background-color: #eeeeee
+          background-color: #eee
   .next >
     a, span
       float: right
@@ -3462,17 +3611,17 @@ textarea.input-group-sm >
       float: left
   .disabled >
     a
-      color: #999999
-      background-color: #ffffff
+      color: #999
       cursor: not-allowed
+      background-color: #fff
       &:hover, &:focus
-        color: #999999
-        background-color: #ffffff
+        color: #999
         cursor: not-allowed
+        background-color: #fff
     span
-      color: #999999
-      background-color: #ffffff
+      color: #999
       cursor: not-allowed
+      background-color: #fff
 
 .label
   display: inline
@@ -3480,21 +3629,21 @@ textarea.input-group-sm >
   font-size: 75%
   font-weight: bold
   line-height: 1
-  color: #ffffff
+  color: #fff
   text-align: center
   white-space: nowrap
   vertical-align: baseline
   border-radius: .25em
   &[href]
     &:hover, &:focus
-      color: #ffffff
+      color: #fff
       text-decoration: none
       cursor: pointer
   &:empty
     display: none
 
 .label-default
-  background-color: #999999
+  background-color: #999
   &[href]
     &:hover, &:focus
       background-color: #808080
@@ -3535,19 +3684,19 @@ textarea.input-group-sm >
   padding: 3px 7px
   font-size: 12px
   font-weight: bold
-  color: #ffffff
   line-height: 1
-  vertical-align: baseline
-  white-space: nowrap
+  color: #fff
   text-align: center
-  background-color: #999999
+  white-space: nowrap
+  vertical-align: baseline
+  background-color: #999
   border-radius: 10px
   &:empty
     display: none
 
 a.badge
   &:hover, &:focus
-    color: #ffffff
+    color: #fff
     text-decoration: none
     cursor: pointer
 
@@ -3557,12 +3706,12 @@ a.badge
 
 a.list-group-item.active > .badge
   color: #428bca
-  background-color: #ffffff
+  background-color: #fff
 
 .nav-pills >
   .active > a > .badge
     color: #428bca
-    background-color: #ffffff
+    background-color: #fff
   li > a > .badge
     margin-left: 3px
 
@@ -3573,7 +3722,7 @@ a.list-group-item.active > .badge
   font-weight: 200
   line-height: 2.1428571435
   color: inherit
-  background-color: #eeeeee
+  background-color: #eee
   h1
     line-height: 1
     color: inherit
@@ -3588,27 +3737,27 @@ a.list-group-item.active > .badge
     padding-top: 48px
     padding-bottom: 48px
   .container .jumbotron
-    padding-left: 60px
     padding-right: 60px
+    padding-left: 60px
   .jumbotron h1
     font-size: 63px
 
 .thumbnail
+  display: inline-block
+  display: block
+  height: auto
+  max-width: 100%
   padding: 4px
   line-height: 1.428571429
-  background-color: #ffffff
-  border: 1px solid #dddddd
+  background-color: #fff
+  border: 1px solid #ddd
   border-radius: 4px
-  -webkit-transition: all 0.2s ease-in-out
-  transition: all 0.2s ease-in-out
-  display: inline-block
-  max-width: 100%
-  height: auto
-  display: block
+  -webkit-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
   > img
     display: block
-    max-width: 100%
     height: auto
+    max-width: 100%
 
 a.thumbnail
   &:hover, &:focus
@@ -3616,11 +3765,11 @@ a.thumbnail
 
 .thumbnail
   > img
-    margin-left: auto
     margin-right: auto
+    margin-left: auto
   .caption
     padding: 9px
-    color: #333333
+    color: #333
 
 .alert
   padding: 15px
@@ -3647,36 +3796,36 @@ a.thumbnail
     color: inherit
 
 .alert-success
+  color: #468847
   background-color: #dff0d8
   border-color: #d6e9c6
-  color: #468847
   hr
     border-top-color: #c9e2b3
   .alert-link
     color: #356635
 
 .alert-info
+  color: #3a87ad
   background-color: #d9edf7
   border-color: #bce8f1
-  color: #3a87ad
   hr
     border-top-color: #a6e1ec
   .alert-link
     color: #2d6987
 
 .alert-warning
+  color: #c09853
   background-color: #fcf8e3
   border-color: #fbeed5
-  color: #c09853
   hr
     border-top-color: #f8e5be
   .alert-link
     color: #a47e3c
 
 .alert-danger
+  color: #b94a48
   background-color: #f2dede
   border-color: #eed3d7
-  color: #b94a48
   hr
     border-top-color: #e6c1c7
   .alert-link
@@ -3711,9 +3860,9 @@ a.thumbnail
 
 
 .progress
-  overflow: hidden
   height: 20px
   margin-bottom: 20px
+  overflow: hidden
   background-color: #f5f5f5
   border-radius: 4px
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
@@ -3721,16 +3870,16 @@ a.thumbnail
 
 .progress-bar
   float: left
-  width: 0%
+  width: 0
   height: 100%
   font-size: 12px
-  color: #ffffff
+  color: #fff
   text-align: center
   background-color: #428bca
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15)
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15)
-  -webkit-transition: width 0.6s ease
-  transition: width 0.6s ease
+  -webkit-transition: width .6s ease
+  transition: width .6s ease
 
 .progress-striped .progress-bar
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent))
@@ -3810,16 +3959,16 @@ a.thumbnail
   list-style: none
 
 .list-group
-  margin-bottom: 20px
   padding-left: 0
+  margin-bottom: 20px
 
 .list-group-item
   position: relative
   display: block
   padding: 10px 15px
   margin-bottom: -1px
-  background-color: #ffffff
-  border: 1px solid #dddddd
+  background-color: #fff
+  border: 1px solid #ddd
   &:first-child
     border-top-right-radius: 4px
     border-top-left-radius: 4px
@@ -3833,21 +3982,21 @@ a.thumbnail
       margin-right: 5px
 
 a.list-group-item
-  color: #555555
+  color: #555
   .list-group-item-heading
-    color: #333333
+    color: #333
   &:hover, &:focus
     text-decoration: none
     background-color: #f5f5f5
 
 .list-group-item.active
   z-index: 2
-  color: #ffffff
+  color: #fff
   background-color: #428bca
   border-color: #428bca
   &:hover, &:focus
     z-index: 2
-    color: #ffffff
+    color: #fff
     background-color: #428bca
     border-color: #428bca
   .list-group-item-heading, &:hover .list-group-item-heading, &:focus .list-group-item-heading
@@ -3865,7 +4014,7 @@ a.list-group-item
 
 .panel
   margin-bottom: 20px
-  background-color: #ffffff
+  background-color: #fff
   border: 1px solid transparent
   border-radius: 4px
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
@@ -3874,18 +4023,18 @@ a.list-group-item
 .panel-body
   padding: 15px
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 .panel > .list-group
@@ -3905,7 +4054,7 @@ a.list-group-item
   .table
     margin-bottom: 0
   .panel-body + .table
-    border-top: 1px solid #dddddd
+    border-top: 1px solid #ddd
 
 .panel-heading
   padding: 10px 15px
@@ -3923,43 +4072,43 @@ a.list-group-item
 .panel-footer
   padding: 10px 15px
   background-color: #f5f5f5
-  border-top: 1px solid #dddddd
+  border-top: 1px solid #ddd
   border-bottom-right-radius: 3px
   border-bottom-left-radius: 3px
 
 .panel-group
   .panel
     margin-bottom: 0
-    border-radius: 4px
     overflow: hidden
+    border-radius: 4px
     + .panel
       margin-top: 5px
   .panel-heading
     border-bottom: 0
     + .panel-collapse .panel-body
-      border-top: 1px solid #dddddd
+      border-top: 1px solid #ddd
   .panel-footer
     border-top: 0
     + .panel-collapse .panel-body
-      border-bottom: 1px solid #dddddd
+      border-bottom: 1px solid #ddd
 
 .panel-default
-  border-color: #dddddd
+  border-color: #ddd
   >
     .panel-heading
-      color: #333333
+      color: #333
       background-color: #f5f5f5
-      border-color: #dddddd
+      border-color: #ddd
       + .panel-collapse .panel-body
-        border-top-color: #dddddd
+        border-top-color: #ddd
     .panel-footer + .panel-collapse .panel-body
-      border-bottom-color: #dddddd
+      border-bottom-color: #ddd
 
 .panel-primary
   border-color: #428bca
   >
     .panel-heading
-      color: #ffffff
+      color: #fff
       background-color: #428bca
       border-color: #428bca
       + .panel-collapse .panel-body
@@ -4041,15 +4190,15 @@ a.list-group-item
   font-size: 21px
   font-weight: bold
   line-height: 1
-  color: #000000
-  text-shadow: 0 1px 0 #ffffff
-  opacity: 0.2
+  color: #000
+  text-shadow: 0 1px 0 #fff
+  opacity: .2
   filter: alpha(opacity = 20)
   &:hover, &:focus
-    color: #000000
+    color: #000
     text-decoration: none
     cursor: pointer
-    opacity: 0.5
+    opacity: .5
     filter: alpha(opacity = 50)
 
 button.close
@@ -4059,157 +4208,157 @@ button.close
   border: 0
   -webkit-appearance: none
 
-.caret
-  display: inline-block
-  width: 0
-  height: 0
-  margin-left: 2px
-  vertical-align: middle
-  border-top: 4px solid #000000
-  border-right: 4px solid transparent
-  border-left: 4px solid transparent
-  border-bottom: 0 dotted
-  content: ""
+.modal-open
+  overflow: hidden
 
-.dropdown
-  position: relative
+body.modal-open
+  margin-right: 15px
 
-.dropdown-toggle:focus
-  outline: 0
+.modal-open
+  .navbar-fixed-top, .navbar-fixed-bottom
+    margin-right: 15px
 
-.dropdown-menu
-  position: absolute
-  top: 100%
-  left: 0
-  z-index: 1000
-  display: none
-  float: left
-  min-width: 160px
-  padding: 5px 0
-  margin: 2px 0 0
-  list-style: none
-  font-size: 14px
-  background-color: #ffffff
-  border: 1px solid #cccccc
-  border: 1px solid rgba(0, 0, 0, 0.15)
-  border-radius: 4px
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
-  background-clip: padding-box
-  &.pull-right
-    right: 0
-    left: auto
-  .divider
-    height: 1px
-    margin: 9px 0
-    overflow: hidden
-    background-color: #e5e5e5
-  >
-    li > a
-      display: block
-      padding: 3px 20px
-      clear: both
-      font-weight: normal
-      line-height: 1.428571429
-      color: #333333
-      white-space: nowrap
-      &:hover, &:focus
-        text-decoration: none
-        color: #ffffff
-        background-color: #428bca
-    .active > a
-      color: #ffffff
-      text-decoration: none
-      outline: 0
-      background-color: #428bca
-      &:hover, &:focus
-        color: #ffffff
-        text-decoration: none
-        outline: 0
-        background-color: #428bca
-    .disabled > a
-      color: #999999
-      &:hover, &:focus
-        color: #999999
-      &:hover, &:focus
-        text-decoration: none
-        background-color: transparent
-        background-image: none
-        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
-        cursor: not-allowed
-
-.open >
-  .dropdown-menu
-    display: block
-  a
-    outline: 0
-
-.dropdown-header
-  display: block
-  padding: 3px 20px
-  font-size: 12px
-  line-height: 1.428571429
-  color: #999999
-
-.dropdown-backdrop
+.modal
   position: fixed
-  left: 0
+  top: 0
   right: 0
   bottom: 0
+  left: 0
+  z-index: 1040
+  display: none
+  overflow: auto
+  overflow-y: scroll
+  &.fade .modal-dialog
+    -webkit-transform: translate(0, -25%)
+    -ms-transform: translate(0, -25%)
+    transform: translate(0, -25%)
+    -webkit-transition: -webkit-transform .3s ease-out
+    -moz-transition: -moz-transform .3s ease-out
+    -o-transition: -o-transform .3s ease-out
+    transition: transform .3s ease-out
+  &.in .modal-dialog
+    -webkit-transform: translate(0, 0)
+    -ms-transform: translate(0, 0)
+    transform: translate(0, 0)
+
+.modal-dialog
+  z-index: 1050
+  width: auto
+  padding: 10px
+  margin-right: auto
+  margin-left: auto
+
+.modal-content
+  position: relative
+  background-color: #fff
+  border: 1px solid #999
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  border-radius: 6px
+  outline: 0
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+  background-clip: padding-box
+
+.modal-backdrop
+  position: fixed
   top: 0
-  z-index: 990
-
-.pull-right > .dropdown-menu
   right: 0
-  left: auto
+  bottom: 0
+  left: 0
+  z-index: 1030
+  background-color: #000
+  &.fade
+    opacity: 0
+    filter: alpha(opacity = 0)
+  &.in
+    opacity: .5
+    filter: alpha(opacity = 50)
 
-.dropup .caret, .navbar-fixed-bottom .dropdown .caret
-  border-top: 0 dotted
-  border-bottom: 4px solid #000000
-  content: ""
+.modal-header
+  min-height: 16.428571429px
+  padding: 15px
+  border-bottom: 1px solid #e5e5e5
+  .close
+    margin-top: -2px
 
-.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu
-  top: auto
-  bottom: 100%
-  margin-bottom: 1px
+.modal-title
+  margin: 0
+  line-height: 1.428571429
 
-@media (min-width: 768px)
-  .navbar-right .dropdown-menu
-    right: 0
-    left: auto
+.modal-body
+  position: relative
+  padding: 20px
+
+.modal-footer
+  padding: 19px 20px 20px
+  margin-top: 15px
+  text-align: right
+  border-top: 1px solid #e5e5e5
+  &:before
+    display: table
+    content: " "
+  &:after
+    display: table
+    content: " "
+    clear: both
+  &:before
+    display: table
+    content: " "
+  &:after
+    display: table
+    content: " "
+    clear: both
+  .btn + .btn
+    margin-bottom: 0
+    margin-left: 5px
+  .btn-group .btn + .btn
+    margin-left: -1px
+  .btn-block + .btn-block
+    margin-left: 0
+
+@media screen and (min-width: 768px)
+  .modal-dialog
+    right: auto
+    left: 50%
+    width: 600px
+    padding-top: 30px
+    padding-bottom: 30px
+  .modal-content
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
 
 .tooltip
   position: absolute
   z-index: 1030
   display: block
-  visibility: visible
   font-size: 12px
   line-height: 1.4
   opacity: 0
   filter: alpha(opacity = 0)
+  visibility: visible
   &.in
-    opacity: 0.9
+    opacity: .9
     filter: alpha(opacity = 90)
   &.top
+    padding: 5px 0
     margin-top: -3px
-    padding: 5px 0
   &.right
+    padding: 0 5px
     margin-left: 3px
-    padding: 0 5px
   &.bottom
-    margin-top: 3px
     padding: 5px 0
+    margin-top: 3px
   &.left
-    margin-left: -3px
     padding: 0 5px
+    margin-left: -3px
 
 .tooltip-inner
   max-width: 200px
   padding: 3px 8px
-  color: #ffffff
+  color: #fff
   text-align: center
   text-decoration: none
-  background-color: #000000
+  background-color: #000
   border-radius: 4px
 
 .tooltip-arrow
@@ -4224,46 +4373,46 @@ button.close
     bottom: 0
     left: 50%
     margin-left: -5px
+    border-top-color: #000
     border-width: 5px 5px 0
-    border-top-color: #000000
   &.top-left .tooltip-arrow
     bottom: 0
     left: 5px
+    border-top-color: #000
     border-width: 5px 5px 0
-    border-top-color: #000000
   &.top-right .tooltip-arrow
-    bottom: 0
     right: 5px
+    bottom: 0
+    border-top-color: #000
     border-width: 5px 5px 0
-    border-top-color: #000000
   &.right .tooltip-arrow
     top: 50%
     left: 0
     margin-top: -5px
+    border-right-color: #000
     border-width: 5px 5px 5px 0
-    border-right-color: #000000
   &.left .tooltip-arrow
     top: 50%
     right: 0
     margin-top: -5px
+    border-left-color: #000
     border-width: 5px 0 5px 5px
-    border-left-color: #000000
   &.bottom .tooltip-arrow
     top: 0
     left: 50%
     margin-left: -5px
+    border-bottom-color: #000
     border-width: 0 5px 5px
-    border-bottom-color: #000000
   &.bottom-left .tooltip-arrow
     top: 0
     left: 5px
+    border-bottom-color: #000
     border-width: 0 5px 5px
-    border-bottom-color: #000000
   &.bottom-right .tooltip-arrow
     top: 0
     right: 5px
+    border-bottom-color: #000
     border-width: 0 5px 5px
-    border-bottom-color: #000000
 
 .popover
   position: absolute
@@ -4274,14 +4423,14 @@ button.close
   max-width: 276px
   padding: 1px
   text-align: left
-  background-color: #ffffff
-  background-clip: padding-box
-  border: 1px solid #cccccc
+  white-space: normal
+  background-color: #fff
+  border: 1px solid #ccc
   border: 1px solid rgba(0, 0, 0, 0.2)
   border-radius: 6px
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
-  white-space: normal
+  background-clip: padding-box
   &.top
     margin-top: -10px
   &.right
@@ -4292,8 +4441,8 @@ button.close
     margin-left: -10px
 
 .popover-title
-  margin: 0
   padding: 8px 14px
+  margin: 0
   font-size: 14px
   font-weight: normal
   line-height: 18px
@@ -4323,195 +4472,76 @@ button.close
       content: ""
     border-width: 11px
   &.top .arrow
+    bottom: -11px
     left: 50%
     margin-left: -11px
-    border-bottom-width: 0
-    border-top-color: #999999
+    border-top-color: #999
     border-top-color: rgba(0, 0, 0, 0.25)
-    bottom: -11px
+    border-bottom-width: 0
     &:after
-      content: " "
       bottom: 1px
       margin-left: -10px
+      border-top-color: #fff
       border-bottom-width: 0
-      border-top-color: #ffffff
+      content: " "
   &.right .arrow
     top: 50%
     left: -11px
     margin-top: -11px
-    border-left-width: 0
-    border-right-color: #999999
+    border-right-color: #999
     border-right-color: rgba(0, 0, 0, 0.25)
+    border-left-width: 0
     &:after
-      content: " "
-      left: 1px
       bottom: -10px
+      left: 1px
+      border-right-color: #fff
       border-left-width: 0
-      border-right-color: #ffffff
+      content: " "
   &.bottom .arrow
+    top: -11px
     left: 50%
     margin-left: -11px
-    border-top-width: 0
-    border-bottom-color: #999999
+    border-bottom-color: #999
     border-bottom-color: rgba(0, 0, 0, 0.25)
-    top: -11px
+    border-top-width: 0
     &:after
-      content: " "
       top: 1px
       margin-left: -10px
+      border-bottom-color: #fff
       border-top-width: 0
-      border-bottom-color: #ffffff
+      content: " "
   &.left .arrow
     top: 50%
     right: -11px
     margin-top: -11px
-    border-right-width: 0
-    border-left-color: #999999
+    border-left-color: #999
     border-left-color: rgba(0, 0, 0, 0.25)
+    border-right-width: 0
     &:after
-      content: " "
       right: 1px
-      border-right-width: 0
-      border-left-color: #ffffff
       bottom: -10px
-
-.modal-open
-  overflow: hidden
-
-body.modal-open
-  margin-right: 15px
-
-.modal-open
-  .navbar-fixed-top, .navbar-fixed-bottom
-    margin-right: 15px
-
-.modal
-  display: none
-  overflow: auto
-  overflow-y: scroll
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 1040
-  &.fade .modal-dialog
-    -webkit-transform: translate(0, -25%)
-    -ms-transform: translate(0, -25%)
-    transform: translate(0, -25%)
-    -webkit-transition: -webkit-transform 0.3s ease-out
-    -moz-transition: -moz-transform 0.3s ease-out
-    -o-transition: -o-transform 0.3s ease-out
-    transition: transform 0.3s ease-out
-  &.in .modal-dialog
-    -webkit-transform: translate(0, 0)
-    -ms-transform: translate(0, 0)
-    transform: translate(0, 0)
-
-.modal-dialog
-  margin-left: auto
-  margin-right: auto
-  width: auto
-  padding: 10px
-  z-index: 1050
-
-.modal-content
-  position: relative
-  background-color: #ffffff
-  border: 1px solid #999999
-  border: 1px solid rgba(0, 0, 0, 0.2)
-  border-radius: 6px
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
-  background-clip: padding-box
-  outline: none
-
-.modal-backdrop
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 1030
-  background-color: #000000
-  &.fade
-    opacity: 0
-    filter: alpha(opacity = 0)
-  &.in
-    opacity: 0.5
-    filter: alpha(opacity = 50)
-
-.modal-header
-  padding: 15px
-  border-bottom: 1px solid #e5e5e5
-  min-height: 16.428571429px
-  .close
-    margin-top: -2px
-
-.modal-title
-  margin: 0
-  line-height: 1.428571429
-
-.modal-body
-  position: relative
-  padding: 20px
-
-.modal-footer
-  margin-top: 15px
-  padding: 19px 20px 20px
-  text-align: right
-  border-top: 1px solid #e5e5e5
-  &:before
-    content: " "
-    display: table
-  &:after
-    content: " "
-    display: table
-    clear: both
-  &:before
-    content: " "
-    display: table
-  &:after
-    content: " "
-    display: table
-    clear: both
-  .btn + .btn
-    margin-left: 5px
-    margin-bottom: 0
-  .btn-group .btn + .btn
-    margin-left: -1px
-  .btn-block + .btn-block
-    margin-left: 0
-
-@media screen and (min-width: 768px)
-  .modal-dialog
-    left: 50%
-    right: auto
-    width: 600px
-    padding-top: 30px
-    padding-bottom: 30px
-  .modal-content
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+      border-left-color: #fff
+      border-right-width: 0
+      content: " "
 
 .carousel
   position: relative
 
 .carousel-inner
   position: relative
-  overflow: hidden
   width: 100%
+  overflow: hidden
   >
     .item
-      display: none
       position: relative
-      -webkit-transition: 0.6s ease-in-out left
-      transition: 0.6s ease-in-out left
+      display: none
+      -webkit-transition: .6s ease-in-out left
+      transition: .6s ease-in-out left
       >
         img, a > img
           display: block
-          max-width: 100%
           height: auto
+          max-width: 100%
           line-height: 1
     .active, .next, .prev
       display: block
@@ -4536,35 +4566,35 @@ body.modal-open
 .carousel-control
   position: absolute
   top: 0
-  left: 0
   bottom: 0
+  left: 0
   width: 15%
-  opacity: 0.5
-  filter: alpha(opacity = 50)
   font-size: 20px
-  color: #ffffff
+  color: #fff
   text-align: center
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
+  opacity: .5
+  filter: alpha(opacity = 50)
   &.left
-    background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)))
-    background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%))
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%)
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%)
+    background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)))
+    background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0), color-stop(rgba(0, 0, 0, 0.0001) 100%))
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%)
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%)
     background-repeat: repeat-x
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#00000000',GradientType=1)
   &.right
-    left: auto
     right: 0
-    background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)))
-    background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0%), color-stop(rgba(0, 0, 0, 0.5) 100%))
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%)
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%)
+    left: auto
+    background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)))
+    background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0), color-stop(rgba(0, 0, 0, 0.5) 100%))
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%)
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%)
     background-repeat: repeat-x
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#80000000',GradientType=1)
   &:hover, &:focus
-    color: #ffffff
+    color: #fff
     text-decoration: none
-    opacity: 0.9
+    opacity: .9
     filter: alpha(opacity = 90)
   .icon-prev, .icon-next, .glyphicon-chevron-left, .glyphicon-chevron-right
     position: absolute
@@ -4589,34 +4619,34 @@ body.modal-open
   left: 50%
   z-index: 15
   width: 60%
-  margin-left: -30%
   padding-left: 0
-  list-style: none
+  margin-left: -30%
   text-align: center
+  list-style: none
   li
     display: inline-block
     width: 10px
     height: 10px
     margin: 1px
     text-indent: -999px
-    border: 1px solid #ffffff
-    border-radius: 10px
     cursor: pointer
+    border: 1px solid #fff
+    border-radius: 10px
   .active
-    margin: 0
     width: 12px
     height: 12px
-    background-color: #ffffff
+    margin: 0
+    background-color: #fff
 
 .carousel-caption
   position: absolute
-  left: 15%
   right: 15%
   bottom: 20px
+  left: 15%
   z-index: 10
   padding-top: 20px
   padding-bottom: 20px
-  color: #ffffff
+  color: #fff
   text-align: center
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
   .btn
@@ -4631,19 +4661,19 @@ body.modal-open
       margin-left: -15px
       font-size: 30px
   .carousel-caption
-    left: 20%
     right: 20%
+    left: 20%
     padding-bottom: 30px
   .carousel-indicators
     bottom: 20px
 
 .clearfix
   &:before
-    content: " "
     display: table
+    content: " "
   &:after
-    content: " "
     display: table
+    content: " "
     clear: both
 
 .pull-right
@@ -4926,22 +4956,3 @@ th.hidden-lg, td.hidden-lg
     display: table-cell !important
   .hidden-print, tr.hidden-print, th.hidden-print, td.hidden-print
     display: none !important
-
-.fade
-  opacity: 0
-  -webkit-transition: opacity 0.15s linear
-  transition: opacity 0.15s linear
-  &.in
-    opacity: 1
-
-.collapse
-  display: none
-  &.in
-    display: block
-
-.collapsing
-  position: relative
-  height: 0
-  overflow: hidden
-  -webkit-transition: height 0.35s ease
-  transition: height 0.35s ease
