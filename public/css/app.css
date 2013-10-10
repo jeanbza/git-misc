@@ -10110,8 +10110,3 @@ body .ui-tooltip {
 .app-footer {
   text-align: center;
 }
-
-/* line 1, ../../sass/layouts/_standard.sass */
-body {
-  padding: 80px 20px;
-}
