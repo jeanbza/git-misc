@@ -10119,7 +10119,11 @@ body .ui-tooltip {
   background-image: none;
   box-shadow: none;
 }
-/* line 13, ../../sass/modules/header/_module_header.sass */
+/* line 12, ../../sass/modules/header/_module_header.sass */
+.app-header .navbar .navbar-brand {
+  padding-left: 0px;
+}
+/* line 15, ../../sass/modules/header/_module_header.sass */
 .app-header .navbar li:hover {
   background-color: #f8f8f8;
 }
