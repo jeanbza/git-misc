@@ -19,7 +19,7 @@
             echo $this->headScript()->prependFile($this->basePath() . '/js/handlebars.js');
             echo $this->headScript()->prependFile($this->basePath() . '/js/ember.js');
             echo $this->headScript()->prependFile($this->basePath() . '/js/ember-data.js');
-            ?>
+        ?>
     </head>
     <body>
         <div class="container">
@@ -35,6 +35,5 @@
                 </div>
             </div>
         </div>
-        <?php echo $this->inlineScript() ?>
     </body>
 </html>
