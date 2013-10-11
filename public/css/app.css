@@ -10106,6 +10106,24 @@ body .ui-tooltip {
   padding-bottom: 10px;
 }
 
+/* line 2, ../../sass/modules/header/_module_header.sass */
+.app-header .page-header {
+  margin-bottom: 0px;
+}
+/* line 4, ../../sass/modules/header/_module_header.sass */
+.app-header .navbar {
+  border-radius: 0px;
+  background-color: white;
+  border-left: 0px;
+  border-right: 0px;
+  background-image: none;
+  box-shadow: none;
+}
+/* line 13, ../../sass/modules/header/_module_header.sass */
+.app-header .navbar li:hover {
+  background-color: #f8f8f8;
+}
+
 /* line 3, ../../sass/modules/footer/_module_footer.sass */
 .app-footer {
   text-align: center;

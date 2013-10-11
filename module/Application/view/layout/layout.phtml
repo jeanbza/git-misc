@@ -19,10 +19,12 @@
     </head>
     <body>
         <div class="container">
-            <div class="app-header page-header">
-              <h1>Jean de Klerk <small>Some small header</small></h1>
+            <div class="app-header">
+                <div class="page-header">
+                  <h1>Jean de Klerk <small>Some small header</small></h1>
+                </div>
+                <?php echo $this->partial('partial/navigation.phtml'); ?>
             </div>
-            <?php echo $this->partial('partial/navigation.phtml'); ?>
             <div class="app-body row">
                 <div class="col-md-12">
                     <?php echo $this->content; ?>
