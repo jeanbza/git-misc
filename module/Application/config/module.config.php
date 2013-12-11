@@ -10,7 +10,7 @@
 return array(
     'router' => array(
         'routes' => array(
-            'blog' => array(
+            'home' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/',
