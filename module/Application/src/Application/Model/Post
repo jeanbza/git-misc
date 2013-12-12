@@ -1,0 +1,54 @@
+<?php
+namespace Application\Model;
+
+class Post {
+    public $id;
+    public $title;
+    public $content;
+    public $date;
+    public $parent_post_id;
+
+    public function getConfig()
+    {
+        return include __DIR__ . '/config/module.config.php';
+    }
+
+    public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\ClassMapAutoloader' => array(
+                __DIR__ . '/autoload_classmap.php',
+            ),
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
+        );
+    }
+
+    public function __construct($data) {
+        $this->id = (isset($data['id'])) ? $data['id'] : null;
+        $this->title = (isset($data['title'])) ? $data['title'] : null;
+        $this->content = (isset($data['content'])) ? $data['content'] : null;
+        $this->date = (isset($data['date'])) ? $data['date'] : null;
+        $this->parent_post_id = (isset($data['parent_post_id'])) ? $data['parent_post_id'] : null;
+    }
+
+    public function test() {
+        return "works";
+    }
+
+    public function fetchAll() {
+        $db = Zend_Db::factory('Pdo_Mysql', array(
+            'driver' => 'Mysqli',
+            'database' => 'jeansite',
+            'username' => 'root',
+            'password' => ''
+        )); 
+
+        $sql = "SELECT * FROM jeansite.post";
+
+        return $db->query($sql)->fetchAll();
+    }
+}
