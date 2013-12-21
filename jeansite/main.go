@@ -12,7 +12,10 @@ import (
 func main() {
     http.HandleFunc("/", indexPage)
 
-    fileServer := http.StripPrefix("/js/", http.FileServer(http.Dir("js")))
+    fileServer := http.StripPrefix("/css/", http.FileServer(http.Dir("css")))
+    http.Handle("/css/", fileServer)
+
+    fileServer = http.StripPrefix("/js/", http.FileServer(http.Dir("js")))
     http.Handle("/js/", fileServer)
 
     fileServer = http.StripPrefix("/html/", http.FileServer(http.Dir("html")))
