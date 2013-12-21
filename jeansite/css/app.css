@@ -1,8 +1,3 @@
-/* line 1, ../sass/modules/footer/_footer_module.sass */
-.jdk-footer {
-  text-align: center;
-}
-
 /* line 1, ../sass/externals/bootstrap/_bootstrap.sass */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
@@ -8149,4 +8144,24 @@ th.hidden-lg, td.hidden-lg {
   .hidden-print, tr.hidden-print, th.hidden-print, td.hidden-print {
     display: none !important;
   }
+}
+/* line 1, ../sass/ui_patterns/_bootstrap_overrides.sass */
+.row {
+  margin: 0;
+}
+
+/* line 1, ../sass/modules/header/_header_module.sass */
+.jdk-header {
+  border-radius: 0;
+  background-color: white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/* line 1, ../sass/modules/footer/_footer_module.sass */
+.jdk-footer {
+  text-align: center;
+  padding-top: 15px;
 }
