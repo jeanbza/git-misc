@@ -1,13 +1,17 @@
 package main
 
 import (
-    //"html/template"
-    "io/ioutil"
+    "html/template"
+    // "io/ioutil"
     "net/http"
-    //"regexp"
     "os"
     "fmt"
 )
+
+type Post struct {
+    Title   string
+    Content string
+}
 
 func main() {
     http.HandleFunc("/", indexPage)
@@ -26,8 +30,23 @@ func main() {
 }
 
 func indexPage(rw http.ResponseWriter, req *http.Request) {
-    index, _ := ioutil.ReadFile("html/index.html")
-    rw.Write([]byte(index))
+    p := []Post{
+        Post{
+            Title: "Test blog title 1", 
+            Content: "Test blog content 1",
+        },
+        Post{
+            Title: "Test blog title 2",
+            Content: "Test blog content 2",
+        },
+        Post{
+            Title: "Test blog title THE LAST",
+            Content: "Test blog content BOOM THE LAST",
+        },
+    }
+
+    t, _ := template.ParseFiles("html/index.html")
+    t.Execute(rw, p)
 }
 
 func checkError(err error) {

@@ -30,24 +30,15 @@
                     </ul>
                 </div>
             </nav>
-            <div class="row">
-                <h2>This is a blog title</h2>
-                <div>
-                    This is a blog post.
+
+            {{range .}}
+                <div class="row">
+                    <h2>{{.Title}}</h2>
+                    <div>
+                        {{.Content}}
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h2>This is a blog title</h2>
-                <div>
-                    This is a blog post.
-                </div>
-            </div>
-            <div class="row">
-                <h2>This is a blog title</h2>
-                <div>
-                    This is a blog post.
-                </div>
-            </div>
+            {{end}}
             <nav class="navbar navbar-default navbar-fixed-bottom jdk-footer" role="footer">
                 This is my footer
             </nav>
