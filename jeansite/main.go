@@ -2,7 +2,6 @@ package main
 
 import (
     "html/template"
-    // "io/ioutil"
     "net/http"
     "os"
     "fmt"
@@ -14,7 +13,12 @@ type Post struct {
 }
 
 func main() {
-    http.HandleFunc("/", indexPage)
+    http.HandleFunc("/", blogPage)
+    http.HandleFunc("/blog", blogPage)
+    http.HandleFunc("/blog/", blogPage)
+
+    http.HandleFunc("/about", aboutPage)
+    http.HandleFunc("/about/", aboutPage)
 
     fileServer := http.StripPrefix("/css/", http.FileServer(http.Dir("css")))
     http.Handle("/css/", fileServer)
@@ -29,7 +33,7 @@ func main() {
     checkError(err)
 }
 
-func indexPage(rw http.ResponseWriter, req *http.Request) {
+func blogPage(rw http.ResponseWriter, req *http.Request) {
     p := []Post{
         Post{
             Title: "Test blog title 1", 
@@ -45,8 +49,15 @@ func indexPage(rw http.ResponseWriter, req *http.Request) {
         },
     }
 
-    t, _ := template.ParseFiles("html/index.html")
-    t.Execute(rw, p)
+    tmpl := make(map[string]*template.Template)
+    tmpl["blog.html"] = template.Must(template.ParseFiles("html/blog.html", "html/index.html"))
+    tmpl["blog.html"].ExecuteTemplate(rw, "base", p)
+}
+
+func aboutPage(rw http.ResponseWriter, req *http.Request) {
+    tmpl := make(map[string]*template.Template)
+    tmpl["about.html"] = template.Must(template.ParseFiles("html/about.html", "html/index.html"))
+    tmpl["about.html"].ExecuteTemplate(rw, "base", nil)
 }
 
 func checkError(err error) {

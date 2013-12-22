@@ -1,3 +1,5 @@
+{{define "base"}}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,8 +22,8 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Blog</a></li>
-                        <li><a href="#">About</a></li>
+                        <li class="active"><a href="/">Blog</a></li>
+                        <li><a href="about">About</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="http://www.github.com/jadekler">Github</a></li>
@@ -31,17 +33,12 @@
                 </div>
             </nav>
 
-            {{range .}}
-                <div class="row">
-                    <h2>{{.Title}}</h2>
-                    <div>
-                        {{.Content}}
-                    </div>
-                </div>
-            {{end}}
+            {{template "body" .}}
+
             <nav class="navbar navbar-default navbar-fixed-bottom jdk-footer" role="footer">
                 This is my footer
             </nav>
         </div>
     </body>
 </html>
+{{end}}
