@@ -36,7 +36,7 @@ func main() {
 func blogPage(rw http.ResponseWriter, req *http.Request) {
     p := []Post{
         Post{
-            Title: "Test blog title 1", 
+            Title: "Test blog title 1",
             Content: "Test blog content 1",
         },
         Post{
