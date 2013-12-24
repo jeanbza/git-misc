@@ -25,6 +25,9 @@ func main() {
     http.HandleFunc("/about", aboutPage)
     http.HandleFunc("/about/", aboutPage)
 
+    http.HandleFunc("/contact", contactPage)
+    http.HandleFunc("/contact/", contactPage)
+
     fileServer := http.StripPrefix("/css/", http.FileServer(http.Dir("css")))
     http.Handle("/css/", fileServer)
 
@@ -71,6 +74,17 @@ func aboutPage(rw http.ResponseWriter, req *http.Request) {
     tmpl := make(map[string]*template.Template)
     tmpl["about.html"] = template.Must(template.ParseFiles("html/about.html", "html/index.html"))
     tmpl["about.html"].ExecuteTemplate(rw, "base", p)
+}
+
+func contactPage(rw http.ResponseWriter, req *http.Request) {
+    p := Page{
+        Title: "contact",
+        Posts: nil,
+    }
+
+    tmpl := make(map[string]*template.Template)
+    tmpl["contact.html"] = template.Must(template.ParseFiles("html/contact.html", "html/index.html"))
+    tmpl["contact.html"].ExecuteTemplate(rw, "base", p)
 }
 
 func checkError(err error) {
