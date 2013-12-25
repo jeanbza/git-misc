@@ -1,0 +1,36 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Jean de Klerk'); ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/app.css') ?>
+
+        <?php 
+            echo $this->headScript()->prependFile($this->basePath() . '/js/jquery-1.10.2.min.js');
+            echo $this->headScript()->prependFile($this->basePath() . '/js/bootstrap.min.js');
+        ?>
+    </head>
+    <body>
+        <div class="container">
+            <div class="app-header">
+                <div class="page-header">
+                  <h1>Jean de Klerk <small>Some small header</small></h1>
+                </div>
+                <?php echo $this->partial('partial/navigation.phtml'); ?>
+            </div>
+            <div class="app-body row">
+                <div class="col-md-12">
+                    <?php echo $this->content; ?>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
