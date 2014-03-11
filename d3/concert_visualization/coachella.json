@@ -1,0 +1,14 @@
+[
+{"name":"flare.Coachella Day 1.a","size":2,"imports":["flare.Musicians.OutKast", "flare.Musicians.The Knife", "flare.Musicians.The Replacements"]},
+{"name":"flare.Coachella Day 2.a","size":2,"imports":["flare.Musicians.Muse", "flare.Musicians.Skrillex", "flare.Musicians.Lorde"]},
+{"name":"flare.Coachella Day 3.a","size":2,"imports":["flare.Musicians.Arcade Fire", "flare.Musicians.Beck", "flare.Musicians.Calvin Harris"]},
+{"name":"flare.Musician.OutKast","size":2,"imports":["flare.Coachella Day 1.a"]},
+{"name":"flare.Musician.The Knife","size":2,"imports":["flare.Coachella Day 1.a"]},
+{"name":"flare.Musician.The Replacements","size":2,"imports":["flare.Coachella Day 1.a"]},
+{"name":"flare.Musician.Muse","size":2,"imports":["flare.Coachella Day 2.a"]},
+{"name":"flare.Musician.Skrillex","size":2,"imports":["flare.Coachella Day 2.a"]},
+{"name":"flare.Musician.Lorde","size":2,"imports":["flare.Coachella Day 2.a"]},
+{"name":"flare.Musician.Arcade Fire","size":2,"imports":["flare.Coachella Day 3.a"]},
+{"name":"flare.Musician.Beck","size":2,"imports":["flare.Coachella Day 3.a"]},
+{"name":"flare.Musician.Calvin Harris","size":2,"imports":["flare.Coachella Day 3.a"]}
+]
