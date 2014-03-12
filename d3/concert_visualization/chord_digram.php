@@ -17,6 +17,7 @@ body {
 <script>
 
 var joinedMusicians = joinDuplicates(musiciansList);
+trimArr(joinedMusicians, 2);
 var imports = convertToJSONFlare(joinedMusicians);
 
 function joinDuplicates(arr) {
@@ -42,6 +43,17 @@ function joinDuplicates(arr) {
   }
 
   return joinedArr;
+}
+
+function trimArr(arr, trimLength) {
+  for (var i = 0; i < arr.length; i++) {
+    musician = arr[i];
+
+    if (musician.venues.length < trimLength) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
 }
 
 function convertToJSONFlare(arr) {
