@@ -25,15 +25,17 @@ function joinDuplicates(arr) {
   var joinedArr = [];
 
   arr.forEach(function(musician) {
-    if (joinedHash[musician.name]) {
+    musicianName = musician.name.toUpperCase();
+    
+    if (joinedHash[musicianName]) {
       musician.venues.forEach(function(venue) {
         // Check if the musician already has the venue listed (duplicate entry)
-        if (joinedHash[musician.name].indexOf(venue) == -1) {
-          joinedHash[musician.name].push(venue);
+        if (joinedHash[musicianName].indexOf(venue) == -1) {
+          joinedHash[musicianName].push(venue);
         }
       });
     } else {
-      joinedHash[musician.name] = musician.venues;
+      joinedHash[musicianName] = musician.venues;
     }
   });
 
