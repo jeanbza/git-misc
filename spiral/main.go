@@ -24,7 +24,14 @@ func main() {
 
     spiralNum, err := strconv.Atoi(args[1])
     checkError(err)
-    closestSquare := findClosestSquare(spiralNum)
+    closestSquare := math.Ceil(math.Sqrt(float64(spiralNum+1)))
+
+    // For even-sized squares, we expand to the nearest odd so that our solution is
+    // perfectly square (aesthetical choice)
+    if (int(closestSquare) % 2 == 0) {
+        closestSquare++
+    }
+
     x := int(math.Floor(closestSquare/2))
     y := x
     direction := 0
@@ -73,29 +80,6 @@ func emitGridGraphically(grid [][]int) {
             fmt.Printf("%6d ", val);
         }
         fmt.Print("\n")
-    }
-}
-
-// Finds the closest square (moving up only) to someNum
-func findClosestSquare(someNum int) (float64) {
-    // In the case of 1, we want a 3x3 grid. For all other numbers the following logic will work
-    if (someNum == 1) {
-        return 3
-    }
-
-    var someNumSquared float64
-    var i int
-
-    for i = someNum; someNumSquared == 0 || float64(int64(someNumSquared)) != someNumSquared && i < 100; i++ {
-        someNumSquared = math.Sqrt(float64(i))
-    }
-
-    // We know that grids where our square num is even are too small, so we increment those
-    // to the larger odd version
-    if (int(someNumSquared) % 2 == 0) {
-        return someNumSquared+1
-    } else {
-        return someNumSquared
     }
 }
 
