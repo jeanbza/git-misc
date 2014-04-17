@@ -1,0 +1,1 @@
+Install go: [http://golang.org/doc/install]
