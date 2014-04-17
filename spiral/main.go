@@ -21,16 +21,14 @@ func main() {
     spiralNum, err := strconv.Atoi(args[1])
     checkError(err)
     closestSquare := findClosestSquare(spiralNum)
-
-    // Just setting up our ZxZ grid. Golang doesn't allow dynamic array size allocation, so
-    // we have to use slices + make (which can only allocate one level deep at a time)
     x := int(math.Ceil(float64(closestSquare/2)))
     y := x
-    
     direction := 0
     stepSize := 1
     stepThreshhold := 1
 
+    // Just setting up our ZxZ grid. Golang doesn't allow dynamic array size allocation, so
+    // we have to use slices + make (which can only allocate one level deep at a time)
     var grid = make([][]int, closestSquare)
     for i := range grid {
         grid[i] = make([]int, closestSquare)
@@ -96,6 +94,8 @@ func findClosestSquare(someNum int) (int) {
         someNumSquared = math.Sqrt(float64(i))
     }
 
+    // We know that grids where our square num is even are too small, so we
+    // increment those to the larger odd version
     if (int(someNumSquared) % 2 == 0) {
         return int(someNumSquared)+1
     } else {
