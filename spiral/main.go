@@ -10,9 +10,13 @@ import (
     "fmt"
 )
 
+// SOLUTION OUTLINE
 // Our basic approach is to go one direction a certain step size, change direction
-// and do the same there, then increase our step size and repeat (our direction cycles
-// between right, down, left, up between <stepsize> steps)
+// and go the same step size, then increase our step size and repeat. The direction 
+// cycles between right, down, left, up each <stepsize> steps
+// 
+// SOLUTION EFFICIENCY
+// This solution runs with O(n) space and time complexity
 func main() {
     args := os.Args
     
