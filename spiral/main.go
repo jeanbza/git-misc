@@ -10,6 +10,9 @@ import (
     "fmt"
 )
 
+// Our basic approach is to go one direction a certain step size, change direction
+// and do the same there, then increase our step size and repeat (our direction cycles
+// between right, down, left, up between <stepsize> steps)
 func main() {
     args := os.Args
     
@@ -21,35 +24,28 @@ func main() {
     spiralNum, err := strconv.Atoi(args[1])
     checkError(err)
     closestSquare := findClosestSquare(spiralNum)
-    x := int(math.Ceil(float64(closestSquare/2)))
+    x := int(math.Floor(closestSquare/2))
     y := x
     direction := 0
     stepSize := 1
     stepThreshhold := 1
 
-    // Just setting up our ZxZ grid. Golang doesn't allow dynamic array size allocation, so
+    // Setting up our ZxZ grid. Golang doesn't allow dynamic array size allocation, so
     // we have to use slices + make (which can only allocate one level deep at a time)
-    var grid = make([][]int, closestSquare)
+    var grid = make([][]int, int(closestSquare))
     for i := range grid {
-        grid[i] = make([]int, closestSquare)
+        grid[i] = make([]int, int(closestSquare))
     }
 
-    // Our basic approach is to go one direction a certain step size, change direction
-    // and do the same there, then increase our step size and repeat (our direction cycles
-    // between right, down, left, up between <stepsize> steps)
     for i := 1; i <= spiralNum; i++ {
         if (direction % 4 == 0) {
-            // right
-            y++
+            y++ // right
         } else if (direction % 4 == 1) {
-            // down
-            x++
+            x++ // down
         } else if (direction % 4 == 2) {
-            //left
-            y--
+            y-- //left
         } else if (direction % 4 == 3) {
-            // up
-            x--
+            x-- // up
         }
 
         grid[x][y] = i
@@ -59,9 +55,7 @@ func main() {
             direction++
         }
         
-        // When we reach the next threshhold, we increase our step size and 
-        // set our next threshhold (which is 2x<stepSize>, since our area
-        // increases twice per 'revolution' of the square)
+        // At the next threshhold, we increase our step size and set our next threshhold
         if (i == stepThreshhold) {
             stepSize++
             stepThreshhold += stepSize*2
@@ -71,11 +65,10 @@ func main() {
     emitGridGraphically(grid)
 }
 
-// Emits the grid graphically
+// Emits slice of slices as a grid
 func emitGridGraphically(grid [][]int) {
-    // Emit the grid as a grid (instead of a slice of slices)
-    for _,innerSlice := range grid {
-        for _,val := range innerSlice {
+    for _, innerSlice := range grid {
+        for _, val := range innerSlice {
             fmt.Printf("%6d ", val);
         }
         fmt.Print("\n")
@@ -83,7 +76,12 @@ func emitGridGraphically(grid [][]int) {
 }
 
 // Finds the closest square (moving up only) to someNum
-func findClosestSquare(someNum int) (int) {
+func findClosestSquare(someNum int) (float64) {
+    // In the case of 1, we want a 3x3 grid. For all other numbers the following logic will work
+    if (someNum == 1) {
+        return 3
+    }
+
     var someNumSquared float64
     var i int
 
@@ -91,12 +89,12 @@ func findClosestSquare(someNum int) (int) {
         someNumSquared = math.Sqrt(float64(i))
     }
 
-    // We know that grids where our square num is even are too small, so we
-    // increment those to the larger odd version
+    // We know that grids where our square num is even are too small, so we increment those
+    // to the larger odd version
     if (int(someNumSquared) % 2 == 0) {
-        return int(someNumSquared)+1
+        return someNumSquared+1
     } else {
-        return int(someNumSquared)
+        return someNumSquared
     }
 }
 
