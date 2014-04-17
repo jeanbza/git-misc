@@ -16,7 +16,10 @@ import (
 // cycles between right, down, left, up each <stepsize> steps
 // 
 // SOLUTION EFFICIENCY
-// This solution runs with O(n) space and time complexity
+// This solution runs with O(n) space and time complexity, although there are
+// admittedly a fair amount of operations per step. There is probably a way
+// to calculate the number at each position based on the coordinates relative
+// to the center
 func main() {
     args := os.Args
     
