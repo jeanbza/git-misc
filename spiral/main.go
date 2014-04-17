@@ -34,6 +34,9 @@ func main() {
         grid[i] = make([]int, closestSquare)
     }
 
+    // Our basic approach is to go one direction a certain step size, change direction
+    // and do the same there, then increase our step size and repeat (our direction cycles
+    // between right, down, left, up between <stepsize> steps)
     for i := 1; i <= spiralNum; i++ {
         if (direction % 4 == 0) {
             // right
@@ -68,6 +71,7 @@ func main() {
     emitGridGraphically(grid)
 }
 
+// Emits the grid graphically
 func emitGridGraphically(grid [][]int) {
     // Emit the grid as a grid (instead of a slice of slices)
     for _,innerSlice := range grid {
@@ -78,14 +82,7 @@ func emitGridGraphically(grid [][]int) {
     }
 }
 
-func checkError(err error) {
-    if err != nil {
-        var stack [4096]byte
-        runtime.Stack(stack[:], false)
-        log.Printf("%q\n%s\n", err, stack[:])
-    }
-}
-
+// Finds the closest square (moving up only) to someNum
 func findClosestSquare(someNum int) (int) {
     var someNumSquared float64
     var i int
@@ -100,5 +97,14 @@ func findClosestSquare(someNum int) (int) {
         return int(someNumSquared)+1
     } else {
         return int(someNumSquared)
+    }
+}
+
+// Stacktrace functionality for error handling
+func checkError(err error) {
+    if err != nil {
+        var stack [4096]byte
+        runtime.Stack(stack[:], false)
+        log.Printf("%q\n%s\n", err, stack[:])
     }
 }
