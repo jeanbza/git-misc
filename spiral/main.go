@@ -96,5 +96,9 @@ func findClosestSquare(someNum int) (int) {
         someNumSquared = math.Sqrt(float64(i))
     }
 
-    return int(someNumSquared)
+    if (int(someNumSquared) % 2 == 0) {
+        return int(someNumSquared)+1
+    } else {
+        return int(someNumSquared)
+    }
 }
