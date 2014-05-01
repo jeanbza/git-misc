@@ -1,3 +1,11 @@
+## CREATING YOUR OWN RAILS SKELETON TO MESS AROUND IN
+
+PLEASE NOTE: You will need some of the stuff below (esp the gems if you don't have them) to create projects,
+so probably make sure you have all of those before you come back and make your own project with these two things.
+
+- gem install skeleton-rails
+- http://railswizard.org/ (this is awesome! and what I used to generate this project.)
+
 ## USEFUL LINKS
 
 - There are none. No, really. Ok, fine, here's what I used, but I promise you they all suck
