@@ -1,0 +1,320 @@
+# Logfile created on 2014-04-30 23:03:35 -0400 by logger.rb/36483
+D, [2014-04-30T23:03:35.233778 #33905] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:04:05.108781 #33918] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:04:05.640879 #33918] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:04:20.333413 #33924] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:04:20.482621 #33924] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:04:57.518685 #33935] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:04:57.638394 #33935] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:06:02.154718 #33953] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:06:02.284347 #33953] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:07:25.161876 #33965] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:07:25.305291 #33965] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:07:48.061104 #33972] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:07:48.213450 #33972] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:08:02.282784 #33982] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:08:02.419868 #33982] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:08:58.357021 #33992] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:08:58.842289 #33992] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:10:09.474971 #34021] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:10:10.052541 #34021] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:11:32.410705 #34341] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:11:32.525143 #34341] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:12:01.760358 #34361] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:12:01.884006 #34361] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:12:30.815992 #34374] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:12:30.962673 #34374] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:13:01.412689 #34381] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:13:01.618506 #34381] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:13:42.545225 #34389] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:13:43.122245 #34389] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:13:54.212422 #34395] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:13:54.395745 #34395] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:14:10.295285 #34406] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:14:10.444921 #34406] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:17:55.680348 #34436] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:17:56.240474 #34436] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:18:13.404712 #34444] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:18:13.565991 #34444] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:18:42.541736 #34451] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:18:43.122641 #34451] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:18:55.292686 #34456] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:18:55.442693 #34456] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:19:06.141055 #34461] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:19:06.292473 #34461] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:19:15.513018 #34466] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:19:15.656205 #34466] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:22:06.137685 #34496] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:22:06.716803 #34496] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:22:46.337737 #34506] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:22:46.504118 #34506] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:22:58.547792 #34511] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:22:58.704886 #34511] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:23:26.002987 #34518] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-04-30T23:23:26.610531 #34518] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-04-30T23:24:03.691516 #34529] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/webhp with {} and HTTP headers {}
+D, [2014-04-30T23:24:03.857299 #34529] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/webhp"}
+D, [2014-04-30T23:26:34.601338 #34556] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/webhp with {} and HTTP headers {}
+D, [2014-04-30T23:26:35.838514 #34556] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/webhp"}
+D, [2014-04-30T23:27:17.471989 #34564] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/webhp with {} and HTTP headers {}
+D, [2014-04-30T23:27:17.623505 #34564] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/webhp"}
+D, [2014-04-30T23:27:17.663122 #34564] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/webhp with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:33:07.640235 #34861] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/webhp with {} and HTTP headers {}
+D, [2014-04-30T23:33:07.902398 #34861] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/webhp"}
+D, [2014-04-30T23:35:27.128443 #34884] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:35:44.956878 #34892] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:36:05.306068 #34898] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:36:14.104850 #34903] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:39:05.051959 #34926] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:39:05.229043 #34926] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:39:05.289161 #34926] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:41:51.599547 #34951] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:41:51.862113 #34951] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:41:51.923923 #34951] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:42:10.763850 #34957] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:42:10.956911 #34957] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:42:11.058906 #34957] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:42:23.024645 #34963] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:42:23.211807 #34963] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:42:23.270327 #34963] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:42:32.603502 #34968] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:42:32.799691 #34968] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:42:32.861258 #34968] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:43:06.259619 #34975] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:43:06.453959 #34975] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:43:06.518471 #34975] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:43:22.043035 #34981] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:43:22.222452 #34981] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:43:22.282140 #34981] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:43:36.078090 #34986] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:43:36.260817 #34986] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:43:36.315221 #34986] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:43:48.737172 #34991] DEBUG -- : REQUESTING PAGE: GET http://www.bing.com with {} and HTTP headers {}
+D, [2014-04-30T23:43:48.922803 #34991] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"JS.Class"}, {"go"=>"go"}, {"qs"=>"ds"}, {"form"=>"QBLH"}] and HTTP headers {"HTTP_REFERER"=>"http://www.bing.com"}
+D, [2014-04-30T23:43:48.982871 #34991] DEBUG -- : REQUESTING PAGE: GET /?scope=web&mkt=en-US with {} and HTTP headers {"HTTP_REFERER"=>"/search"}
+D, [2014-04-30T23:46:18.903279 #35017] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:46:47.362402 #35024] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:47:05.643842 #35030] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:49:31.025132 #35054] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:49:31.146537 #35054] DEBUG -- : REQUESTING PAGE: GET //www.wikipedia.org/search-redirect.php with [{"family"=>"wikipedia"}, {"search"=>"south africa"}, {"language"=>"en"}, {"go"=>"  →  "}, {"go"=>"Go"}] and HTTP headers {"HTTP_REFERER"=>"http://www.wikipedia.org/"}
+D, [2014-04-30T23:49:31.171770 #35054] DEBUG -- : REQUESTING PAGE: GET http://.wikipedia.org/wiki/Special:Search?search= with {} and HTTP headers {"HTTP_REFERER"=>"//www.wikipedia.org/search-redirect.php"}
+D, [2014-04-30T23:49:51.799611 #35060] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:49:51.917859 #35060] DEBUG -- : REQUESTING PAGE: GET //www.wikipedia.org/search-redirect.php with [{"family"=>"wikipedia"}, {"search"=>"south africa"}, {"language"=>"en"}, {"go"=>"  →  "}, {"go"=>"Go"}] and HTTP headers {"HTTP_REFERER"=>"http://www.wikipedia.org/"}
+D, [2014-04-30T23:49:51.944521 #35060] DEBUG -- : REQUESTING PAGE: GET http://.wikipedia.org/wiki/Special:Search?search= with {} and HTTP headers {"HTTP_REFERER"=>"//www.wikipedia.org/search-redirect.php"}
+D, [2014-04-30T23:53:25.904906 #35095] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:53:36.125689 #35100] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:53:51.695588 #35106] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:54:28.147099 #35113] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:54:49.749301 #35119] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:55:48.455275 #35132] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:55:55.966054 #35137] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:56:42.221275 #35146] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-04-30T23:57:18.367913 #35153] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:04:32.805450 #35226] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:05:48.693495 #35237] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:06:30.561776 #35246] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:06:53.450469 #35267] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:07:39.429590 #35290] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:08:19.236726 #35301] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:09:20.146272 #35312] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:09:35.989026 #35318] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:11:01.992038 #35333] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:11:24.594935 #35340] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:11:34.809094 #35345] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:12:05.357680 #35352] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:13:04.010788 #35366] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:13:04.073407 #35366] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {"HTTP_REFERER"=>"http://www.wikipedia.org/"}
+D, [2014-05-01T00:13:31.371407 #35373] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:14:22.830711 #35383] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:14:47.198837 #35392] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:14:55.468137 #35397] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:15:06.475481 #35403] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:16:11.762567 #35424] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:16:38.333556 #35431] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:16:51.032886 #35436] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:16:57.321133 #35441] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:17:06.710353 #35446] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:17:31.386335 #35456] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:20:20.787024 #35558] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:25:10.248596 #50134] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:29:56.096546 #82233] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:34:12.518498 #97464] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T00:34:20.001848 #97475] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:03:10.295690 #58342] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:03:53.912307 #58352] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:04:31.029997 #58372] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:06:01.100857 #58413] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:06:48.842773 #58431] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:06:55.824971 #58439] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:07:59.299800 #58454] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:08:10.383289 #58459] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:08:37.655351 #58466] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:09:05.805018 #58479] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:09:24.585375 #58484] DEBUG -- : REQUESTING PAGE: GET http://www.wikipedia.org/ with {} and HTTP headers {}
+D, [2014-05-01T01:10:23.795283 #58496] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:10:23.908230 #58496] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-05-01T01:10:59.030711 #58506] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:10:59.130067 #58506] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-05-01T01:11:17.356576 #58513] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:11:17.863191 #58513] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-05-01T01:11:31.372618 #58518] DEBUG -- : REQUESTING PAGE: GET http://www.google.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:11:31.494215 #58518] DEBUG -- : REQUESTING PAGE: GET /search with [{"ie"=>"ISO-8859-1"}, {"hl"=>"en"}, {"source"=>"hp"}, {"q"=>"JS.Class"}, {"btnG"=>"Google Search"}, {"gbv"=>"1"}] and HTTP headers {"HTTP_REFERER"=>"http://www.google.com/"}
+D, [2014-05-01T01:14:13.115742 #58543] DEBUG -- : REQUESTING PAGE: GET https://www.yahoo.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:14:27.924060 #58550] DEBUG -- : REQUESTING PAGE: GET https://www.yahoo.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:14:28.661894 #58550] DEBUG -- : REQUESTING PAGE: GET https://search.yahoo.com/search with [{"p"=>"JS.Class"}, {"toggle"=>"1"}, {"cop"=>"mss"}, {"ei"=>"UTF-8"}, {".tsrc"=>"yfp-t-901"}] and HTTP headers {"HTTP_REFERER"=>"https://www.yahoo.com/"}
+D, [2014-05-01T01:14:29.382555 #58550] DEBUG -- : REQUESTING PAGE: GET https://search.yahoo.com/web?fr= with {} and HTTP headers {"HTTP_REFERER"=>"https://search.yahoo.com/search"}
+D, [2014-05-01T01:16:05.139622 #58566] DEBUG -- : REQUESTING PAGE: GET https://www.yahoo.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:17:05.184609 #58586] DEBUG -- : REQUESTING PAGE: GET https://www.yahoo.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:19:52.381369 #58711] DEBUG -- : REQUESTING PAGE: GET https://www.yahoo.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:21:25.006847 #58792] DEBUG -- : REQUESTING PAGE: GET https://www.yahoo.com/ with {} and HTTP headers {}
+D, [2014-05-01T01:23:49.416436 #58820] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:23:58.610143 #58826] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:23:58.786439 #58826] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:25:11.440245 #58838] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:25:11.642653 #58838] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:25:55.002534 #58850] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:25:55.575263 #58850] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:26:16.879275 #58862] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:26:17.087248 #58862] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:26:35.570972 #58868] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:26:35.727779 #58868] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:26:43.179748 #58873] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:26:43.754392 #58873] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:27:08.506661 #58880] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:27:08.661478 #58880] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:27:15.382040 #58886] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:27:15.965472 #58886] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:28:04.303832 #58896] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:28:14.713618 #58902] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:29:10.229045 #58912] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:29:48.431831 #58924] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:29:49.014434 #58924] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:30:35.662891 #58934] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:30:35.851091 #58934] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:32:07.164055 #58951] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:32:29.213178 #58960] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:33:10.016511 #58971] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:34:36.205568 #58987] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:34:36.412447 #58987] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T01:34:57.960015 #58995] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:36:14.691332 #59008] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:36:48.109703 #59018] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:37:50.634037 #59039] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T01:38:00.566764 #59045] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:03:13.629112 #90017] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:04:48.230925 #5676] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:05:56.910024 #5690] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:06:55.420358 #5703] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:07:23.481522 #5711] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:07:23.670730 #5711] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T02:08:46.173749 #5728] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:08:46.369571 #5728] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T02:09:09.675872 #5736] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:09:10.250354 #5736] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T02:09:26.960586 #5742] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:09:27.110931 #5742] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T02:09:43.449559 #5748] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:10:06.111864 #5754] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:10:06.687875 #5754] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T02:10:06.734819 #5754] DEBUG -- : REQUESTING PAGE: GET /search with [{"q"=>"git-go-websiteskeleton"}, {"ref"=>"simplesearch"}] and HTTP headers {"HTTP_REFERER"=>"https://github.com/search"}
+D, [2014-05-01T02:11:07.077317 #5766] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:15:34.355886 #5814] DEBUG -- : REQUESTING PAGE: GET https://github.com/search with {} and HTTP headers {}
+D, [2014-05-01T02:23:11.595280 #5883] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:23:32.245598 #5891] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:24:13.567820 #5900] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:24:44.581896 #5909] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:24:45.158399 #5909] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:25:01.644721 #5918] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:25:02.212567 #5918] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:27:15.563874 #5940] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:27:15.762589 #5940] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:27:37.202486 #5947] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:27:37.784194 #5947] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:28:56.317398 #5962] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:28:56.529732 #5962] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:29:18.853653 #5969] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:29:19.433018 #5969] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:29:59.390640 #5979] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:29:59.591183 #5979] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:30:28.894605 #5988] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:30:29.459784 #5988] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:30:29.704543 #5988] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:02.398061 #5997] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:14.578379 #6003] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:14.724448 #6003] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:31:14.956947 #6003] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:44.723290 #6010] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:45.304903 #6010] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:31:45.544078 #6010] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:45.583978 #6010] DEBUG -- : REQUESTING PAGE: GET /blog with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:31:54.948870 #6016] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:31:55.100390 #6016] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:31:55.342245 #6016] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:15.026548 #6022] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:15.220727 #6022] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:32:15.463236 #6022] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:26.972982 #6027] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:27.126158 #6027] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:34.604827 #6032] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:34.757614 #6032] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:44.812377 #6037] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:32:45.388397 #6037] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:32:45.612035 #6037] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:33:08.619373 #6043] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:33:09.203073 #6043] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:33:09.438951 #6043] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:35:35.752013 #6066] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:35:35.944533 #6066] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:37:57.782626 #6095] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:37:57.974082 #6095] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:37:58.167906 #6095] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"/explore"}
+D, [2014-05-01T02:37:58.400940 #6095] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:12.966278 #6102] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:13.118299 #6102] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:38:13.511792 #6102] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:23.352607 #6107] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:23.499916 #6107] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:38:23.735392 #6107] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:39.600948 #6112] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:40.178206 #6112] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:38:40.417328 #6112] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:57.426560 #6118] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:38:58.008632 #6118] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:38:58.263532 #6118] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:39:07.610177 #6123] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:39:07.785520 #6123] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:39:08.043106 #6123] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:39:25.907173 #6129] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:39:26.058345 #6129] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:39:26.320244 #6129] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:39:43.035794 #6135] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:39:43.596823 #6135] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:39:43.830550 #6135] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:41:16.803836 #6154] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:41:17.006912 #6154] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:41:17.237318 #6154] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:41:17.276471 #6154] DEBUG -- : REQUESTING PAGE: GET https://enterprise.github.com/ with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:42:50.918039 #6168] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:42:51.119506 #6168] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:42:51.350471 #6168] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:42:51.396452 #6168] DEBUG -- : REQUESTING PAGE: GET /features with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:42:51.436984 #6168] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:42:51.479051 #6168] DEBUG -- : REQUESTING PAGE: GET https://enterprise.github.com/ with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:42:51.737879 #6168] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:42:51.782619 #6168] DEBUG -- : REQUESTING PAGE: GET /blog with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:28.834580 #6204] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:29.034825 #6204] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:29.261415 #6204] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:29.298191 #6204] DEBUG -- : REQUESTING PAGE: GET /features with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:29.336389 #6204] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:29.377982 #6204] DEBUG -- : REQUESTING PAGE: GET https://enterprise.github.com/ with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:29.584596 #6204] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:29.625526 #6204] DEBUG -- : REQUESTING PAGE: GET /blog with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:43.899822 #6214] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:44.036698 #6214] DEBUG -- : REQUESTING PAGE: GET /explore with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:44.284660 #6214] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:44.323715 #6214] DEBUG -- : REQUESTING PAGE: GET /features with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:44.363546 #6214] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:44.406867 #6214] DEBUG -- : REQUESTING PAGE: GET https://enterprise.github.com/ with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
+D, [2014-05-01T02:44:44.578336 #6214] DEBUG -- : REQUESTING PAGE: GET https://github.com with {} and HTTP headers {}
+D, [2014-05-01T02:44:44.621714 #6214] DEBUG -- : REQUESTING PAGE: GET /blog with {} and HTTP headers {"HTTP_REFERER"=>"https://github.com"}
