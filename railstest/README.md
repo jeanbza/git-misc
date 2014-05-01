@@ -1,3 +1,10 @@
+## USEFUL LINKS
+
+- There are none. No, really. Ok, fine, here's what I used, but I promise you they all suck
+- https://gist.github.com/zhengjia/428105: a capybara cheatsheet. Except that half the stuff is out of date, so that's pretty useless
+- The 'getting started' guide I followed. Except that it doesn't work, so that's also useless. I ended up taking the idea presented there and turning it into what exists now
+- General reading at https://github.com/cucumber/cucumber/wiki
+
 ## YOU WILL NEED
 
 #### xCode
