@@ -313,3 +313,15 @@ ActionController::RoutingError (No route matches [GET] "/db"):
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 13:03:53 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/railties-4.1.0/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 13:04:27 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/railties-4.1.0/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 13ms (Views: 5.6ms | ActiveRecord: 0.0ms)
