@@ -9,6 +9,7 @@ import (
     "log"
     "os"
     "time"
+    "reflect"
 
     _ "image/jpeg"
 )
@@ -81,6 +82,8 @@ func convertDraw(img image.Image, dst *image.Gray) {
 
 func convertLoop(img image.Image, dst *image.Gray) {
     benchmark("Converting pixels", func() interface{} {
+        log.Println("\n"+reflect.TypeOf(img))
+
         // We're ignoring alpha here because it's arguable that pixels should
         // be multiplied by its value. It would make more sense to output
         // Gray+Alpha if the input image is RGBA.
