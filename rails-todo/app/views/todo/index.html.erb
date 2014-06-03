@@ -1,7 +1,7 @@
 <h1>Listing todos</h1>
 
 <% @todos.each do |todo| %>
-  <%= todo %><br>
+  <%= todo.Title %>: <%= todo.Content %><br>
 <% end %>
 
 <br>

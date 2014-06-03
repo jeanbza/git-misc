@@ -529,3 +529,230 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:01:04 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-02 20:01:04 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-02 20:01:04 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-02 20:01:04 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-02 20:01:04 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 20:01:04 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:01:22 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x000001036378e8 @title="todo 1", @content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb___2561160773370147394_2174340400'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb___2561160773370147394_2174340400'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:01:33 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x00000106a9c390 @Title="todo 1", @Content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb___2561160773370147394_2174340400'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb___2561160773370147394_2174340400'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:02:57 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x00000106ce54a8 @Title="todo 1", @Content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb___2561160773370147394_2174340400'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb___2561160773370147394_2174340400'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:02:58 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x00000106e6d140 @Title="todo 1", @Content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb___2561160773370147394_2174340400'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb___2561160773370147394_2174340400'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:03:07 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x000001078b2f10 @Title="todo 1", @Content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb___2561160773370147394_2174340400'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb___2561160773370147394_2174340400'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:03:13 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x00000103051028 @Title="todo 1", @Content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb__1054777832396901140_2164130340'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb__1054777832396901140_2164130340'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:03:14 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `Title' for #<Todo:0x0000010789d6d8 @Title="todo 1", @Content="some content">):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb__1054777832396901140_2164130340'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb__1054777832396901140_2164130340'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:03:42 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (uninitialized class variable @@Title in Todo):
+    1: <h1>Listing todos</h1>
+    2: 
+    3: <% @todos.each do |todo| %>
+    4:   <%= todo.Title %>: <%= todo.Content %><br>
+    5: <% end %>
+    6: 
+    7: <br>
+  app/controllers/todo_controller.rb:16:in `Title'
+  app/views/todo/index.html.erb:4:in `block in _app_views_todo_index_html_erb__1054777832396901140_2164130340'
+  app/views/todo/index.html.erb:3:in `each'
+  app/views/todo/index.html.erb:3:in `_app_views_todo_index_html_erb__1054777832396901140_2164130340'
+
+
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jadekler/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 20:03:49 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-02 20:03:49 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 20:03:49 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-02 20:03:49 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-02 20:03:49 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-02 20:03:49 -0600
