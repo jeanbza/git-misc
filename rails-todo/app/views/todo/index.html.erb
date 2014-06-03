@@ -1,9 +1,14 @@
-<h1>Listing todos</h1>
+<div class="titlebar">
+    <h1>Listing TODOs</h1>
+</div>
 
 <% @todos.each do |todo| %>
-  <%= todo.Title %>: <%= todo.Content %><br>
+  <div class="todo">
+    <div class="title">
+      <%= todo.Title %>
+    </div>
+    <div class="content">
+      <%= todo.Content %>
+    </div>
+  </div>
 <% end %>
-
-<br>
-
-(coming soon)

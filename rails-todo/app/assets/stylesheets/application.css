@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+.main-content {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+}
+
+.titlebar {
+  text-align: center;  
+}
+
+.todo {
+  padding-top: 15px;
+}
+
+.todo > * {
+  display: inline-block;
+}
+
+.todo .title {
+  width: 30%;
+}
+
+.todo .content {
+  width: 65%;
+}
