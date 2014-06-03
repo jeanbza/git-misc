@@ -1,5 +1,12 @@
 <div class="titlebar">
     <h1>Listing TODOs</h1>
+    <form class="form-group" id="add-todo">
+      <input type="text" class="form-control todo-input" id="todo-title" placeholder="Enter title">
+      <input type="text" class="form-control todo-input" id="todo-content" placeholder="Enter content">
+      <button class="btn btn-primary" id="add-todo">
+        <i class="icon-ok icon-white"></i>
+      </button>
+    </form>
 </div>
 
 <% @todos.each do |todo| %>

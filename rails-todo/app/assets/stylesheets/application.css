@@ -20,12 +20,22 @@
   padding-top: 5%;
 }
 
+form#add-todo .todo-input {
+  float: left;
+  margin-right: 10px;
+  width: 40%;
+}
+
+form#add-todo .todo-button {
+  float: right;
+}
+
 .titlebar {
   text-align: center;  
 }
 
 .todo {
-  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .todo > * {
