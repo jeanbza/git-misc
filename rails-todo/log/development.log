@@ -508,3 +508,24 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-02 19:45:54 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-02 19:45:54 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-02 19:46:57 -0600
+Processing by TodoController#index as HTML
+  Rendered todo/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 522ms (Views: 515.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-02 19:46:58 -0600
