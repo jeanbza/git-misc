@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get '/', to: 'todo#index'
-  get '/todo/', to: 'todo#index'
-  get '/post/', to: 'todo#post'
+  get '/', to: 'todos#index'
+  get '/todos/', to: 'todos#index'
+  post '/post/', to: 'todos#post'
+  resources :todos
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,8 +1,8 @@
 <div class="titlebar">
     <h1>Listing TODOs</h1>
     <%= form_tag("/post", method: "get", class: "form-group add-todo") do %>
-      <%= text_field(:todo, :Title, class: "form-control todo-input") %>
-      <%= text_field(:todo, :Content, class: "form-control todo-input") %>
+      <%= text_field(:todo, :title, class: "form-control todo-input") %>
+      <%= text_field(:todo, :content, class: "form-control todo-input") %>
       <button class="btn btn-primary" id="add-todo">
         <i class="icon-ok icon-white"></i>
       </button>
@@ -12,10 +12,10 @@
 <% @todos.each do |todo| %>
   <div class="todo">
     <div class="title">
-      <%= todo.Title %>
+      <%= todo.title %>
     </div>
     <div class="content">
-      <%= todo.Content %>
+      <%= todo.content %>
     </div>
   </div>
 <% end %>
