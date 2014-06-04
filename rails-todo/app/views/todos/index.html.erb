@@ -1,0 +1,14 @@
+<div id="todos">
+  <% @todos.each do|todo| %>
+  <div id="todo">
+    <h3><%= todo.title %></h3>
+    <%= simple_format todo.content %>
+    <small>
+      <%= link_to 'Edit', edit_todo_path(todo) %> |
+      <%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </small>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to 'New todo', new_todo_path %>
