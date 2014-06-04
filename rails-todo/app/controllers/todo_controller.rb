@@ -4,6 +4,13 @@ class TodoController < ApplicationController
   def index
     @todos = [Todo.new("todo 1", "some content"), Todo.new("todo 2", "some more content")]
   end
+
+  def post
+    print "\n\n\n\n\n\n\n"
+    print params[:todo]
+    print "\n\n\n\n\n\n\n"
+    redirect_to({ action: 'index' }, notice: "Saved!")
+  end
 end
 
 class Todo

@@ -20,13 +20,13 @@
   padding-top: 5%;
 }
 
-form#add-todo .todo-input {
+form.add-todo .todo-input {
   float: left;
   margin-right: 10px;
   width: 40%;
 }
 
-form#add-todo .todo-button {
+form.add-todo .todo-button {
   float: right;
 }
 
