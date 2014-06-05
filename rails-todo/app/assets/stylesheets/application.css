@@ -19,3 +19,14 @@
     padding-right: 25%;
     padding-top: 10%;
 }
+
+.main-title {
+    margin-top: 0;
+    display: inline-block;
+}
+
+form.add-todo {
+    margin: 0;
+    display: inline-block;
+    float: right;
+}
