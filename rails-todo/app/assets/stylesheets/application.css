@@ -30,3 +30,8 @@ form.add-todo {
     display: inline-block;
     float: right;
 }
+
+#todos #todo form {
+    float: right;
+    margin-left: 5px;
+}

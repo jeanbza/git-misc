@@ -1,14 +1,14 @@
 <h3 class="main-title">Listing TODOs</h3>
-<%= button_to "+", new_todo_path, :class => "btn btn-primary", :form_class => "add-todo", :method => :get %>
+<%= button_to "+", new_todo_path, :class => "btn btn-success", :form_class => "add-todo", :method => :get %>
 <div id="todos">
   <% @todos.each do|todo| %>
   <div class="row-fluid" id="todo">
     <div class="span3"><%= todo.title %></div>
-    <div class="span9"><%= todo.content %></div>
-    <small>
-      <%= link_to 'Edit', edit_todo_path(todo) %> |
-      <%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </small>
+    <div class="span5"><%= todo.content %></div>
+    <div class="span4 actions">
+      <%= button_to "Remove", todo, :class => "btn btn-danger", :method => :delete, data: { confirm: 'Are you sure?' } %>
+      <%= button_to "Edit", edit_todo_path(todo), :class => "btn btn-info", :method => :get %>
+    </div>
   </div>
   <% end %>
 </div>
