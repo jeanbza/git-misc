@@ -12,7 +12,7 @@ func main() {
         }
 
         fmt.Printf("Read %v from stdin\n", input)
-        fmt.Printf("%v\n", orderCoffee(5))
+        fmt.Printf("%v\n", OrderCoffee(5))
     }
 }
 
