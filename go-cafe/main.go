@@ -3,6 +3,8 @@ package main
 import (
     "fmt"
     "os"
+    "time"
+    "math/rand"
 )
 
 type Orders struct {
@@ -17,10 +19,23 @@ func main() {
     
     // Spawn goroutine for each order
     // (later) spawn goroutines capped at max amount of barristas
+    completeOrders(orders)
 
     // Give customer their order
 
     // Calculate total cost and give customer receipt
+    fmt.Println("Have a good day!")
+}
+
+func completeOrders(orders Orders) () {
+    for i := 0; i < orders.coffees; i++ {
+        product := "coffee"
+        go func() {
+            amt := time.Duration(rand.Intn(250))
+            time.Sleep(time.Millisecond * amt)
+            fmt.Printlf("%v completed!", product)
+        }()
+    }
 }
 
 func getOrders() (Orders) {
