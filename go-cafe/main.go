@@ -13,7 +13,14 @@ type Orders struct {
 
 func main() {
     orders := getOrders()
-    fmt.Printf("%v", orders)
+    fmt.Println("I'll let you know as soon as those orders are ready!")
+    
+    // Spawn goroutine for each order
+    // (later) spawn goroutines capped at max amount of barristas
+
+    // Give customer their order
+
+    // Calculate total cost and give customer receipt
 }
 
 func getOrders() (Orders) {
