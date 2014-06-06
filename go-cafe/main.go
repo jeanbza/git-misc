@@ -7,12 +7,6 @@ import (
     "math/rand"
 )
 
-type Orders struct {
-    coffees     int
-    teas        int
-    hotchocs    int
-}
-
 func main() {
     orders := getOrders()
     fmt.Println("I'll let you know as soon as those orders are ready!")
@@ -25,22 +19,30 @@ func main() {
 
     // Calculate total cost and give customer receipt
     fmt.Println("Have a good day!")
+    var input string
+    fmt.Scanln(&input)
 }
 
-func completeOrders(orders Orders) () {
-    for i := 0; i < orders.coffees; i++ {
-        product := "coffee"
-        go func() {
-            amt := time.Duration(rand.Intn(250))
-            time.Sleep(time.Millisecond * amt)
-            fmt.Printlf("%v completed!", product)
-        }()
+func completeOrders(orders map[string]int) () {
+    for product, amt := range orders {
+        for i := 0; i < amt; i++ {
+            go func(product string) {
+                amt := time.Duration(rand.Intn(250))
+                time.Sleep(time.Millisecond * amt)
+                fmt.Printf("%v completed!", product)
+            }(product)
+        }
     }
 }
 
-func getOrders() (Orders) {
+func getOrders() (map[string]int) {
     var input = ""
-    orders := Orders{0,0,0}
+
+    orders := map[string]int{
+        "coffees": 0,
+        "teas": 0,
+        "hotchocs": 0,
+    }
 
     fmt.Println("Welcome! What can I get you? We have coffee (c), hot chocolate (h), and tea (t). If you'd like to quit, press (q).")
 
@@ -53,13 +55,13 @@ func getOrders() (Orders) {
         switch input {
             case "c", "coffee":
                 fmt.Println("One coffee, got it.")
-                orders.coffees++
+                orders["coffees"]++
             case "h", "hot chocolate":
                 fmt.Println("One hot chocolate, got it.")
-                orders.hotchocs++
+                orders["hotchocs"]++
             case "t", "tea":
                 fmt.Println("One tea, got it.")
-                orders.teas++
+                orders["teas"]++
             case "q", "quit":
                 os.Exit(1)
             case "d", "done":
