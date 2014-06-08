@@ -8,6 +8,12 @@ import (
 )
 
 func main() {
+    costs := map[string]int {
+        "coffees": 5,
+        "teas": 4,
+        "hotchocs": 1,
+    }
+
     orders := getOrders()
     fmt.Println("I'll let you know as soon as those orders are ready!")
     
@@ -16,6 +22,8 @@ func main() {
     completeOrders(orders)
 
     // Give customer their order
+    cost := tallyCost(orders, costs)
+    fmt.Printf("Here's your order! Your total comes to %d.", cost)
 
     // Calculate total cost and give customer receipt
     fmt.Println("Have a good day!")
@@ -33,6 +41,16 @@ func completeOrders(orders map[string]int) () {
             }(product)
         }
     }
+}
+
+func tallyCost(orders map[string]int, costs map[string]int) (int) {
+    cost := 0
+
+    for product, amt := range orders {
+        cost += amt * costs[product]
+    }
+
+    return cost
 }
 
 func getOrders() (map[string]int) {
@@ -77,10 +95,4 @@ func getOrders() (map[string]int) {
     fmt.Println("That's it? Ok!")
 
     return orders
-}
-
-// Orders amountOfCoffees coffees and returns the price
-// when the coffees are ready
-func OrderCoffee(amountOfCoffees int) (price int) {
-    return amountOfCoffees*3
 }
