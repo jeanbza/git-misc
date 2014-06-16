@@ -21,3 +21,12 @@
   width: 180px;
   height: 180px;
 }
+/* line 21, app.sass */
+.watch .edge .face {
+  background-color: #a6a6a7;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 160px;
+  width: 160px;
+  height: 160px;
+}
