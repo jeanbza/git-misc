@@ -1,0 +1,19 @@
+/* line 1, app.sass */
+.watch {
+  background-color: #6b6b6a;
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 15%;
+}
+/* line 9, app.sass */
+.watch .edge {
+  background-color: #b7b7b5;
+  border-top: 10px solid #6b6b6a;
+  margin-left: 10px;
+  border-radius: 180px;
+  width: 180px;
+  height: 180px;
+}
