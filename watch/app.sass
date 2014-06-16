@@ -1,5 +1,6 @@
 $watchsize: 200px
-$edgesize: 20px
+$outeredgesize: 30px
+$inneredgesize: 40px
 
 .watch
   background-color: #6B6B6A
@@ -13,15 +14,15 @@ $edgesize: 20px
     position: absolute
   .edge
     background-color: #B7B7B5
-    margin-top: $edgesize / 2
-    margin-left: $edgesize / 2
-    border-radius: $watchsize - $edgesize
-    width: $watchsize - $edgesize
-    height: $watchsize - $edgesize
+    margin-top: $outeredgesize / 2
+    margin-left: $outeredgesize / 2
+    border-radius: $watchsize - $outeredgesize
+    width: $watchsize - $outeredgesize
+    height: $watchsize - $outeredgesize
     .face
       background-color: #A6A6A7
-      margin-top: $edgesize / 2
-      margin-left: $edgesize / 2
-      border-radius: $watchsize - $edgesize * 2
-      width: $watchsize - $edgesize * 2
-      height: $watchsize - $edgesize * 2
+      margin-top: $inneredgesize / 2
+      margin-left: $inneredgesize / 2
+      border-radius: $watchsize - $outeredgesize - $inneredgesize
+      width: $watchsize - $outeredgesize - $inneredgesize
+      height: $watchsize - $outeredgesize - $inneredgesize
