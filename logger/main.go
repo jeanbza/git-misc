@@ -1,26 +1,46 @@
-package main
+package woodsman
 
 import (
     "fmt"
     "flag"
-    "log"
     "os"
+
+    "github.com/golang/glog"
+    "github.com/blackjack/syslog"
 )
 
-var logType = flag.String("logtype", "stderr", "-logtype [stderr|syslog]")
+var logType = flag.String("log_type", "stderr", "-log_type [stderr|syslog]")
+var logName = flag.String("log_name", "awesome_app", "-log_name <some name>")
 
-func main() {
+func init() {
     flag.Parse()
     
     switch {
         case *logType == "stderr":
-            fmt.Println("Logging using stderr")
+            defer glog.Flush()
         case *logType == "syslog":
-            fmt.Println("Logging using syslog")
+            syslog.Openlog(*logName, syslog.LOG_PID, syslog.LOG_USER)
+            defer syslog.Closelog()
         default:
             fmt.Println("Incorrect flag passed! Run again with -h to see flag usage")
             os.Exit(1)
     }
+}
 
-    log.Println("bam")
+func Info(msg string) {
+    switch {
+        case *logType == "stderr":
+            glog.Infoln(msg)
+        case *logType == "syslog":
+            syslog.Info(msg)
+    }
+}
+
+func Error(msg string) {
+    switch {
+        case *logType == "stderr":
+            glog.Errorln(msg)
+        case *logType == "syslog":
+            syslog.Err(msg)
+    }
 }
