@@ -1,12 +1,23 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="app.css" />
+        <script src="moment.min.js"></script>
+        <script src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(updateTime);
+            function updateTime() {
+                $(".watch .edge .face .time").text(moment().format('hh:mm:ss'));
+                setTimeout(function() {
+                    updateTime();
+                }, 1000)
+            }
+        </script>
     </head>
     <body>
         <div class="watch">
             <div class="edge">
                 <div class="face">
-                    <div class="time">00:00</div>
+                    <div class="time">00:00:00</div>
                 </div>
             </div>
         </div>
