@@ -1,4 +1,4 @@
-/* line 5, app.sass */
+/* line 6, app.sass */
 .watch {
   background-color: #6b6b6a;
   border-radius: 200px;
@@ -8,11 +8,11 @@
   margin-right: 25%;
   margin-top: 15%;
 }
-/* line 13, app.sass */
+/* line 14, app.sass */
 .watch * {
   position: absolute;
 }
-/* line 15, app.sass */
+/* line 16, app.sass */
 .watch .edge {
   background-color: #b7b7b5;
   margin-top: 15px;
@@ -21,7 +21,7 @@
   width: 170px;
   height: 170px;
 }
-/* line 22, app.sass */
+/* line 23, app.sass */
 .watch .edge .face {
   background-color: #a6a6a7;
   margin-top: 20px;
@@ -29,4 +29,14 @@
   border-radius: 130px;
   width: 130px;
   height: 130px;
+}
+/* line 30, app.sass */
+.watch .edge .face .time {
+  position: relative;
+  top: 90px;
+  -webkit-transform: translateY(-45px);
+  -ms-transform: translateY(-45px);
+  transform: translateY(-45px);
+  text-align: center;
+  font-size: 40px;
 }

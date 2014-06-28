@@ -1,6 +1,7 @@
 $watchsize: 200px
 $outeredgesize: 30px
 $inneredgesize: 40px
+$facesize: $watchsize - $outeredgesize - $inneredgesize
 
 .watch
   background-color: #6B6B6A
@@ -23,6 +24,14 @@ $inneredgesize: 40px
       background-color: #A6A6A7
       margin-top: $inneredgesize / 2
       margin-left: $inneredgesize / 2
-      border-radius: $watchsize - $outeredgesize - $inneredgesize
-      width: $watchsize - $outeredgesize - $inneredgesize
-      height: $watchsize - $outeredgesize - $inneredgesize
+      border-radius: $facesize
+      width: $facesize
+      height: $facesize
+      .time
+        position: relative
+        top: $facesize - $inneredgesize
+        -webkit-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
+        -ms-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
+        transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
+        text-align: center
+        font-size: $inneredgesize
