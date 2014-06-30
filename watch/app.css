@@ -31,11 +31,37 @@
   height: 130px;
 }
 /* line 37, app.sass */
-.watch .edge .face table, .watch .edge .face thead, .watch .edge .face tbody {
-  width: 100%;
-  height: 100%;
-}
-/* line 40, app.sass */
 .watch .edge .face * {
   position: relative;
+}
+/* line 39, app.sass */
+.watch .edge .face .focus {
+  top: 90px;
+  -webkit-transform: translateY(-45px);
+  -ms-transform: translateY(-45px);
+  transform: translateY(-45px);
+  font-size: 32px;
+  background-color: #c9c9c8;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 49, app.sass */
+.watch .edge .face .focus tr, .watch .edge .face .focus td {
+  padding: 0;
+}
+/* line 51, app.sass */
+.watch .edge .face .focus .hours-seconds {
+  font-size: 0.7em;
+  text-align: right;
+}
+/* line 54, app.sass */
+.watch .edge .face .focus .seconds {
+  font-size: 0.5em;
+  text-align: left;
+}
+/* line 57, app.sass */
+.watch .edge .face .focus .date {
+  font-size: 0.4em;
+  text-align: center;
 }

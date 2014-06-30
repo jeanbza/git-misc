@@ -34,8 +34,26 @@ $facesize: $watchsize - $outeredgesize - $inneredgesize
       border-radius: $facesize
       width: $facesize
       height: $facesize
-      table, thead, tbody
-        width: 100%
-        height: 100%
       *
         position: relative
+      .focus
+        top: $facesize - $inneredgesize
+        -webkit-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
+        -ms-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
+        transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
+        font-size: $inneredgesize * .8
+        background-color: $primary-zero
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+        tr, td
+          padding: 0
+        .hours-seconds
+          font-size: .7em
+          text-align: right
+        .seconds
+          font-size: .5em
+          text-align: left
+        .date
+          font-size: .4em
+          text-align: center
