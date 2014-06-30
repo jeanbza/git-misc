@@ -1,10 +1,17 @@
+$primary-zero: #C9C9C8
+$primary-one: #B6B5B6
+$primary-two: #8B8B8B
+$primary-three: #626262
+$primary-four: #303030
+$primary-five: #030303
+
 $watchsize: 200px
 $outeredgesize: 30px
 $inneredgesize: 40px
 $facesize: $watchsize - $outeredgesize - $inneredgesize
 
 .watch
-  background-color: #6B6B6A
+  background-color: $primary-three
   border-radius: $watchsize
   width: $watchsize
   height: $watchsize
@@ -14,14 +21,14 @@ $facesize: $watchsize - $outeredgesize - $inneredgesize
   *
     position: absolute
   .edge
-    background-color: #B7B7B5
+    background-color: $primary-two
     margin-top: $outeredgesize / 2
     margin-left: $outeredgesize / 2
     border-radius: $watchsize - $outeredgesize
     width: $watchsize - $outeredgesize
     height: $watchsize - $outeredgesize
     .face
-      background-color: #A6A6A7
+      background-color: $primary-one
       margin-top: $inneredgesize / 2
       margin-left: $inneredgesize / 2
       border-radius: $facesize
@@ -33,5 +40,17 @@ $facesize: $watchsize - $outeredgesize - $inneredgesize
         -webkit-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
         -ms-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
         transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
-        text-align: center
         font-size: $inneredgesize * .8
+        background-color: $primary-zero
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+        .main
+          position: relative
+          display: inline-block
+        .seconds
+          position: relative
+          display: inline-block
+          font-size: .5em
+          line-height: 170%
+          vertical-align: top
