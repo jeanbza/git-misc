@@ -34,23 +34,5 @@ $facesize: $watchsize - $outeredgesize - $inneredgesize
       border-radius: $facesize
       width: $facesize
       height: $facesize
-      .time
-        position: relative
-        top: $facesize - $inneredgesize
-        -webkit-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
-        -ms-transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
-        transform: translateY(-1 / 2 * ($facesize - $inneredgesize))
-        font-size: $inneredgesize * .8
-        background-color: $primary-zero
-        width: 80%
-        margin-left: auto
-        margin-right: auto
-        .main
-          position: relative
-          display: inline-block
-        .seconds
-          position: relative
-          display: inline-block
-          font-size: .5em
-          line-height: 170%
-          vertical-align: top
+      .focus
+        width: 100%
