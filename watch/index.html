@@ -6,8 +6,9 @@
         <script type="text/javascript">
             $(document).ready(updateTime);
             function updateTime() {
-                $(".watch .edge .face .time .main").text(moment().format('hh:mm'));
-                $(".watch .edge .face .time .seconds").text(moment().format('ss'));
+                $(".watch .edge .face .hours-minutes").text(moment().format('hh:mm'));
+                $(".watch .edge .face .seconds").text(moment().format('ss'));
+                $(".watch .edge .face .date").text(moment().format('D') + " " + moment().format('MMM').toUpperCase());
                 setTimeout(function() {
                     updateTime();
                 }, 1000)
@@ -24,7 +25,7 @@
                             <td class="seconds">00</td>
                         </tr>
                         <tr>
-                            <td colspan=2 class="date">JUN 24</td>
+                            <td colspan=2 class="date">00 ABC</td>
                         </tr>
                     </table>
                 </div>
