@@ -25,6 +25,8 @@ class AddTodoViewController : UIViewController {
         }
     }
     
-    @IBOutlet var doneButton : UIBarButtonItem
+    
     @IBOutlet var textField : UITextField
+    
+    @IBOutlet var doneButton : UIBarButtonItem
 }

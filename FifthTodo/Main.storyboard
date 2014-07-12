@@ -84,8 +84,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="doneButton" destination="gz7-WC-mjr" id="s7t-Ok-JRG"/>
-                        <outlet property="textField" destination="ND4-AC-PRZ" id="cEn-Ud-l01"/>
+                        <outlet property="doneButton" destination="gz7-WC-mjr" id="wA3-Q3-i2o"/>
+                        <outlet property="textField" destination="ND4-AC-PRZ" id="xUq-iL-WCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2b-h9-w89" userLabel="First Responder" sceneMemberID="firstResponder"/>
