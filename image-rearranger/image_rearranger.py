@@ -2,10 +2,10 @@
 
 from PIL import Image
 
-n = 5 #number of partitions per channel.
+partitions_per_channel = 5 #number of partitions per channel.
 
-src_img = "src5.png"
-dst_img = "src1.png"
+src_img = "src2.png"
+dst_img = "src6.png"
 
 def sortAndDivide(coordlist, pixelimage, channel):
     global src,dst,n
@@ -15,7 +15,7 @@ def sortAndDivide(coordlist, pixelimage, channel):
     coordlist.sort(key = lambda t: pixelimage[t][channel])
     
     #divide
-    partitionLength = int(len(coordlist) / n)
+    partitionLength = int(len(coordlist) / partitions_per_channel)
     
     if partitionLength <= 0:
         partitionLength = 1
