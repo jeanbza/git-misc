@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Todo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ND4-AC-PRZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Todo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ND4-AC-PRZ">
                                 <rect key="frame" x="20" y="140" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -66,7 +66,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ND4-AC-PRZ" firstAttribute="top" secondItem="mGj-xE-pCL" secondAttribute="bottom" constant="120" id="23a-NX-o0G"/>
+                            <constraint firstItem="ND4-AC-PRZ" firstAttribute="top" secondItem="mGj-xE-pCL" secondAttribute="bottom" constant="76" id="23a-NX-o0G"/>
                             <constraint firstItem="ND4-AC-PRZ" firstAttribute="leading" secondItem="F7U-5u-cdI" secondAttribute="leading" constant="20" id="92E-R8-x0g"/>
                             <constraint firstAttribute="trailing" secondItem="ND4-AC-PRZ" secondAttribute="trailing" constant="20" id="qbJ-0N-2Pq"/>
                         </constraints>

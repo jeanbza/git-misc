@@ -9,7 +9,22 @@
 import UIKit
 
 class AddTodoViewController : UIViewController {
+    var todoItem:TodoItem = TodoItem(itemName: "")
+    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
+        if sender as UIBarButtonItem != self.doneButton {
+            return
+        }
+        
+        if self.textField.text.utf16count > 0 {
+            self.todoItem = TodoItem(itemName: self.textField.text)
+        }
+    }
+    
+    @IBOutlet var doneButton : UIBarButtonItem
+    @IBOutlet var textField : UITextField
 }

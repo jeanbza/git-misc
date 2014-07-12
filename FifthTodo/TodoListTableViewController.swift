@@ -53,4 +53,12 @@ import UIKit
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimation.None)
     }
+    
+    func unwindToList(segue: UIStoryboardSegue) {
+        println("Unwinding")
+        let source = segue.sourceViewController as AddTodoViewController
+        self.todoItems += source.todoItem
+        println("Adding item \(source.todoItem.itemName)")
+        self.tableView.reloadData()
+    }
 }
