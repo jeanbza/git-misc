@@ -9,7 +9,13 @@
 import UIKit
 
 @objc(TodoListTableViewController) class TodoListTableViewController: UITableViewController {
+    var todoItems: [TodoItem]
+    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
+    }
+    
+    func viewDidLoad() {
+        todoItems += [TodoItem]
     }
 }
