@@ -29,7 +29,7 @@ import UIKit
         return 1
     }
     
-    override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoItems.count
     }
     
@@ -37,6 +37,20 @@ import UIKit
         let cell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell") as UITableViewCell
         let todoItem = todoItems[indexPath.row]
         cell.textLabel.text = todoItem.itemName
+        
+        if todoItem.completed {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.None
+        }
+        
         return cell;
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let todoItem = todoItems[indexPath.row]
+        todoItem.completed = !todoItem.completed
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimation.None)
     }
 }
