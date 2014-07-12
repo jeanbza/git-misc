@@ -10,17 +10,22 @@ dst_img = "src1.png"
 def sortAndDivide(coordlist, pixelimage, channel):
     global src,dst,n
     retlist = []
+    
     #sort
     coordlist.sort(key = lambda t: pixelimage[t][channel])
+    
     #divide
     partitionLength = int(len(coordlist) / n)
+    
     if partitionLength <= 0:
         partitionLength = 1
+    
     if channel < 2:
         for i in range(0, len(coordlist),partitionLength):
             retlist += sortAndDivide(coordlist[i: i + partitionLength], pixelimage,channel + 1)
     else:
         retlist += coordlist
+    
     return retlist
 
 def makePixelList(img):
