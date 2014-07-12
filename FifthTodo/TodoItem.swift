@@ -13,7 +13,8 @@ class TodoItem {
     var completed: Bool = false
     var creationDate: NSDate
     
-    init() {
+    init(itemName: String) {
+        self.itemName = itemName
         self.creationDate = NSDate()
     }
 }
