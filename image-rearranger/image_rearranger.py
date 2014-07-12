@@ -1,3 +1,5 @@
+# Original idea from flawr at http://codegolf.stackexchange.com/questions/33172/american-gothic-in-the-palette-of-mona-lisa-rearrange-the-pixels
+
 from PIL import Image
 
 n = 5 #number of partitions per channel.
