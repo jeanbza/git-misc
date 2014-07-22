@@ -5,9 +5,8 @@ import (
     "time"
     "flag"
 
-    "git-go-websiteskeleton/app/common"
-    "git-go-websiteskeleton/app/home"
-    "git-go-websiteskeleton/app/user"
+    "git-misc/logic-tree/app/common"
+    "git-misc/logic-tree/app/home"
 
     "github.com/gorilla/mux"
     "github.com/golang/glog"
@@ -23,10 +22,7 @@ func main() {
     http.HandleFunc("/", httpInterceptor)
 
     router.HandleFunc("/", home.GetHomePage).Methods("GET")
-    router.HandleFunc("/user{_:/?}", user.GetHomePage).Methods("GET")
-
-    router.HandleFunc("/user/view/{id:[0-9]+}", user.GetViewPage).Methods("GET")
-    router.HandleFunc("/user/{id:[0-9]+}", user.GetViewPage).Methods("GET")
+    router.HandleFunc("/save", home.SaveForm).Methods("POST")
 
     fileServer := http.StripPrefix("/static/", http.FileServer(http.Dir("static")))
     http.Handle("/static/", fileServer)
