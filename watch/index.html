@@ -1,14 +1,33 @@
 <html>
     <head>
-        <style>
-            <link rel="stylesheet" type="text/css" href="app.css" />
-        </style>
+        <link rel="stylesheet" type="text/css" href="app.css" />
+        <script src="moment.min.js"></script>
+        <script src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(updateTime);
+            function updateTime() {
+                $(".watch .edge .face .hours-minutes").text(moment().format('hh:mm'));
+                $(".watch .edge .face .seconds").text(moment().format('ss'));
+                $(".watch .edge .face .date").text(moment().format('D') + " " + moment().format('MMM').toUpperCase());
+                setTimeout(function() {
+                    updateTime();
+                }, 1000)
+            }
+        </script>
     </head>
     <body>
         <div class="watch">
             <div class="edge">
                 <div class="face">
-                    00:00
+                    <table class="focus">
+                        <tr>
+                            <td class="hours-minutes">00:00</td>
+                            <td class="seconds">00</td>
+                        </tr>
+                        <tr>
+                            <td colspan=2 class="date">00 ABC</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
