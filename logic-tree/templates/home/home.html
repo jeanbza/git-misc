@@ -1,0 +1,32 @@
+{{define "body"}}
+    <table class="user-table">
+        <tr>
+            <td>
+                Field: 
+                <select name="field">
+                    <option value="age">Age</option>
+                    <option value="pets"># Pets</option>
+                </select>
+                Operator:
+                <select name="operator">
+                    <option value="eq">=</option>
+                    <option value="ne">!=</option>
+                    <option value="gt">></option>
+                    <option value="lt"><</option>
+                </select>
+                Value: <input name="value"></input>
+            </td>
+            <td>
+                two
+            </td>
+        </tr>
+        <tr>
+            <td>
+                three
+            </td>
+            <td>
+                four
+            </td>
+        </tr>
+    </table>
+{{end}}
