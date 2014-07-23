@@ -18,6 +18,11 @@
                     Value: <input name="value"></input>
                     <input type="submit">
                 </form>
+                <div>
+                    {{range .Conditions}}
+                        <div>{{.Field}} {{.Operator}} {{.Value}}
+                    {{end}}
+                </div>
             </td>
             <td>
                 two
