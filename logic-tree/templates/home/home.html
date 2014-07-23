@@ -20,10 +20,15 @@
                 </form>
             </td>
             <td>
+                two
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <table>
                     <thead>
                         <tr>
-                            <th colspan=2>Conditions Table</th>
+                            <th colspan=2>Equality Table</th>
                             <th>
                                 <form action="truncate" method="post">
                                     <input type="submit" value="Truncate">
@@ -37,7 +42,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{range .Conditions}}
+                        {{range .Equality}}
                             <tr>
                                 <td>{{.Field}}</td>
                                 <td>{{.Operator}}</td>
@@ -47,13 +52,29 @@
                     <tbody>
                 </table>
             </td>
-        </tr>
-        <tr>
             <td>
-                three
-            </td>
-            <td>
-                four
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Logic Table</th>
+                            <th>
+                                <form action="truncate" method="post">
+                                    <input type="submit" value="Truncate">
+                                </form>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan=2>Operator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .Logic}}
+                            <tr>
+                                <td colspan=2>{{.Operator}}</td>
+                            </tr>
+                        {{end}}
+                    <tbody>
+                </table>
             </td>
         </tr>
     </table>

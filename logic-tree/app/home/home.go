@@ -9,21 +9,27 @@ import (
     "git-misc/logic-tree/app/common"
 )
 
-type Condition struct {
+type EqualityCondition struct {
     Field string
     Operator string
     Value int
 }
 
+type LogicalCondition struct {
+    Operator string
+}
+
 func GetHomePage(rw http.ResponseWriter, req *http.Request) {
     type Page struct {
         Title string
-        Conditions []Condition
+        Equality []EqualityCondition
+        Logic []LogicalCondition
     }
     
     p := Page{
         Title: "home",
-        Conditions: getConditions(),
+        Equality: getEqualityConditions(),
+        Logic: getLogicConditions(),
     }
 
     common.Templates = template.Must(template.ParseFiles("templates/home/home.html", common.LayoutPath))
@@ -37,23 +43,43 @@ func SaveForm(rw http.ResponseWriter, req *http.Request) {
     value, err := strconv.Atoi(req.FormValue("value"))
     common.CheckError(err, 2)
 
-    _, err = common.DB.Query(fmt.Sprintf("INSERT INTO logictree.conditions(field, operator, value) VALUES ('%s', '%s', %d)", field, operator, value))
+    _, err = common.DB.Query(fmt.Sprintf("INSERT INTO logictree.equality(field, operator, value) VALUES ('%s', '%s', %d)", field, operator, value))
+    common.CheckError(err, 2)
+
+    _, err = common.DB.Query("INSERT INTO logictree.logic(operator) VALUES ('AND')")
     common.CheckError(err, 2)
 
     GetHomePage(rw, req)
 }
 
 func Truncate(rw http.ResponseWriter, req *http.Request) {
-    _, err := common.DB.Query("TRUNCATE TABLE logictree.conditions")
+    _, err := common.DB.Query("TRUNCATE TABLE logictree.equality")
     common.CheckError(err, 2)
 
     GetHomePage(rw, req)
 }
 
-func getConditions() []Condition {
-    conditions := make([]Condition, 0)
+func getLogicConditions() []LogicalCondition {
+    conditions := make([]LogicalCondition, 0)
 
-    rows, err := common.DB.Query("SELECT field, operator, value FROM logictree.conditions")
+    rows, err := common.DB.Query("SELECT operator FROM logictree.logic")
+    common.CheckError(err, 2)
+
+    var operator string
+
+    for rows.Next() {
+        rows.Scan(&operator)
+
+        conditions = append(conditions, LogicalCondition{Operator: operator})
+    }
+
+    return conditions
+}
+
+func getEqualityConditions() []EqualityCondition {
+    conditions := make([]EqualityCondition, 0)
+
+    rows, err := common.DB.Query("SELECT field, operator, value FROM logictree.equality")
     common.CheckError(err, 2)
 
     var field, operator, value string
@@ -64,7 +90,7 @@ func getConditions() []Condition {
         valueInt, err = strconv.Atoi(value)
         common.CheckError(err, 2)
 
-        conditions = append(conditions, Condition{Field: field, Operator: operator, Value: valueInt})
+        conditions = append(conditions, EqualityCondition{Field: field, Operator: operator, Value: valueInt})
     }
 
     return conditions
