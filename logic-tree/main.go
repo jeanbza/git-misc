@@ -23,6 +23,7 @@ func main() {
 
     router.HandleFunc("/", home.GetHomePage).Methods("GET")
     router.HandleFunc("/save", home.SaveForm).Methods("POST")
+    router.HandleFunc("/truncate", home.Truncate).Methods("POST")
 
     fileServer := http.StripPrefix("/static/", http.FileServer(http.Dir("static")))
     http.Handle("/static/", fileServer)

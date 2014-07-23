@@ -43,6 +43,13 @@ func SaveForm(rw http.ResponseWriter, req *http.Request) {
     GetHomePage(rw, req)
 }
 
+func Truncate(rw http.ResponseWriter, req *http.Request) {
+    _, err := common.DB.Query("TRUNCATE TABLE logictree.conditions")
+    common.CheckError(err, 2)
+
+    GetHomePage(rw, req)
+}
+
 func getConditions() []Condition {
     conditions := make([]Condition, 0)
 
