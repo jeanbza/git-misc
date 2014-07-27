@@ -52,8 +52,15 @@ func SaveForm(rw http.ResponseWriter, req *http.Request) {
     GetHomePage(rw, req)
 }
 
-func Truncate(rw http.ResponseWriter, req *http.Request) {
+func TruncateEquality(rw http.ResponseWriter, req *http.Request) {
     _, err := common.DB.Query("TRUNCATE TABLE logictree.equality")
+    common.CheckError(err, 2)
+
+    GetHomePage(rw, req)
+}
+
+func TruncateLogic(rw http.ResponseWriter, req *http.Request) {
+    _, err := common.DB.Query("TRUNCATE TABLE logictree.logic")
     common.CheckError(err, 2)
 
     GetHomePage(rw, req)
