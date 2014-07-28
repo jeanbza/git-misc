@@ -11,7 +11,10 @@ import (
 
 type Condition struct {
     Text string
-    Other string
+    Type string
+    Field string
+    Operator string
+    Value string
 }
 
 func GetHomePage(rw http.ResponseWriter, req *http.Request) {
@@ -25,7 +28,7 @@ func GetHomePage(rw http.ResponseWriter, req *http.Request) {
         Conditions: getConditions(),
     }
 
-    common.Templates = template.Must(template.ParseFiles("templates/home/home.html", common.LayoutPath))
+    common.Templates = template.Must(template.New("asd").ParseFiles("templates/home/home.html", common.LayoutPath))
     err := common.Templates.ExecuteTemplate(rw, "base", p)
     common.CheckError(err, 2)
 }
@@ -72,14 +75,17 @@ func getConditions() []Condition {
         if i != 0 {
             conditions = append(conditions, Condition{
                 Text: "AND",
-                Other: "data-type='logic'",
+                Type: "logic",
             })
         }
 
         conditions = append(conditions, Condition{
             Text: fmt.Sprintf("%s %s %s", field, operator, value),
-            Other: fmt.Sprintf("data-type='equality' data-field='%s' data-operator='%s' data-value='%s'", field, operator, value)},
-        )
+            Type: "equality",
+            Field: field,
+            Operator: operator,
+            Value: value,
+        })
 
         i++
     }
