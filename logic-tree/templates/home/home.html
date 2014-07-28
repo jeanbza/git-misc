@@ -3,6 +3,20 @@
     $(document).ready(function() {
         $("#addEquality").click(function(e) {
             e.preventDefault();
+
+            equalities = [];
+
+            $("#sortable li").each(function(key, condition) {
+                console.dir(condition);
+                console.dir($(condition));
+                console.dir($(condition).attr("data-type"));
+                console.dir(condition.attr("data-type"));
+                if (condition.attr("data-type") == "equality") {
+                    equalities.append({Field: condition.attr("data-field"), Operator: condition.attr("data-operator"), Value: condition.attr("data-value")})
+                }
+            });
+
+            console.dir(equalities);
         });
 
         $("#sortable").sortable();
@@ -42,7 +56,7 @@
                 </form>
                 <ul id="sortable">
                     {{range .Conditions}}
-                        <li class="ui-state-default" {{.Other}}>{{.Text}}</li>
+                        <li class="ui-state-default" {{.Other}}>{{.Text}} {{.Other}}</li>
                     {{end}}
                 </ul>
             </td>
