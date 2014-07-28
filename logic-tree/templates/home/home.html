@@ -37,38 +37,13 @@
                     <input type="submit" value="Truncate">
                 </form>
                 <ul id="sortable">
-                    {{range $i, $e := .Equality}}
-                        {{if $i}}
-                            <li class="ui-state-default">AND</li>
-                        {{end}}
-
-                        <li class="ui-state-default">{{$e.Field}} {{$e.Operator}} {{$e.Value}}</li>
+                    {{range .Conditions}}
+                        <li class="ui-state-default" {{.Other}}>{{.Text}}</li>
                     {{end}}
                 </ul>
             </td>
             <td>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Logic Table</th>
-                            <th>
-                                <form action="truncate_logic" method="post">
-                                    <input type="submit" value="Truncate">
-                                </form>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th colspan=2>Operator</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{range .Logic}}
-                            <tr>
-                                <td colspan=2>{{.Operator}}</td>
-                            </tr>
-                        {{end}}
-                    <tbody>
-                </table>
+                four
             </td>
         </tr>
     </table>

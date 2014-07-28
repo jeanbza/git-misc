@@ -9,27 +9,20 @@ import (
     "git-misc/logic-tree/app/common"
 )
 
-type EqualityCondition struct {
-    Field string
-    Operator string
-    Value int
-}
-
-type LogicalCondition struct {
-    Operator string
+type Condition struct {
+    Text string
+    Other string
 }
 
 func GetHomePage(rw http.ResponseWriter, req *http.Request) {
     type Page struct {
         Title string
-        Equality []EqualityCondition
-        Logic []LogicalCondition
+        Conditions []Condition
     }
     
     p := Page{
         Title: "home",
-        Equality: getEqualityConditions(),
-        Logic: getLogicConditions(),
+        Conditions: getConditions(),
     }
 
     common.Templates = template.Must(template.ParseFiles("templates/home/home.html", common.LayoutPath))
@@ -66,39 +59,41 @@ func TruncateLogic(rw http.ResponseWriter, req *http.Request) {
     GetHomePage(rw, req)
 }
 
-func getLogicConditions() []LogicalCondition {
-    conditions := make([]LogicalCondition, 0)
-
-    rows, err := common.DB.Query("SELECT operator FROM logictree.logic")
-    common.CheckError(err, 2)
-
-    var operator string
-
-    for rows.Next() {
-        rows.Scan(&operator)
-
-        conditions = append(conditions, LogicalCondition{Operator: operator})
-    }
-
-    return conditions
-}
-
-func getEqualityConditions() []EqualityCondition {
-    conditions := make([]EqualityCondition, 0)
+func getConditions() []Condition {
+    conditions := make([]Condition, 0)
 
     rows, err := common.DB.Query("SELECT field, operator, value FROM logictree.equality")
     common.CheckError(err, 2)
 
     var field, operator, value string
-    var valueInt int
+
+    i := 0
 
     for rows.Next() {
         rows.Scan(&field, &operator, &value)
-        valueInt, err = strconv.Atoi(value)
         common.CheckError(err, 2)
 
-        conditions = append(conditions, EqualityCondition{Field: field, Operator: operator, Value: valueInt})
+        if i != 0 {
+            conditions = append(conditions, Condition{
+                Text: "AND",
+                Other: "data-type='logic'",
+            })
+        }
+
+        conditions = append(conditions, Condition{
+            Text: fmt.Sprintf("%s %s %s", field, operator, value),
+            Other: fmt.Sprintf("data-type='equality' data-field='%s' data-operator='%s' data-value='%s'", field, operator, value)},
+        )
+
+        i++
     }
 
     return conditions
 }
+
+
+
+
+
+
+
