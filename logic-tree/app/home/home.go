@@ -30,7 +30,7 @@ func GetHomePage(rw http.ResponseWriter, req *http.Request) {
     common.CheckError(err, 2)
 }
 
-func SaveForm(rw http.ResponseWriter, req *http.Request) {
+func SaveState(rw http.ResponseWriter, req *http.Request) {
     field := req.FormValue("field")
     operator := req.FormValue("operator")
     value, err := strconv.Atoi(req.FormValue("value"))
@@ -45,15 +45,11 @@ func SaveForm(rw http.ResponseWriter, req *http.Request) {
     GetHomePage(rw, req)
 }
 
-func TruncateEquality(rw http.ResponseWriter, req *http.Request) {
+func Truncate(rw http.ResponseWriter, req *http.Request) {
     _, err := common.DB.Query("TRUNCATE TABLE logictree.equality")
     common.CheckError(err, 2)
 
-    GetHomePage(rw, req)
-}
-
-func TruncateLogic(rw http.ResponseWriter, req *http.Request) {
-    _, err := common.DB.Query("TRUNCATE TABLE logictree.logic")
+    _, err = common.DB.Query("TRUNCATE TABLE logictree.logic")
     common.CheckError(err, 2)
 
     GetHomePage(rw, req)

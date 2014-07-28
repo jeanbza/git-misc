@@ -1,6 +1,10 @@
 {{define "body"}}
     <script type="text/javascript">
     $(document).ready(function() {
+        $("#addEquality").click(function(e) {
+            e.preventDefault();
+        });
+
         $("#sortable").sortable();
         $("#sortable").disableSelection();
     });
@@ -9,7 +13,7 @@
     <table class="main-table">
         <tr>
             <td>
-                <form action="/save" method="post">
+                <form id="addEquality" action="/save" method="post">
                     Field:
                     <select name="field">
                         <option value="age">Age</option>
