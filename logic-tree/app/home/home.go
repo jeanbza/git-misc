@@ -17,6 +17,12 @@ type Condition struct {
     Value string
 }
 
+type treeNode struct {
+    Parent *treeNode
+    Children []*treeNode
+    Node Condition
+}
+
 func GetHomePage(rw http.ResponseWriter, req *http.Request) {
     type Page struct {
         Title string
@@ -93,9 +99,23 @@ func getConditions() []Condition {
     return conditions
 }
 
+func serializeTree(node *treeNode) []Condition {
+    if node.Children == nil || len(node.Children) == 0 {
+        return []Condition{node.Node}
+    }
 
+    var linearConditions []Condition
 
+    for key, child := range node.Children {
+        if key != 0 {
+            linearConditions = append(linearConditions, node.Node)
+        }
 
+        linearConditions = append(linearConditions, serializeTree(child)...)
+    }
+
+    return linearConditions
+}
 
 
 
