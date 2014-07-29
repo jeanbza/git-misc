@@ -5,6 +5,7 @@ import (
     "strconv"
     "net/http"
     "html/template"
+    "errors"
 
     "git-misc/logic-tree/app/common"
 )
@@ -99,9 +100,17 @@ func getConditions() []Condition {
     return conditions
 }
 
-func serializeTree(node *treeNode) []Condition {
+func serializeTree(node *treeNode) ([]Condition, error) {
     if node.Children == nil || len(node.Children) == 0 {
-        return []Condition{node.Node}
+        // Has no children - should be equality
+
+        return []Condition{node.Node}, nil
+    } else {
+        // Has children - should be logic
+
+        if node.Node.Type != "logic" {
+            return nil, errors.New("ERROR: This tree has an equality condition as a branch. Quitting.")
+        }
     }
 
     var linearConditions []Condition
@@ -111,10 +120,11 @@ func serializeTree(node *treeNode) []Condition {
             linearConditions = append(linearConditions, node.Node)
         }
 
-        linearConditions = append(linearConditions, serializeTree(child)...)
+        serializedChild, _ := serializeTree(child)
+        linearConditions = append(linearConditions, serializedChild...)
     }
 
-    return linearConditions
+    return linearConditions, nil
 }
 
 

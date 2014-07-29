@@ -14,13 +14,20 @@ func TestSerializeTreeOneNodeZeroDepth(t *testing.T) {
 
     root := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
     expectedOut := []Condition{Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
+    var expectedOutErr error
 
-    if conditionsReturned := serializeTree(root); !matchesArray(conditionsReturned, expectedOut) {
+    conditionsReturned, errorsReturned := serializeTree(root)
+
+    if !matchesArray(conditionsReturned, expectedOut) {
         t.Errorf("serializeTree(%v) - got %v, want %v", root, conditionsReturned, expectedOut)
+    }
+
+    if errorsReturned != expectedOutErr {
+        t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", root, errorsReturned, expectedOutErr)
     }
 }
 
-func TestSerializeTreeThreeNodeOneDeepth(t *testing.T) {
+func TestSerializeTreeThreeNodeOneDepth(t *testing.T) {
     beforeEach()
 
     root := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "AND", Type: "logic", Operator: "AND"}}
@@ -33,9 +40,37 @@ func TestSerializeTreeThreeNodeOneDeepth(t *testing.T) {
         Condition{Text: "AND", Type: "logic", Operator: "AND"},
         Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"},
     }
+    var expectedOutErr error
 
-    if conditionsReturned := serializeTree(root); !matchesArray(conditionsReturned, expectedOut) {
-        t.Errorf("serializeTree(%v) - got %v, want %v", root, conditionsReturned, expectedOut)
+    conditionsReturned, errorsReturned := serializeTree(root)
+
+    if !matchesArray(conditionsReturned, expectedOut) {
+        t.Errorf("serializeTree(%v) conditionsReturned - got %v, want %v", root, conditionsReturned, expectedOut)
+    }
+
+    if errorsReturned != expectedOutErr {
+        t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", root, errorsReturned, expectedOutErr)
+    }
+}
+
+func TestSerializeTreeWithEqualityBranch(t *testing.T) {
+    beforeEach()
+
+    root := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "age eq 4", Type: "equality", Field: "age", Operator: "eq", Value: "4"}}
+    child1 := treeNode{Parent: root, Children: nil, Node: Condition{Text: "age eq 8", Type: "equality", Field: "age", Operator: "eq", Value: "8"}}
+    child2 := treeNode{Parent: root, Children: nil, Node: Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"}}
+    root.Children = []*treeNode{&child1, &child2}
+
+    expectedOutErr := "ERROR: This tree has an equality condition as a branch. Quitting."
+
+    conditionsReturned, errorsReturned := serializeTree(root) 
+
+    if conditionsReturned != nil {
+        t.Errorf("serializeTree(%v) - got %v, want %v", root, conditionsReturned, nil)
+    }
+
+    if errorsReturned.Error() != expectedOutErr {
+        t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", root, errorsReturned, expectedOutErr)
     }
 }
 
