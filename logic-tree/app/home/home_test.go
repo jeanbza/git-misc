@@ -9,7 +9,68 @@ func beforeEach() {
     fmt.Println("Starting test..")
 }
 
-// SINGLE NODE: It should be able to serialize a tree with only one node
+func TestParseJSON(t *testing.T) {
+    beforeEach()
+
+    in := `
+        [
+            {
+                "Text": "age eq 8",
+                "Type": "equality",
+                "Field": "age",
+                "Operator": "eq",
+                "Value": "8"
+            },
+            {
+                "Text": "(",
+                "Type": "scope",
+                "Operator": "("
+            },
+            {
+                "Text": "AND",
+                "Type": "logic",
+                "Operator": "AND"
+            }
+        ]
+    `
+    expectedOut := []Condition{
+        Condition{Text: "(", Type: "scope", Operator: "("},
+        Condition{Text: "age eq 8", Type: "equality", Field: "age", Operator: "eq", Value: "8"},
+        Condition{Text: "AND", Type: "logic", Operator: "AND"},
+    }
+    var expectedOutErr error
+
+    conditionsReturned, errorsReturned := parseJSON(in)
+
+    if !matchesArray(conditionsReturned, expectedOut) {
+        t.Errorf("parseJSON(%v) conditionsReturned - got %v, want %v", expectedOut, conditionsReturned, expectedOut)
+    }
+
+    if errorsReturned != expectedOutErr {
+        t.Errorf("parseJSON(%v) errorsReturned - got %v, want %v", expectedOut, errorsReturned, expectedOutErr)
+    }
+}
+
+// UNSERIALIZE SINGLE NODE: It should be able to unserialize a tree with only one node
+// func TestSerializeTreeOneNodeZeroDepth(t *testing.T) {
+//     beforeEach()
+
+//     expectedOut := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
+//     in := []Condition{Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
+//     var expectedOutErr error
+
+//     conditionsReturned, errorsReturned := serializeTree(root)
+
+//     if !matchesArray(conditionsReturned, expectedOut) {
+//         t.Errorf("serializeTree(%v) - got %v, want %v", root, conditionsReturned, expectedOut)
+//     }
+
+//     if errorsReturned != expectedOutErr {
+//         t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", root, errorsReturned, expectedOutErr)
+//     }
+// }
+
+// SERIALIZE SINGLE NODE: It should be able to serialize a tree with only one node
 func TestSerializeTreeOneNodeZeroDepth(t *testing.T) {
     beforeEach()
 
@@ -28,7 +89,7 @@ func TestSerializeTreeOneNodeZeroDepth(t *testing.T) {
     }
 }
 
-// SINGLE DEPTH, ENCLOSURE: It should be able to serialize a tree with a node and two children
+// SERIALIZE SINGLE DEPTH, ENCLOSURE: It should be able to serialize a tree with a node and two children
 /**
  * A && B
  *      AND
@@ -62,7 +123,7 @@ func TestSerializeTreeThreeNodeOneDepth(t *testing.T) {
     }
 }
 
-// ORDER, ARBITRARY DEPTH: It should be able to serialize a tree with nine nodes and four levels of depth (aka, arbitrary depth) in the correct order
+// SERIALIZE ORDER, ARBITRARY DEPTH: It should be able to serialize a tree with nine nodes and four levels of depth (aka, arbitrary depth) in the correct order
 /**
  * ((A && B) || C) && (D || E)
  *             AND
@@ -115,7 +176,7 @@ func TestSerializeTreeArbitraryDepth(t *testing.T) {
     conditionsReturned, errorsReturned := serializeTree(root)
 
     if !matchesArray(conditionsReturned, expectedOut) {
-        t.Errorf("serializeTree(%v) conditionsReturned - got %v, want %v", root, simplify(conditionsReturned), simplify(expectedOut))
+        t.Errorf("serializeTree(%v) conditionsReturned - got %v, want %v", root, simplifyConditions(conditionsReturned), simplifyConditions(expectedOut))
     }
 
     if errorsReturned != expectedOutErr {
@@ -123,7 +184,7 @@ func TestSerializeTreeArbitraryDepth(t *testing.T) {
     }
 }
 
-// ARBITRARY WIDTH: It should be able to serialize a tree with any amount of children on a branch
+// SERIALIZE ARBITRARY WIDTH: It should be able to serialize a tree with any amount of children on a branch
 /**
  * ((A && B) || C) && (D || E)
  *              AND
@@ -185,7 +246,7 @@ func TestSerializeTreeArbitraryWidth(t *testing.T) {
     conditionsReturned, errorsReturned := serializeTree(root)
 
     if !matchesArray(conditionsReturned, expectedOut) {
-        t.Errorf("serializeTree(%v) conditionsReturned - got %v, want %v", root, simplify(conditionsReturned), simplify(expectedOut))
+        t.Errorf("serializeTree(%v) conditionsReturned - got %v, want %v", root, simplifyConditions(conditionsReturned), simplifyConditions(expectedOut))
     }
 
     if errorsReturned != expectedOutErr {
@@ -193,7 +254,7 @@ func TestSerializeTreeArbitraryWidth(t *testing.T) {
     }
 }
 
-// ERROR EQUALITY BRANCH: It should return an error when the tree contains an equality condition in a branch
+// SERIALIZE ERROR EQUALITY BRANCH: It should return an error when the tree contains an equality condition in a branch
 func TestSerializeTreeWithEqualityBranch(t *testing.T) {
     beforeEach()
 
@@ -215,7 +276,7 @@ func TestSerializeTreeWithEqualityBranch(t *testing.T) {
     }
 }
 
-// ERROR LOGIC LEAF: It should return an error when the tree contains a logic condition in a leaf
+// SERIALIZE ERROR LOGIC LEAF: It should return an error when the tree contains a logic condition in a leaf
 func TestSerializeTreeWithLogicLeaf(t *testing.T) {
     beforeEach()
 
@@ -235,20 +296,6 @@ func TestSerializeTreeWithLogicLeaf(t *testing.T) {
     if errorsReturned != nil && errorsReturned.Error() != expectedOutErr {
         t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", root, errorsReturned, expectedOutErr)
     }
-}
-
-func simplify(conditions []Condition) string {
-    var t string
-
-    for k, c := range conditions {
-        if k != 0 {
-            t += " "
-        }
-
-        t += c.Text
-    }
-
-    return t
 }
 
 func matchesArray(conditionsA []Condition, conditionsB []Condition) bool {

@@ -100,6 +100,10 @@ func getConditions() []Condition {
     return conditions
 }
 
+func parseJSON(conditions string) ([]Condition, error) {
+    return nil, nil
+}
+
 func serializeTree(node *treeNode) ([]Condition, error) {
     if node.Children == nil || len(node.Children) == 0 {
         // Has no children - should be equality
@@ -138,5 +142,18 @@ func serializeTree(node *treeNode) ([]Condition, error) {
     return linearConditions, nil
 }
 
+func simplifyConditions(conditions []Condition) string {
+    var t string
+
+    for k, c := range conditions {
+        if k != 0 {
+            t += " "
+        }
+
+        t += c.Text
+    }
+
+    return t
+}
 
 
