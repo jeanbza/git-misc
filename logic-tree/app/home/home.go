@@ -104,6 +104,10 @@ func serializeTree(node *treeNode) ([]Condition, error) {
     if node.Children == nil || len(node.Children) == 0 {
         // Has no children - should be equality
 
+        if node.Node.Type != "equality" {
+            return nil, errors.New("ERROR: This tree has a logic condition as a leaf. Quitting.")
+        }
+
         return []Condition{node.Node}, nil
     } else {
         // Has children - should be logic
@@ -120,7 +124,12 @@ func serializeTree(node *treeNode) ([]Condition, error) {
             linearConditions = append(linearConditions, node.Node)
         }
 
-        serializedChild, _ := serializeTree(child)
+        serializedChild, err := serializeTree(child)
+
+        if err != nil {
+            return nil, err
+        }
+
         linearConditions = append(linearConditions, serializedChild...)
     }
 
