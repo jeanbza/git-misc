@@ -117,7 +117,7 @@ func serializeTree(node *treeNode) ([]Condition, error) {
         }
     }
 
-    var linearConditions []Condition
+    linearConditions := []Condition{Condition{Text: "(", Type: "scope", Operator: "("}}
 
     for key, child := range node.Children {
         if key != 0 {
@@ -132,6 +132,8 @@ func serializeTree(node *treeNode) ([]Condition, error) {
 
         linearConditions = append(linearConditions, serializedChild...)
     }
+
+    linearConditions = append(linearConditions, Condition{Text: ")", Type: "scope", Operator: ")"})
 
     return linearConditions, nil
 }
