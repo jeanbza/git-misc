@@ -62,11 +62,46 @@ func TestUnserializeTreeOneNodeZeroDepth(t *testing.T) {
     treeReturned, errorsReturned := unserializeTree(in)
 
     if !treeReturned.matches(expectedOut) {
-        t.Errorf("serializeTree(%v) - got %v, want %v", in, treeReturned, expectedOut)
+        t.Errorf("unserializeTree(%v) - got %v, want %v", in, treeReturned, expectedOut)
     }
 
     if errorsReturned != expectedOutErr {
-        t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", in, errorsReturned, expectedOutErr)
+        t.Errorf("unserializeTree(%v) errorsReturned - got %v, want %v", in, errorsReturned, expectedOutErr)
+    }
+}
+
+// SERIALIZE SINGLE DEPTH, ENCLOSURE: It should be able to serialize a tree with a node and two children
+/**
+ * A && B
+ *      AND
+ *     A   B
+ */
+func TestUnserializeTreeThreeNodeOneDepth(t *testing.T) {
+    beforeEach()
+
+    in := []Condition{
+        Condition{Text: "(", Type: "scope", Operator: "("},
+        Condition{Text: "age eq 8", Type: "equality", Field: "age", Operator: "eq", Value: "8"},
+        Condition{Text: "AND", Type: "logic", Operator: "AND"},
+        Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"},
+        Condition{Text: ")", Type: "scope", Operator: ")"},
+    }
+
+    expectedOut := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "AND", Type: "logic", Operator: "AND"}}
+    child1 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 8", Type: "equality", Field: "age", Operator: "eq", Value: "8"}}
+    child2 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"}}
+    expectedOut.Children = []*treeNode{&child1, &child2}
+
+    var expectedOutErr error
+
+    treeReturned, errorsReturned := unserializeTree(in)
+
+    if !treeReturned.matches(expectedOut) {
+        t.Errorf("unserializeTree(%v) - got %v, want %v", in, treeReturned, expectedOut)
+    }
+
+    if errorsReturned != expectedOutErr {
+        t.Errorf("unserializeTree(%v) errorsReturned - got %v, want %v", in, errorsReturned, expectedOutErr)
     }
 }
 
