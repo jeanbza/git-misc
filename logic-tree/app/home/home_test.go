@@ -52,23 +52,23 @@ func TestParseJSON(t *testing.T) {
 }
 
 // UNSERIALIZE SINGLE NODE: It should be able to unserialize a tree with only one node
-// func TestSerializeTreeOneNodeZeroDepth(t *testing.T) {
-//     beforeEach()
+func TestUnserializeTreeOneNodeZeroDepth(t *testing.T) {
+    beforeEach()
 
-//     expectedOut := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
-//     in := []Condition{Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
-//     var expectedOutErr error
+    in := []Condition{Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
+    expectedOut := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
+    var expectedOutErr error
 
-//     conditionsReturned, errorsReturned := serializeTree(root)
+    treeReturned, errorsReturned := unserializeTree(in)
 
-//     if !matchesArray(conditionsReturned, expectedOut) {
-//         t.Errorf("serializeTree(%v) - got %v, want %v", root, conditionsReturned, expectedOut)
-//     }
+    if !treeReturned.matches(expectedOut) {
+        t.Errorf("serializeTree(%v) - got %v, want %v", in, treeReturned, expectedOut)
+    }
 
-//     if errorsReturned != expectedOutErr {
-//         t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", root, errorsReturned, expectedOutErr)
-//     }
-// }
+    if errorsReturned != expectedOutErr {
+        t.Errorf("serializeTree(%v) errorsReturned - got %v, want %v", in, errorsReturned, expectedOutErr)
+    }
+}
 
 // SERIALIZE SINGLE NODE: It should be able to serialize a tree with only one node
 func TestSerializeTreeOneNodeZeroDepth(t *testing.T) {
@@ -317,6 +317,29 @@ func matchesArray(conditionsA []Condition, conditionsB []Condition) bool {
         if !truth {
             return false
         }
+    }
+
+    return true
+}
+
+// Only matches DOWNWARDS - not up the parent chain
+func (treeNodeA *treeNode) matches(treeNodeB *treeNode) bool {
+    if treeNodeA.Parent != treeNodeB.Parent {
+        return false
+    }
+
+    if len(treeNodeA.Children) != len(treeNodeB.Children) {
+        return false
+    }
+
+    for key, child := range treeNodeA.Children {
+        if !child.matches(treeNodeB.Children[key]) {
+            return false
+        }
+    }
+    
+    if !treeNodeA.Node.matches(treeNodeB.Node) {
+        return false
     }
 
     return true
