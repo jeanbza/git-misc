@@ -2,6 +2,7 @@ package home
 
 import (
     "fmt"
+    "encoding/json"
     "strconv"
     "net/http"
     "html/template"
@@ -100,8 +101,15 @@ func getConditions() []Condition {
     return conditions
 }
 
-func parseJSON(conditions string) ([]Condition, error) {
-    return nil, nil
+func parseJSON(conditionsString string) ([]Condition, error) {
+    var conditionsSlice []Condition
+    
+    err := json.Unmarshal([]byte(conditionsString), &conditionsSlice)
+    if err != nil {
+        return nil, err
+    }
+    
+    return conditionsSlice, nil
 }
 
 func serializeTree(node *treeNode) ([]Condition, error) {
