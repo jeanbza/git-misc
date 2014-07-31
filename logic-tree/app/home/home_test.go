@@ -324,6 +324,10 @@ func matchesArray(conditionsA []Condition, conditionsB []Condition) bool {
 
 // Only matches DOWNWARDS - not up the parent chain
 func (treeNodeA *treeNode) matches(treeNodeB *treeNode) bool {
+    if treeNodeA == nil || treeNodeB == nil {
+        return false
+    }
+
     if treeNodeA.Parent != treeNodeB.Parent {
         return false
     }
