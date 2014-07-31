@@ -113,7 +113,9 @@ func parseJSON(conditionsString string) ([]Condition, error) {
 }
 
 func unserializeTree(conditions []Condition) (*treeNode, error) {
-    return nil, nil
+    root := treeNode{Node: conditions[0]}
+
+    return &root, nil
 }
 
 func serializeTree(node *treeNode) ([]Condition, error) {
