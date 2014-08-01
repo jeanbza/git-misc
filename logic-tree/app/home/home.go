@@ -113,7 +113,29 @@ func parseJSON(conditionsString string) ([]Condition, error) {
 }
 
 func unserializeTree(conditions []Condition) (*treeNode, error) {
-    root := treeNode{Node: conditions[0]}
+    depth := 0
+    var root treeNode
+
+    for _, condition := range conditions {
+        switch condition.Type {
+        case "scope":
+            if condition.Operator == "(" {
+                depth++
+            }
+
+            if condition.Operator == ")" {
+                depth--
+            }
+        case "logic":
+            root.Node = condition
+        case "equality":
+            if depth > 0 {
+                root.Children = append(root.Children, &treeNode{Parent: &root, Node: condition})
+            } else {
+                root.Node = condition
+            }
+        }
+    }
 
     return &root, nil
 }
@@ -154,6 +176,16 @@ func serializeTree(node *treeNode) ([]Condition, error) {
     linearConditions = append(linearConditions, Condition{Text: ")", Type: "scope", Operator: ")"})
 
     return linearConditions, nil
+}
+
+func (t *treeNode) print() string {
+    var s string
+
+    for _, child := range t.Children {
+        s += child.print()
+    }
+
+    return s + " :: " + fmt.Sprintf("%v", t.Node)
 }
 
 func simplifyConditions(conditions []Condition) string {

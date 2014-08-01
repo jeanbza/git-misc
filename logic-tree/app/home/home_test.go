@@ -81,15 +81,15 @@ func TestUnserializeTreeThreeNodeOneDepth(t *testing.T) {
 
     in := []Condition{
         Condition{Text: "(", Type: "scope", Operator: "("},
-        Condition{Text: "age eq 8", Type: "equality", Field: "age", Operator: "eq", Value: "8"},
+        Condition{Text: "age eq 81", Type: "equality", Field: "age", Operator: "eq", Value: "81"},
         Condition{Text: "AND", Type: "logic", Operator: "AND"},
-        Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"},
+        Condition{Text: "age eq 27", Type: "equality", Field: "age", Operator: "eq", Value: "27"},
         Condition{Text: ")", Type: "scope", Operator: ")"},
     }
 
     expectedOut := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "AND", Type: "logic", Operator: "AND"}}
-    child1 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 8", Type: "equality", Field: "age", Operator: "eq", Value: "8"}}
-    child2 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"}}
+    child1 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 81", Type: "equality", Field: "age", Operator: "eq", Value: "81"}}
+    child2 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 27", Type: "equality", Field: "age", Operator: "eq", Value: "27"}}
     expectedOut.Children = []*treeNode{&child1, &child2}
 
     var expectedOutErr error
@@ -97,7 +97,7 @@ func TestUnserializeTreeThreeNodeOneDepth(t *testing.T) {
     treeReturned, errorsReturned := unserializeTree(in)
 
     if !treeReturned.matches(expectedOut) {
-        t.Errorf("unserializeTree(%v) - got %v, want %v", in, treeReturned, expectedOut)
+        t.Errorf("unserializeTree(%v) - got %v, want %v", in, treeReturned.print(), expectedOut.print())
     }
 
     if errorsReturned != expectedOutErr {
@@ -360,10 +360,6 @@ func matchesArray(conditionsA []Condition, conditionsB []Condition) bool {
 // Only matches DOWNWARDS - not up the parent chain
 func (treeNodeA *treeNode) matches(treeNodeB *treeNode) bool {
     if treeNodeA == nil || treeNodeB == nil {
-        return false
-    }
-
-    if treeNodeA.Parent != treeNodeB.Parent {
         return false
     }
 
