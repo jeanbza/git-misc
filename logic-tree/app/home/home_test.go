@@ -70,7 +70,7 @@ func TestUnserializeTreeOneNodeZeroDepth(t *testing.T) {
     }
 }
 
-// SERIALIZE SINGLE DEPTH, ENCLOSURE: It should be able to serialize a tree with a node and two children
+// UNSERIALIZE SINGLE DEPTH, ENCLOSURE: It should be able to unserialize a tree with a node and two children
 /**
  * A && B
  *      AND
@@ -91,6 +91,68 @@ func TestUnserializeTreeThreeNodeOneDepth(t *testing.T) {
     child1 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 81", Type: "equality", Field: "age", Operator: "eq", Value: "81"}}
     child2 := treeNode{Parent: expectedOut, Children: nil, Node: Condition{Text: "age eq 27", Type: "equality", Field: "age", Operator: "eq", Value: "27"}}
     expectedOut.Children = []*treeNode{&child1, &child2}
+
+    var expectedOutErr error
+
+    treeReturned, errorsReturned := unserializeTree(in)
+
+    if !treeReturned.matches(expectedOut) {
+        t.Errorf("unserializeTree(%v) - got %v, want %v", in, treeReturned.print(), expectedOut.print())
+    }
+
+    if errorsReturned != expectedOutErr {
+        t.Errorf("unserializeTree(%v) errorsReturned - got %v, want %v", in, errorsReturned, expectedOutErr)
+    }
+}
+
+// UNSERIALIZE ORDER, ARBITRARY DEPTH: It should be able to unserialize a tree with nine nodes and four levels of depth (aka, arbitrary depth) in the correct order
+/**
+ * ((A && B) || C) && (D || E)
+ *             AND
+ *       OR           OR
+ *   AND     C      D    E
+ *  A   B
+ */
+func TestUnserializeTreeArbitraryDepth(t *testing.T) {
+    beforeEach()
+
+    in := []Condition{
+        Condition{Text: "(", Type: "scope", Operator: "("},
+        Condition{Text: "(", Type: "scope", Operator: "("},
+        Condition{Text: "(", Type: "scope", Operator: "("},
+        Condition{Text: "age eq 4", Type: "equality", Field: "age", Operator: "eq", Value: "4"},
+        Condition{Text: "AND", Type: "logic", Operator: "AND"},
+        Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"},
+        Condition{Text: ")", Type: "scope", Operator: ")"},
+        Condition{Text: "OR", Type: "logic", Operator: "OR"},
+        Condition{Text: "age eq 1", Type: "equality", Field: "age", Operator: "eq", Value: "1"},
+        Condition{Text: ")", Type: "scope", Operator: ")"},
+        Condition{Text: "AND", Type: "logic", Operator: "AND"},
+        Condition{Text: "(", Type: "scope", Operator: "("},
+        Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"},
+        Condition{Text: "OR", Type: "logic", Operator: "OR"},
+        Condition{Text: "age eq 3", Type: "equality", Field: "age", Operator: "eq", Value: "3"},
+        Condition{Text: ")", Type: "scope", Operator: ")"},
+        Condition{Text: ")", Type: "scope", Operator: ")"},
+    }
+
+    expectedOut := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "AND", Type: "logic", Operator: "AND"}}
+
+    child1 := treeNode{Parent: nil, Children: nil, Node: Condition{Text: "OR", Type: "logic", Operator: "OR"}}
+    child2 := treeNode{Parent: nil, Children: nil, Node: Condition{Text: "OR", Type: "logic", Operator: "OR"}}
+    expectedOut.Children = []*treeNode{&child1, &child2}
+
+    child3 := treeNode{Parent: &child1, Children: nil, Node: Condition{Text: "AND", Type: "logic", Operator: "AND"}}
+    child4 := treeNode{Parent: &child1, Children: nil, Node: Condition{Text: "age eq 1", Type: "equality", Field: "age", Operator: "eq", Value: "1"}}
+    child1.Children = []*treeNode{&child3, &child4}
+
+    child5 := treeNode{Parent: &child2, Children: nil, Node: Condition{Text: "age eq 2", Type: "equality", Field: "age", Operator: "eq", Value: "2"}}
+    child6 := treeNode{Parent: &child2, Children: nil, Node: Condition{Text: "age eq 3", Type: "equality", Field: "age", Operator: "eq", Value: "3"}}
+    child2.Children = []*treeNode{&child5, &child6}
+
+    child7 := treeNode{Parent: &child3, Children: nil, Node: Condition{Text: "age eq 4", Type: "equality", Field: "age", Operator: "eq", Value: "4"}}
+    child8 := treeNode{Parent: &child3, Children: nil, Node: Condition{Text: "age eq 5", Type: "equality", Field: "age", Operator: "eq", Value: "5"}}
+    child3.Children = []*treeNode{&child7, &child8}
 
     var expectedOutErr error
 
