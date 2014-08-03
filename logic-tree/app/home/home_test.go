@@ -105,14 +105,14 @@ func TestUnserializeTreeThreeNodeOneDepth(t *testing.T) {
     }
 }
 
-// UNSERIALIZE ORDER, ARBITRARY DEPTH: It should be able to unserialize a tree with nine nodes and four levels of depth (aka, arbitrary depth) in the correct order
-/**
- * ((A && B) || C) && (D || E)
- *             AND
- *       OR           OR
- *   AND     C      D    E
- *  A   B
- */
+// // UNSERIALIZE ORDER, ARBITRARY DEPTH: It should be able to unserialize a tree with nine nodes and four levels of depth (aka, arbitrary depth) in the correct order
+// /**
+//  * ((A && B) || C) && (D || E)
+//  *             AND
+//  *       OR           OR
+//  *   AND     C      D    E
+//  *  A   B
+//  */
 func TestUnserializeTreeArbitraryDepth(t *testing.T) {
     beforeEach()
 

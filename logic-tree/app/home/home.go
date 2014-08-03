@@ -112,32 +112,53 @@ func parseJSON(conditionsString string) ([]Condition, error) {
     return conditionsSlice, nil
 }
 
+/** Treat conditions like a queue. Rules:
+ * If you reach a (, pop the condition, drop down a depth and assign results to root's children
+ * If you reach a ), pop the condition, pop back up a depth with the root
+ * If you reach a logical condition, pop the condition, assign it as the root's node
+ * If you reach an equality condition, pop the condition, assign it as one of the children of the root
+ * At the end of the loop, return the root's first child (since we have parans around all conditions we're going to be one level too deep)
+**/
 func unserializeTree(conditions []Condition) (*treeNode, error) {
-    depth := 0
+    // depth := 0
     var root treeNode
+    var emptyNode Condition
+    var condition Condition
 
-    for _, condition := range conditions {
+    key := 0
+
+    for key < len(conditions) {
+        // Pop the item from the slice
+        condition = conditions[0]
+        conditions = append(conditions[:key], conditions[key+1:]...)
+
         switch condition.Type {
         case "scope":
             if condition.Operator == "(" {
-                depth++
+                children, _ := unserializeTree(conditions)
+
+                if len(root.Children) == 0 {
+                    root.Children = []*treeNode{children}
+                } else {
+                    root.Children = append(root.Children, children)
+                }
             }
 
             if condition.Operator == ")" {
-                depth--
+                if root.Node == emptyNode {
+                    return root.Children[0], nil
+                } else {
+                    return &root, nil
+                }
             }
         case "logic":
             root.Node = condition
         case "equality":
-            if depth > 0 {
-                root.Children = append(root.Children, &treeNode{Parent: &root, Node: condition})
-            } else {
-                root.Node = condition
-            }
+            root.Children = append(root.Children, &treeNode{Parent: &root, Node: condition})
         }
     }
 
-    return &root, nil
+    return root.Children[0], nil
 }
 
 func serializeTree(node *treeNode) ([]Condition, error) {
@@ -200,6 +221,16 @@ func simplifyConditions(conditions []Condition) string {
     }
 
     return t
+}
+
+func (t *treeNode) getChildrenConditions() []Condition {
+    var children []Condition
+
+    for _, child := range t.Children {
+        children = append(children, child.Node)
+    }
+
+    return children
 }
 
 
