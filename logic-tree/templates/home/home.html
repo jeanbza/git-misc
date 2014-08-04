@@ -1,5 +1,28 @@
 {{define "body"}}
     <script type="text/javascript">
+    function updateConditions() {
+        var conditions = [];
+        $("#sortable li").each(function(k, v) {
+            var condition = {
+                Type: $(v).attr("data-type"),
+                Text: $(v).text(),
+                Field: $(v).attr("data-field"),
+                Operator: $(v).attr("data-operator"),
+                Value: $(v).attr("data-value")
+            }
+
+            conditions.push(condition);
+        });
+
+        $.ajax({
+            url: "/updateConditions",
+            method: "POST",
+            data: {
+                conditions: JSON.stringify(conditions)
+            }
+        });
+    }
+
     $(document).ready(function() {
         $("#addEquality").click(function(e) {
             e.preventDefault();
@@ -7,19 +30,25 @@
             equalities = [];
 
             $("#sortable li").each(function(key, condition) {
-                console.dir(condition);
-                console.dir($(condition));
-                console.dir($(condition).attr("data-type"));
-                console.dir(condition.attr("data-type"));
-                if (condition.attr("data-type") == "equality") {
-                    equalities.append({Field: condition.attr("data-field"), Operator: condition.attr("data-operator"), Value: condition.attr("data-value")})
+                if ($(condition).attr("data-type") == "equality") {
+                    var condition = {
+                        Field: $(condition).attr("data-field"),
+                        Operator: $(condition).attr("data-operator"),
+                        Value: $(condition).attr("data-value")
+                    }
+
+                    equalities.push(condition);
                 }
             });
 
-            console.dir(equalities);
+            updateConditions();
         });
 
-        $("#sortable").sortable();
+        $("#sortable").sortable({
+            change: function() {
+                updateConditions();
+            }
+        });
         $("#sortable").disableSelection();
     });
     </script>

@@ -22,8 +22,7 @@ func main() {
     http.HandleFunc("/", httpInterceptor)
 
     router.HandleFunc("/", home.GetHomePage).Methods("GET")
-    router.HandleFunc("/save", home.SaveState).Methods("POST")
-    router.HandleFunc("/truncate", home.Truncate).Methods("POST")
+    router.HandleFunc("/updateConditions", home.UpdateConditions).Methods("POST")
 
     fileServer := http.StripPrefix("/static/", http.FileServer(http.Dir("static")))
     http.Handle("/static/", fileServer)

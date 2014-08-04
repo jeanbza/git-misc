@@ -3,7 +3,6 @@ package home
 import (
     "fmt"
     "encoding/json"
-    "strconv"
     "net/http"
     "html/template"
     "errors"
@@ -41,17 +40,12 @@ func GetHomePage(rw http.ResponseWriter, req *http.Request) {
     common.CheckError(err, 2)
 }
 
-func SaveState(rw http.ResponseWriter, req *http.Request) {
-    field := req.FormValue("field")
-    operator := req.FormValue("operator")
-    value, err := strconv.Atoi(req.FormValue("value"))
-    common.CheckError(err, 2)
+func UpdateConditions(rw http.ResponseWriter, req *http.Request) {
+    conditions := req.FormValue("conditions");
+    fmt.Println(conditions);
 
-    _, err = common.DB.Query(fmt.Sprintf("INSERT INTO logictree.equality(field, operator, value) VALUES ('%s', '%s', %d)", field, operator, value))
-    common.CheckError(err, 2)
-
-    _, err = common.DB.Query("INSERT INTO logictree.logic(operator) VALUES ('AND')")
-    common.CheckError(err, 2)
+    parsedConditions, _ := parseJSON(conditions);
+    fmt.Println(parsedConditions);
 
     GetHomePage(rw, req)
 }
