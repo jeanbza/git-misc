@@ -20,7 +20,7 @@ func beforeEach() {
 func TestFullstack(t *testing.T) {
     beforeEach()
 
-    originalConditions := []Condition{
+    conditionsIn := []Condition{
         Condition{Text: "(", Type: "scope", Operator: "("},
         Condition{Text: "(", Type: "scope", Operator: "("},
         Condition{Text: "(", Type: "scope", Operator: "("},
@@ -44,6 +44,12 @@ func TestFullstack(t *testing.T) {
         Condition{Text: "age eq 3", Type: "equality", Field: "age", Operator: "eq", Value: "3"},
         Condition{Text: ")", Type: "scope", Operator: ")"},
         Condition{Text: ")", Type: "scope", Operator: ")"},
+    }
+
+    // Because slices are pointers by default, and unserialize pops items, we shallow copy a new version for later use
+    var originalConditions []Condition
+    for _, condition := range conditionsIn {
+        originalConditions = append(originalConditions, condition)
     }
 
     treeRootExpectation := &treeNode{Parent: nil, Children: nil, Node: Condition{Text: "AND", Type: "logic", Operator: "AND"}}
@@ -70,14 +76,14 @@ func TestFullstack(t *testing.T) {
     // Unserialize into a tree
     var expectedOutErr error
 
-    treeReturned, errorsReturned := unserializeTree(originalConditions)
+    treeReturned, errorsReturned := unserializeTree(conditionsIn)
 
     if !treeReturned.matches(treeRootExpectation) {
-        t.Errorf("unserializeTree(%v) - got %v, want %v", originalConditions, treeReturned.print(), treeRootExpectation.print())
+        t.Errorf("unserializeTree(%v) - got %v, want %v", conditionsIn, treeReturned.print(), treeRootExpectation.print())
     }
 
     if errorsReturned != expectedOutErr {
-        t.Errorf("unserializeTree(%v) errorsReturned - got %v, want %v", originalConditions, errorsReturned, expectedOutErr)
+        t.Errorf("unserializeTree(%v) errorsReturned - got %v, want %v", conditionsIn, errorsReturned, expectedOutErr)
     }
 
     // Serialize back into conditions array

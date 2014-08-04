@@ -120,15 +120,13 @@ func parseJSON(conditionsString string) ([]Condition, error) {
  * At the end of the loop, return the root's first child (since we have parans around all conditions we're going to be one level too deep)
 **/
 func unserializeTree(conditions []Condition) (*treeNode, error) {
-    // depth := 0
     var root treeNode
-    var emptyNode Condition
-    var condition Condition
+    var emptyNode, condition Condition
 
     key := 0
 
     for key < len(conditions) {
-        // Pop the item from the slice
+        // Pop the front item from the slice
         condition = conditions[0]
         conditions = append(conditions[:key], conditions[key+1:]...)
 
