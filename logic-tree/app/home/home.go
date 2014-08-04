@@ -11,17 +11,14 @@ import (
 )
 
 type Condition struct {
-    Text string
-    Type string
-    Field string
-    Operator string
-    Value string
+    Text, Type, Field, Operator, Value string
 }
 
 type treeNode struct {
     Parent *treeNode
     Children []*treeNode
     Node Condition
+    Left, Right int
 }
 
 func GetHomePage(rw http.ResponseWriter, req *http.Request) {
@@ -191,6 +188,14 @@ func serializeTree(node *treeNode) ([]Condition, error) {
     return linearConditions, nil
 }
 
+func (t *treeNode) attachLeftsAndRights() {
+
+}
+
+func (t *treeNode) toMysql() (equalityStr, logicStr string) {
+    return equalityStr, logicStr
+}
+
 func (t *treeNode) print() string {
     var s string
 
@@ -198,7 +203,7 @@ func (t *treeNode) print() string {
         s += child.print()
     }
 
-    return s + " :: " + fmt.Sprintf("%v", t.Node)
+    return s + " :: " + fmt.Sprintf("%v, %d, %d", t.Node, t.Left, t.Right)
 }
 
 func simplifyConditions(conditions []Condition) string {
