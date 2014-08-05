@@ -121,23 +121,10 @@ func TestToMysql(t *testing.T) {
     child3.Children = []*treeNode{&child7, &child8, &child9, &child10, &child11}
 
     // INSERT INTO logictree.equality (field, operator, value, lt, rt) VALUES ...
-    expectedOutEquality := `
-        ('age', 'eq', '4', 4, 5),
-        ('age', 'eq', '5', 6, 7),
-        ('age', 'eq', '6', 8, 9),
-        ('age', 'eq', '7', 10, 11),
-        ('age', 'eq', '8', 12, 13),
-        ('age', 'eq', '1', 15, 16),
-        ('age', 'eq', '2', 19, 20),
-        ('age', 'eq', '3', 21, 22)
-    `
+    expectedOutEquality := "('age', 'eq', '4', 4, 5),('age', 'eq', '5', 6, 7),('age', 'eq', '6', 8, 9),('age', 'eq', '7', 10, 11),('age', 'eq', '8', 12, 13),('age', 'eq', '1', 15, 16),('age', 'eq', '2', 19, 20),('age', 'eq', '3', 21, 22)"
 
     // INSERT INTO logictree.logic (operator, lt, rt) VALUES ...
-    expectedOutLogic := `
-        ('AND', 3, 14),
-        ('OR', 18, 23),
-        ('AND', 1, 24),
-    `
+    expectedOutLogic := "('AND', 3, 14),('OR', 2, 17),('OR', 18, 23),('AND', 1, 24)"
 
     equalityReturned, logicReturned := root.toMysql()
 

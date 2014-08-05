@@ -189,10 +189,48 @@ func serializeTree(node *treeNode) ([]Condition, error) {
 }
 
 func (t *treeNode) attachLeftsAndRights() {
+    indexStart := 0
+    t.attachLeftsAndRightsRecursively(&indexStart)
+}
 
+func (t *treeNode) attachLeftsAndRightsRecursively(index *int) {
+    *index++
+    t.Left = *index
+
+    for _, child := range t.Children {
+        child.attachLeftsAndRightsRecursively(index)
+    }
+
+    *index++
+    t.Right = *index
 }
 
 func (t *treeNode) toMysql() (equalityStr, logicStr string) {
+    t.attachLeftsAndRights()
+
+    equalityStr, logicStr = t.toMysqlRecursively()
+
+    equalityStr = equalityStr[:(len(equalityStr)-1)]
+    logicStr = logicStr[:(len(logicStr)-1)]
+
+    return equalityStr, logicStr
+}
+
+func (t *treeNode) toMysqlRecursively() (equalityStr, logicStr string) {
+    var equalityTemp, logicTemp string
+    for _, child := range t.Children {
+        equalityTemp, logicTemp = child.toMysqlRecursively()
+        equalityStr += equalityTemp
+        logicStr += logicTemp
+    }
+
+    switch (t.Node.Type) {
+    case "equality":
+        equalityStr += fmt.Sprintf("('%s', '%s', '%s', %d, %d),", t.Node.Field, t.Node.Operator, t.Node.Value, t.Left, t.Right)
+    case "logic":
+        logicStr += fmt.Sprintf("('%s', %d, %d),", t.Node.Operator, t.Left, t.Right)
+    }
+
     return equalityStr, logicStr
 }
 
