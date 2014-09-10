@@ -1,18 +1,19 @@
 var main = function() {
-  // fade and animate each circle up together
-  //$(".circle-div").animate({opacity:1,'margin-top':0}, 600);
+    $(".circle-div").each(function(j) {
+        var self = $(this);
+        setTimeout(function() {moveUp(self, 0);}, 200*j);
+    });
 
-  // fade circle in one at a time
-  // all animate up together
-  $(".circle-div").each(function(i) { 
-    $(this).delay(i*200).animate({opacity:1,'margin-top':0});
-  })
+    function moveUp(elem, i) {
+        var marginTop = elem.css('margin-top').substring(0, elem.css('margin-top').length-2);
 
-  // $(".mint-circle-div").animate({opacity:1,'margin-top':0}, 600);
-  // $(".green-circle-div").delay(100).animate({opacity:1,'margin-top':0}, 600);
-  // $(".blue-circle-div").delay(200).animate({opacity:1,'margin-top':0}, 600);
-  // $(".purple-circle-div").delay(300).animate({opacity:1,'margin-top':0}, 600);
-  // $(".navy-circle-div").delay(400).animate({opacity:1,'margin-top':0}, 600);
+        elem.css('margin-top', marginTop-20+'px');
+        i++;
+
+        if (i < 15) {
+            setTimeout(function() {moveUp(elem, i);}, 50)
+        }
+    }
 };
 
 $(document).ready(main);

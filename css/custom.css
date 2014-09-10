@@ -32,17 +32,16 @@ body {
 }
 
 .circle-div {
-  height: 250px;
-  width: auto;
-  min-width: 20%;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-color: black;
   border: 4px;
 }
 
 .circle-div-fade {
-  opacity: 0;
-  margin-top: 50%;
+  opacity: 1;
+  margin-top: 80%;
 }
 
 .mint-circle-div {
