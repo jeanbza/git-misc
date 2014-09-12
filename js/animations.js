@@ -1,15 +1,26 @@
 var main = function() {
-    $(".circle-div").each(function(j) {
-        var self = $(this);
-        setTimeout(function() {moveUp(self, 0, false);}, 200*j);
-    });
+    var timeout = 200;
 
-    setTimeout(function() {
-        $(".circle-div").each(function(j) {
-            var self = $(this);
-            setTimeout(function() {moveUp(self, 0, true);}, 200*j);
-        });
-    }, $(".circle-div").length*200);
+    for (k = 0; k < 10; k++) {
+        (function(i) {setTimeout(function() {
+            $(".circle-div").each(function(j) {
+                var self = $(this);
+                setTimeout(function() {moveUp(self, 0, i%2!=0);}, timeout*j);
+            });
+        }, $(".circle-div").length*timeout*i); } (k));
+    }
+
+    // $(".circle-div").each(function(j) {
+    //     var self = $(this);
+    //     setTimeout(function() {moveUp(self, 0, false);}, timeout*j);
+    // });
+
+    // setTimeout(function() {
+    //     $(".circle-div").each(function(j) {
+    //         var self = $(this);
+    //         setTimeout(function() {moveUp(self, 0, true);}, timeout*j);
+    //     });
+    // }, $(".circle-div").length*timeout);
 
     function moveUp(elem, i, up) {
         var marginTop = elem.css('margin-top').substring(0, elem.css('margin-top').length-2);
