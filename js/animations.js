@@ -1,17 +1,29 @@
 var main = function() {
     $(".circle-div").each(function(j) {
         var self = $(this);
-        setTimeout(function() {moveUp(self, 0);}, 200*j);
+        setTimeout(function() {moveUp(self, 0, false);}, 200*j);
     });
 
-    function moveUp(elem, i) {
+    setTimeout(function() {
+        $(".circle-div").each(function(j) {
+            var self = $(this);
+            setTimeout(function() {moveUp(self, 0, true);}, 200*j);
+        });
+    }, $(".circle-div").length*200);
+
+    function moveUp(elem, i, up) {
         var marginTop = elem.css('margin-top').substring(0, elem.css('margin-top').length-2);
 
-        elem.css('margin-top', marginTop-20+'px');
+        if (up) {
+            elem.css('margin-top', parseInt(marginTop)-20+'px');
+        } else {
+            elem.css('margin-top', parseInt(marginTop)+20+'px');
+        }
+        
         i++;
 
         if (i < 15) {
-            setTimeout(function() {moveUp(elem, i);}, 50)
+            setTimeout(function() {moveUp(elem, i, up);}, 50)
         }
     }
 };
