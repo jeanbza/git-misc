@@ -1,4 +1,5 @@
-jquery-animations
-=================
+=======
+git-misc
+========
 
-jQuery animations examples
+Catchall repo
