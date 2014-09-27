@@ -27,8 +27,8 @@ func main() {
 }
 
 func replaceLinks(bodyStr string) string {
-    hrefRegex := regexp.MustCompile(`(href|src)="(.*)"`)
-    result := hrefRegex.ReplaceAllString(bodyStr, "$1=\"vagrant.$2\"")
+    hrefRegex := regexp.MustCompile(`(href|src)="(https://www)?(.*)"`)
+    result := hrefRegex.ReplaceAllString(bodyStr, "$1=\"localhost:1234$3\"")
 
     return result
 }
