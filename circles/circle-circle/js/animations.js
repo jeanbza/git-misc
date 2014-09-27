@@ -1,47 +1,17 @@
+function addMargin(elem, marginToAdd) {
+    var marginTop = elem.css('margin-top').substring(0, elem.css('margin-top').length-2);
+    margin = parseInt(marginTop)+marginToAdd+'px';
+    return margin;
+}
+
 var main = function() {
-    var timeout = 200;
-    var allCirclesFinished = [];
+    var animationTime = 2;
 
-    moveCircles(false);
-    
-    function moveCircles(negative) {
-        $(".circle-div").each(function(j) {
-            var self = $(this);
-            var promiseToFinish = new $.Deferred();
-            allCirclesFinished.push(promiseToFinish);
-            setTimeout(function() {moveCircle(self, 0, negative, false, promiseToFinish);}, timeout*j);
-        });
-
-        $.when.apply($, allCirclesFinished).then(function() {
-            allCirclesFinished = [];
-            moveCircles(!negative);
-        });
-    }
-
-    function moveCircle(elem, i, negative, horizontally, promise) {
-        var marginTop = elem.css('margin-top').substring(0, elem.css('margin-top').length-2);
-
-        if (horizontally) {
-            if (negative) {
-                elem.css('margin-top', parseInt(marginTop)-20+'px');
-            } else {
-                elem.css('margin-top', parseInt(marginTop)+20+'px');
-            }
-        } else {
-            if (negative) {
-                elem[0].offsetLeft = elem[0].offsetLeft-20;
-            } else {
-                elem[0].offsetLeft = elem[0].offsetLeft+20;
-            }
-        }
-        
-        i++;
-
-        if (i < 15) {
-            setTimeout(function() {moveCircle(elem, i, negative, horizontally, promise);}, 50)
-        } else {
-            promise.resolve();
-        }
+    for (i = 0; i < 100; i++) {
+        $(".circle-div").delay(i*animationTime).animate({
+            'margin-top': addMargin($(".circle-div"), 3*i),
+            'margin-left': addMargin($(".circle-div"), 1*i)
+        }, animationTime);
     }
 };
 
