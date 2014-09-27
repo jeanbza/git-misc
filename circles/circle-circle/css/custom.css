@@ -15,5 +15,6 @@ body {
 
 .mint-circle {
   left: 400px;
+  top: 400px;
   background-color: red;
 }
