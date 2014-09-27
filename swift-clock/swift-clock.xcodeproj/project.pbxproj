@@ -13,6 +13,8 @@
 		38FF4B6819C6597400D99B71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FF4B6719C6597400D99B71 /* Images.xcassets */; };
 		38FF4B6B19C6597400D99B71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FF4B6919C6597400D99B71 /* LaunchScreen.xib */; };
 		38FF4B7719C6597400D99B71 /* swift_clockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FF4B7619C6597400D99B71 /* swift_clockTests.swift */; };
+		38FF4B8119C6633800D99B71 /* ViewController in Resources */ = {isa = PBXBuildFile; fileRef = 38FF4B8019C6633800D99B71 /* ViewController */; };
+		38FF4B8219C6633800D99B71 /* ViewController in Resources */ = {isa = PBXBuildFile; fileRef = 38FF4B8019C6633800D99B71 /* ViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		38FF4B7019C6597400D99B71 /* swift-clockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-clockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FF4B7519C6597400D99B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38FF4B7619C6597400D99B71 /* swift_clockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_clockTests.swift; sourceTree = "<group>"; };
+		38FF4B8019C6633800D99B71 /* ViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewController; path = ../../../../../xcode/ViewController; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			children = (
 				38FF4B6019C6597400D99B71 /* AppDelegate.swift */,
 				38FF4B6219C6597400D99B71 /* ViewController.swift */,
+				38FF4B8019C6633800D99B71 /* ViewController */,
 				38FF4B6419C6597400D99B71 /* Main.storyboard */,
 				38FF4B6719C6597400D99B71 /* Images.xcassets */,
 				38FF4B6919C6597400D99B71 /* LaunchScreen.xib */,
@@ -193,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38FF4B6619C6597400D99B71 /* Main.storyboard in Resources */,
+				38FF4B8119C6633800D99B71 /* ViewController in Resources */,
 				38FF4B6B19C6597400D99B71 /* LaunchScreen.xib in Resources */,
 				38FF4B6819C6597400D99B71 /* Images.xcassets in Resources */,
 			);
@@ -202,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FF4B8219C6633800D99B71 /* ViewController in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
