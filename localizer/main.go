@@ -8,6 +8,22 @@ import (
     "regexp"
 )
 
+/*
+plan:
+STAGE 1
+1. save page locally
+2. save page javascript+css locally
+3. change page javascript+css to local paths
+
+STAGE 2
+1. spawn workers to repeat STAGE1 for each link on page
+2. change links to local paths
+
+STAGE 3
+1. allow for ability to recurse n times
+2. add config files ot describe recursive length
+*/
+
 func main() {
     response, err := http.Get("http://localhost:8080")
     handleErr(err)
