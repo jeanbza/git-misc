@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 starter-kit
 ===========
 
@@ -34,3 +35,11 @@ Contact
 ====
 
 [www.emberjs.com](http://www.emberjs.com)
+=======
+=======
+git-misc
+========
+
+Catchall repo
+
+>>>>>>> 5670b4563a4397d84b0041ea79220bd29ec8e19b

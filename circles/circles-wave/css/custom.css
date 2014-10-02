@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.circle-div {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 50px;
+}
+
+.mint-circle {
+  left: 20px;
+  background-color: red;
+}
+
+.green-circle {
+  left: 80px;
+  background-color: blue;
+}
+
+.blue-circle {
+  left: 140px;
+  background-color: green;
+}
+
+.purple-circle {
+  left: 200px;
+  background-color: orange;
+}
+
+.navy-circle {
+  left: 260px;
+  background-color: purple;
+}
